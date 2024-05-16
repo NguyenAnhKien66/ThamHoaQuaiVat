@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChucNang : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class ChucNang : MonoBehaviour
     void Update()
     {
         
+    }
+    public void BatDau()
+    {
+        SceneManager.LoadScene(1);
     }
 
 }
