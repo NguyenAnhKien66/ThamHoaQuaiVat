@@ -206,9 +206,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1009579901}
-        m_TargetAssemblyTypeName: ChucNangMenu, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1009579906}
+        m_TargetAssemblyTypeName: ChucNang, Assembly-CSharp
+        m_MethodName: ThoatGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

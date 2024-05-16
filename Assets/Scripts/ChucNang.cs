@@ -20,5 +20,8 @@ public class ChucNang : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-
+    public void ThoatGame()
+    {
+        Application.Quit();
+    }
 }
