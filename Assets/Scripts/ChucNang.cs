@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ChucNang : MonoBehaviour
 {
+    int Map = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +28,21 @@ public class ChucNang : MonoBehaviour
     public void TroVeMenu()
     {
         SceneManager.LoadScene(0);
+    }
+    public void ChonMap1()
+    {
+        Map = 1;
+    }
+    public void ChonMap2()
+    {
+        Map = 2;
+    }
+    public void ChonMap3()
+    {
+        Map = 3;
+    }
+    public void ChonMap4()
+    {
+        Map = 4;
     }
 }
