@@ -24,4 +24,8 @@ public class ChucNang : MonoBehaviour
     {
         Application.Quit();
     }
+    public void TroVeMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
