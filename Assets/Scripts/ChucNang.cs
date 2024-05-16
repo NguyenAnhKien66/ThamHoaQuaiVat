@@ -15,4 +15,5 @@ public class ChucNang : MonoBehaviour
     {
         
     }
+
 }
