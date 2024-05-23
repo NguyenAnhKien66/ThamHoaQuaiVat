@@ -2,20 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ChucNang : MonoBehaviour
 {
-    int ChonMap = 1; //map được chọn
+    int ChonMap = 1; //map được chọn    
+    public Button nut_batdau;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (nut_batdau != null)
+        {
+            nut_batdau.onClick.AddListener(BatDau);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.KeypadEnter)) 
+        {
+            nut_batdau.onClick.Invoke();
+        }
     }
     public void BatDau()
     {
