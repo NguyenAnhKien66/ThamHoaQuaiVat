@@ -15,11 +15,6 @@ public class NhanVat : MonoBehaviour
     private bool DangCuon = false; // Bien de kiem tra xem dang cuon hay khong
     public Animator animator; // Khai bao tham chieu den thanh phan Animator
 
-    void Start()
-    {
-       
-    }
-
     private void Update()
     {
         // Lay du lieu tu ban phim
@@ -82,5 +77,10 @@ public class NhanVat : MonoBehaviour
 
         // Cap nhat trang thai khong con cuon nua
         DangCuon = false;
+    }
+    public ThanhMauNhanVat thanhMauNhanVat;
+    public void SatThuongGanhChieu(int SatThuong)
+    {
+        thanhMauNhanVat.NhanSatThuong(SatThuong);
     }
 }

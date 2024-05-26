@@ -27,19 +27,25 @@ public class QuaiBayAI : MonoBehaviour
         DichDen = true; // Xac dinh dich den
     }
 
+ 
     private void Update()
     {
-        HoiChieu -= Time.deltaTime; // Giam thoi gian hoi chiêu theo thoi gian thuc
+        HoiChieu -= Time.deltaTime;// Giam thoi gian hoi chiêu theo thoi gian thuc
         if (HoiChieu < 0)
         {
-            HoiChieu = TocDoBan; // Reset thoi gian hoi chiêu
-            // Thuc hien hanh dong ban dan
-            QuaiVatBanDan();
+            HoiChieu = TocDoBan;// Reset thoi gian hoi chieu
+            var nhanVat = FindObjectOfType<NhanVat>();
+            if (nhanVat != null)
+            {
+                // Thuc hien hanh dong ban dan
+                QuaiVatBanDan();    
+            }
         }
     }
 
     void QuaiVatBanDan()
     {
+
         // Tao ra mot vien dan tam thoi tai vi tri hien tai cua quai vat
         var DanTam = Instantiate(Dan, transform.position, Quaternion.identity);
         Rigidbody2D rb = DanTam.GetComponent<Rigidbody2D>();
@@ -105,17 +111,30 @@ public class QuaiBayAI : MonoBehaviour
 
     Vector2 TimMucTieu()
     {
-        // Tim vi tri cua nhan vat
-        Vector3 ViTriNhanVat = FindObjectOfType<NhanVat>().transform.position;
-        if (DiChuyenNgaunhien == true)
+        // Tim doi tuong nhan vat
+        NhanVat nhanVat = FindObjectOfType<NhanVat>();
+
+        if (nhanVat != null)
         {
-            // Neu di chuyen ngau nhien, tra ve vi tri ngau nhien xung quanh nhan vat
-            return (Vector2)ViTriNhanVat + Random.Range(10f, 50f) * new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
+            // Lay vi tri cua nhan vat
+            Vector3 ViTriNhanVat = nhanVat.transform.position;
+
+            if (DiChuyenNgaunhien == true)
+            {
+                // Neu di chuyen ngau nhien, tra ve vi tri ngau nhien xung quanh nhan vat
+                return (Vector2)ViTriNhanVat + Random.Range(10f, 50f) * new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
+            }
+            else
+            {
+                // Neu khong, tra ve vi tri nhan vat
+                return ViTriNhanVat;
+            }
         }
         else
         {
-            // Neu khong, tra ve vi tri nhan vat
-            return ViTriNhanVat;
+            // Neu khong tim thay nhan vat, tra ve vi tri hien tai cua quai vat
+            return transform.position;
         }
     }
 }
+
