@@ -17,35 +17,36 @@ public class QuaiBayAI : MonoBehaviour
     // Ban dan
     public GameObject Dan; // Doi tuong dan de ban
     public float TocDoDan; // Toc do di chuyen cua dan
-    public float TocDoBan; // Toc do ban dan
-    private float HoiChieu; // Thoi gian hoi chiêu cua viec ban dan
+    public float TocDoBan = 10f; // Thoi gian hoi chieu cua viec ban dan
+    private float HoiChieu; // Thoi gian hoi chieu cua viec ban dan
 
     private void Start()
     {
         // Goi ham TinhToanDuong moi 0.5 giay de tinh toan duong di
         InvokeRepeating("TinhToanDuong", 0f, 0.5f);
         DichDen = true; // Xac dinh dich den
+
+        // Khoi tao thoi gian hoi chieu ban dau va dat gia tri hoi chieu ban dau
+        HoiChieu = Random.Range(0f, TocDoBan);
     }
 
- 
     private void Update()
     {
-        HoiChieu -= Time.deltaTime;// Giam thoi gian hoi chiêu theo thoi gian thuc
-        if (HoiChieu < 0)
+        HoiChieu -= Time.deltaTime; // Giam thoi gian hoi chiêu theo thoi gian thuc
+        if (HoiChieu <= 0)
         {
-            HoiChieu = TocDoBan;// Reset thoi gian hoi chieu
+            HoiChieu = TocDoBan; // Reset thoi gian hoi chieu
             var nhanVat = FindObjectOfType<NhanVat>();
             if (nhanVat != null)
             {
                 // Thuc hien hanh dong ban dan
-                QuaiVatBanDan();    
+                QuaiVatBanDan();
             }
         }
     }
 
     void QuaiVatBanDan()
     {
-
         // Tao ra mot vien dan tam thoi tai vi tri hien tai cua quai vat
         var DanTam = Instantiate(Dan, transform.position, Quaternion.identity);
         Rigidbody2D rb = DanTam.GetComponent<Rigidbody2D>();
@@ -137,4 +138,3 @@ public class QuaiBayAI : MonoBehaviour
         }
     }
 }
-

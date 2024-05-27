@@ -7,22 +7,38 @@ public class QuanLyQuai : MonoBehaviour
     NhanVat nhanVat;
     public int SatThuongNhoNhat;
     public int SatThuongLonNhat;
-    ThanhMauNhanVat thanhMauQuai;
+    public int LuongMau;
+
+    void Awake()
+    {
+        LuongMau = 100;
+    }
+
     private void Start()
     {
-        thanhMauQuai = GetComponent<ThanhMauNhanVat>();
+        
     }
+
     public void SatThuongQuaiGanhChieu(int SatThuong)
     {
-        thanhMauQuai.NhanSatThuong(SatThuong);
+        LuongMau -= SatThuong;
+        Debug.Log("Quái nhận sát thương " + SatThuong + ". Lượng máu còn lại: " + LuongMau);
+
+        if (LuongMau <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             nhanVat = collision.GetComponent<NhanVat>();
-            InvokeRepeating("SatThuongQuaigayRa", 0,0.1f);
-
+            if (nhanVat != null)
+            {
+                InvokeRepeating("SatThuongQuaigayRa", 0, 0.1f);
+            }
         }
     }
 
@@ -30,17 +46,18 @@ public class QuanLyQuai : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            CancelInvoke("SatThuongQuaigayRa");
             nhanVat = null;
-            CancelInvoke("SatThuongCuaNhanVat");    
-
         }
     }
 
     void SatThuongQuaigayRa()
     {
-        int SatThuong= UnityEngine.Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
-        Debug.Log("Player take damage "+SatThuong);
-        nhanVat.SatThuongGanhChieu(SatThuong);
-
+        if (nhanVat != null)
+        {
+            int SatThuong = UnityEngine.Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
+            Debug.Log("Player nhận sát thương " + SatThuong);
+            nhanVat.SatThuongGanhChieu(SatThuong);
+        }
     }
 }
