@@ -73,4 +73,8 @@ public class ChucNang : MonoBehaviour
         }
 
     }
+    public void Xong()
+    {
+        SceneManager.LoadScene(1);
+    }
 }

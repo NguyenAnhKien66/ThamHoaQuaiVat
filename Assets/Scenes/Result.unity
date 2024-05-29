@@ -826,8 +826,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 884150776}
-        m_TargetAssemblyTypeName: ChucNangMenu, Assembly-CSharp
+      - m_Target: {fileID: 884150777}
+        m_TargetAssemblyTypeName: ChucNang, Assembly-CSharp
         m_MethodName: Xong
         m_Mode: 1
         m_Arguments:
@@ -980,6 +980,7 @@ GameObject:
   - component: {fileID: 884150774}
   - component: {fileID: 884150773}
   - component: {fileID: 884150776}
+  - component: {fileID: 884150777}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1049,8 +1050,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ee7d00f408c3f4c8479beb1e8caa86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &884150777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884150772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42be1487a58c65b49914e83c15977ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   nut_batdau: {fileID: 0}
-  nut_thoat: {fileID: 0}
 --- !u!1 &1006991067
 GameObject:
   m_ObjectHideFlags: 0
