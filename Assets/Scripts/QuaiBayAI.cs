@@ -39,7 +39,7 @@ public class QuaiBayAI : MonoBehaviour
             var nhanVat = FindObjectOfType<NhanVat>();
             if (nhanVat != null)
             {
-                // Thuc hien hanh dong ban dan
+                //Thuc hien hanh dong ban dan
                 QuaiVatBanDan();
             }
         }
