@@ -800,6 +800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42be1487a58c65b49914e83c15977ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nut_batdau: {fileID: 509605656}
 --- !u!1 &1167288262
 GameObject:
   m_ObjectHideFlags: 0
