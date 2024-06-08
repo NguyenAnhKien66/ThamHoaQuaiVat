@@ -8,7 +8,7 @@ public class ChucNang : MonoBehaviour
 {
     int ChonMap = 1; //map được chọn    
     public Button nut_batdau;
-    // Start is called before the first frame update
+    [SerializeField] GameObject MenuTamDung;
     void Start()
     {
         if (nut_batdau != null)
@@ -27,7 +27,7 @@ public class ChucNang : MonoBehaviour
     }
     public void BatDau()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("GameMap");
     }
     public void ThoatGame()
     {
@@ -35,7 +35,7 @@ public class ChucNang : MonoBehaviour
     }
     public void TroVeMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
     }
     public void Map1()
     {
@@ -75,6 +75,26 @@ public class ChucNang : MonoBehaviour
     }
     public void Xong()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("GameMap"); 
+    }
+    //Chuc nang pause
+    public void TamDung()
+    {
+        MenuTamDung.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void ThoatGamePlay()
+    {
+        SceneManager.LoadScene("GameMap"); 
+    }
+    public void TiepTuc()
+    {
+        MenuTamDung.SetActive(false);
+        Time.timeScale = 1;
+    }   
+    public void BatDauLai()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
 }
