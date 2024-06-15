@@ -53,15 +53,21 @@ public class ChucNang : MonoBehaviour
     {
         ChonMap = 4;
     }
+    public void Map5()
+    {
+        ChonMap = 5;
+    }
     public void Choi()
     {
         if (ChonMap == 1)
         {
             //Vào màn hình chơi game của map 1
+            SceneManager.LoadScene("Gameplay");
         }
         else if (ChonMap == 2)
         {
             //Vào màn hình chơi game của map 2
+            SceneManager.LoadScene("Gameplay2");
         }
         else if (ChonMap == 3)
         {
@@ -70,6 +76,10 @@ public class ChucNang : MonoBehaviour
         else if (ChonMap == 4)
         {
             //Vào màn hình chơi game của map 4
+        }
+        else if (ChonMap == 5)
+        {
+            //Vào màn hình chơi game của map 5
         }
 
     }

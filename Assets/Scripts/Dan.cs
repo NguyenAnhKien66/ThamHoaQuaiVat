@@ -19,8 +19,8 @@ public class Dan : MonoBehaviour
         }
         if (collision.CompareTag("QuaiVat") && CoPhaiNhanVat)
         {
-            int SatThuongQuaigayRa = Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
-            collision.GetComponent<QuanLyQuai>().SatThuongQuaiGanhChieu(SatThuongQuaigayRa);
+            int SatThuongTuNhanVat = Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
+            collision.GetComponent<QuanLyQuai>().SatThuongQuaiGanhChieu(SatThuongTuNhanVat);
             Destroy(gameObject);
         }
     }

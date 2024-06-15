@@ -13,6 +13,7 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
     private void Start()
     {
         StartCoroutine(SinhQuaiDinhKy());
+        Debug.Log("ViTriSinhRa = " + viTriSinhRa[0]);
     }
 
     IEnumerator SinhQuaiDinhKy()
@@ -25,6 +26,7 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
             {
                 if (quaiPrefab != null)
                 {
+                    
                     Transform viTriNgauNhien = viTriSinhRa[Random.Range(0, viTriSinhRa.Length)];
 
                     // Tạo một Vector3 mới với giá trị Z là 0

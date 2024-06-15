@@ -8,6 +8,7 @@ public class QuanLyQuai : MonoBehaviour
     public int SatThuongNhoNhat;
     public int SatThuongLonNhat;
     public int LuongMau;
+    public bool AnimationTanCong;
 
     void Awake()
     {
@@ -34,6 +35,12 @@ public class QuanLyQuai : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            //animation quái đánh
+            if (GetComponent<Animator>() != null && AnimationTanCong)
+            {
+                GetComponent<Animator>().SetBool("VaCham", true);
+            }
+
             nhanVat = collision.GetComponent<NhanVat>();
             if (nhanVat != null)
             {
@@ -46,6 +53,12 @@ public class QuanLyQuai : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            //Ngừng animation quái đánh
+            if (GetComponent<Animator>() != null&& AnimationTanCong)
+            {
+                GetComponent<Animator>().SetBool("VaCham", false);
+            }
+             
             CancelInvoke("SatThuongQuaigayRa");
             nhanVat = null;
         }
