@@ -41,7 +41,19 @@ public class ThanhMauNhanVat : MonoBehaviour
 
     public void Matmang()
     {
-        // Load the Result scene
+        // Lay so luong kills va chuyen scene
+        if (DemQuaiChet.instance != null)
+        {
+            PlayerPrefs.SetInt("Kills", DemQuaiChet.instance.LaySoLuongHienTai());
+            PlayerPrefs.Save(); 
+        
+        }
+        DongHo dongHo = FindObjectOfType<DongHo>();
+        if (dongHo != null)
+        {
+            PlayerPrefs.SetFloat("Time", dongHo.GetThoiGianTroiQua());
+            PlayerPrefs.Save();
+        }
         SceneManager.LoadScene("Result");
         Destroy(gameObject);
     }

@@ -14,11 +14,6 @@ public class QuanLyQuai : MonoBehaviour
         LuongMau = 100;
     }
 
-    private void Start()
-    {
-        
-    }
-
     public void SatThuongQuaiGanhChieu(int SatThuong)
     {
         LuongMau -= SatThuong;
@@ -26,6 +21,7 @@ public class QuanLyQuai : MonoBehaviour
 
         if (LuongMau <= 0)
         {
+            DemQuaiChet.instance.ThemSoluong();
             Destroy(gameObject);
         }
     }
