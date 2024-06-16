@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Dan : MonoBehaviour
 {
-    public int SatThuongNhoNhat;
-    public int SatThuongLonNhat;
+    public QuanLyThongSoNhanVat quanLyThongSoNhanVat;
+    
     public bool CoPhaiNhanVat;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !CoPhaiNhanVat)
         {
-            int SatThuongTuQuai = Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
+            int SatThuongTuQuai = Random.Range(quanLyThongSoNhanVat.SatThuongNhoNhatQuai, quanLyThongSoNhanVat.SatThuongNhoNhatQuai);
             Debug.Log(SatThuongTuQuai);
             collision.GetComponent<NhanVat>().SatThuongGanhChieu(SatThuongTuQuai);
             Destroy(gameObject);
         }
         if (collision.CompareTag("QuaiVat") && CoPhaiNhanVat)
         {
-            int SatThuongQuaigayRa = Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
+            int SatThuongQuaigayRa = Random.Range(quanLyThongSoNhanVat.SatThuongNhoNhat, quanLyThongSoNhanVat.SatThuongLonNhat);
             collision.GetComponent<QuanLyQuai>().SatThuongQuaiGanhChieu(SatThuongQuaigayRa);
             Destroy(gameObject);
         }
