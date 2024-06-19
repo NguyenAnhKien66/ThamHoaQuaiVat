@@ -10,6 +10,8 @@ public class QuanLyQuai : MonoBehaviour
     public int LuongMau;
     public bool AnimationTanCong;
 
+    GameObject obj;
+
     void Awake()
     {
         LuongMau = 100;
@@ -17,9 +19,17 @@ public class QuanLyQuai : MonoBehaviour
 
     private void Start()
     {
-        
+
     }
 
+    private void Update()
+    {
+        obj = GameObject.Find("Boss(Clone)");
+        if (obj != null)
+        {
+            Destroy(gameObject);               
+        }
+    }
     public void SatThuongQuaiGanhChieu(int SatThuong)
     {
         LuongMau -= SatThuong;
@@ -30,7 +40,6 @@ public class QuanLyQuai : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -73,4 +82,8 @@ public class QuanLyQuai : MonoBehaviour
             nhanVat.SatThuongGanhChieu(SatThuong);
         }
     }
+    
+
+    
+    
 }

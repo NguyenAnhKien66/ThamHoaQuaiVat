@@ -23,5 +23,12 @@ public class Dan : MonoBehaviour
             collision.GetComponent<QuanLyQuai>().SatThuongQuaiGanhChieu(SatThuongTuNhanVat);
             Destroy(gameObject);
         }
+        if (collision.CompareTag("Boss") && CoPhaiNhanVat)
+        {
+            int SatThuongTuNhanVat = Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
+            collision.GetComponent<QuanLyBoss>().SatThuongBossGanhChieu(SatThuongTuNhanVat);
+            Destroy(gameObject);
+        }
+
     }
 }
