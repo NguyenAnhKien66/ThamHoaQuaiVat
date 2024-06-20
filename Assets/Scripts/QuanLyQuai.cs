@@ -4,27 +4,39 @@ using UnityEngine;
 
 public class QuanLyQuai : MonoBehaviour
 {
-    NhanVat nhanVat;
+    private NhanVat nhanVat;
     public int SatThuongNhoNhat;
     public int SatThuongLonNhat;
-    public int LuongMau;
+    public int LuongMau = 100;
+    
 
     void Awake()
     {
         LuongMau = 100;
     }
 
-    public void SatThuongQuaiGanhChieu(int SatThuong)
+    public void SatThuongQuaiGanhChieu(int SatThuong, NhanVat nhanVat)
     {
-        LuongMau -= SatThuong;
-        Debug.Log("Quái nhận sát thương " + SatThuong + ". Lượng máu còn lại: " + LuongMau);
+        this.nhanVat = nhanVat;
+
+        if (LuongMau > 0)
+        {
+            LuongMau -= SatThuong;
+            Debug.Log("Quái nhận sát thương " + SatThuong + ". Lượng máu còn lại: " + LuongMau);
+        }
 
         if (LuongMau <= 0)
         {
-            DemQuaiChet.instance.ThemSoluong();
-            Destroy(gameObject);
+            if (this.nhanVat != null)
+            {
+                this.nhanVat.CapNhatKinhNghiem(10);
+                DemQuaiChet.instance.ThemSoluong(); // Đảm bảo gọi đúng thứ tự cập nhật
+                Destroy(gameObject);
+            }
         }
     }
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -43,7 +55,6 @@ public class QuanLyQuai : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             CancelInvoke("SatThuongQuaigayRa");
-            nhanVat = null;
         }
     }
 
