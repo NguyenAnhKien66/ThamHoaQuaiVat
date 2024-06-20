@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6530574218838768106}
   - component: {fileID: 203437671591983945}
   - component: {fileID: -5839559755670056081}
+  - component: {fileID: 3137383578046773257}
   m_Layer: 0
   m_Name: Quaibay
   m_TagString: QuaiVat
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 8254222968374482198}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.92, y: 5.24, z: 0}
+  m_LocalPosition: {x: -1.8, y: 5.58, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108,7 +109,7 @@ MonoBehaviour:
   KhoangCachTiepTheo: 1
   Dan: {fileID: 5678471727513526027, guid: af9f05930e130c34282aa904eadf4d4b, type: 3}
   TocDoDan: 5
-  TocDoBan: 5
+  TocDoBan: 10
 --- !u!58 &7288303835144151916
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -187,6 +188,7 @@ MonoBehaviour:
   SatThuongNhoNhat: 1
   SatThuongLonNhat: 5
   LuongMau: 50
+  AnimationTanCong: 0
 --- !u!50 &-5839559755670056081
 Rigidbody2D:
   serializedVersion: 4
@@ -214,3 +216,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &3137383578046773257
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8254222968374482198}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 27a8e62033bed2c409826e79e9fd3015, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

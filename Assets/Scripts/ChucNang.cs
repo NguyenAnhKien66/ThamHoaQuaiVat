@@ -67,7 +67,7 @@ public class ChucNang : MonoBehaviour
         else if (ChonMap == 2)
         {
             //Vào màn hình chơi game của map 2
-            SceneManager.LoadScene("Gameplay2");
+            /*SceneManager.LoadScene("Gameplay2");*/
         }
         else if (ChonMap == 3)
         {

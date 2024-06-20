@@ -207,8 +207,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6774b4499b5c75a4c9b59bdb3037dbda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SatThuongNhoNhat: 5
-  SatThuongLonNhat: 10
+  SatThuongNhoNhat: 4
+  SatThuongLonNhat: 6
   LuongMau: 0
   AnimationTanCong: 1
 --- !u!95 &5941759120374932330

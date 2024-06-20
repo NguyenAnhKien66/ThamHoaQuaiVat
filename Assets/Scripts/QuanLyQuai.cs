@@ -22,14 +22,14 @@ public class QuanLyQuai : MonoBehaviour
 
     }
 
-    private void Update()
+    /*private void Update()
     {
         obj = GameObject.Find("Boss(Clone)");
         if (obj != null)
         {
             Destroy(gameObject);               
         }
-    }
+    }*/
     public void SatThuongQuaiGanhChieu(int SatThuong)
     {
         LuongMau -= SatThuong;

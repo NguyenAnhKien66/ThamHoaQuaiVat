@@ -25,7 +25,7 @@ public class QuanLyBoss : MonoBehaviour
         if(LuongMau <=0)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene("Result");
+           /* SceneManager.LoadScene("Result");*/
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
