@@ -669,14 +669,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4504c7e858f2dcb40abd3bcd683ffae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quanLyThongSoNhanVat: {fileID: 0}
   QuanLyNhanVat: {fileID: 345543593}
-  TocDoDiChuyen: 3
-  TocDoCuon: 1
-  ThoiGianCuon: 0.25
   HuongDiChuyen: {x: 0, y: 0, z: 0}
   HoiChieuCuon: 10
   animator: {fileID: 362552333}
   thanhKyNangNhanVat: {fileID: 503252120}
+  thanhKinhNghiem: {fileID: 0}
+  textCapDo: {fileID: 0}
   thanhMauNhanVat: {fileID: 362552334}
 --- !u!58 &362552331
 CircleCollider2D:
@@ -2162,10 +2162,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 725694141}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &809289659
 MonoBehaviour:
@@ -2306,11 +2306,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a383f4fa7d31e408a2b5447a57b1aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quanLyThongSoNhanVat: {fileID: 0}
   VienDan: {fileID: 278823866704907309, guid: d7b043c502c991c40991b0e04ab010ea, type: 3}
   ViTriBan: {fileID: 936908491}
   TiaLua: {fileID: 3680348624768178883, guid: bee5babefa1ed1341abe85191fb8d9d4, type: 3}
-  TocDoban: 1
-  LucBan: 8
 --- !u!212 &936908493
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2379,7 +2378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1085768055
 Transform:
   m_ObjectHideFlags: 0
@@ -2523,6 +2522,7 @@ MonoBehaviour:
   - {fileID: 1289611078}
   thoiGianBatDau: 2
   thoiGianLapLai: 5
+  khoangCachMinGiuaCacQuai: 2
 --- !u!4 &1289611078
 Transform:
   m_ObjectHideFlags: 0
@@ -3032,10 +3032,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 725694141}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -50}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1573553616
 MonoBehaviour:
@@ -3540,6 +3540,7 @@ MonoBehaviour:
   - {fileID: 1951643633}
   thoiGianBatDau: 2
   thoiGianLapLai: 5
+  khoangCachMinGiuaCacQuai: 2
 --- !u!4 &1951643633
 Transform:
   m_ObjectHideFlags: 0
@@ -3588,10 +3589,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 725694141}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 450, y: -50}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959898235
 MonoBehaviour:

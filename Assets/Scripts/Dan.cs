@@ -32,25 +32,16 @@ public class Dan : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-    }
-}
-            int SatThuongTuQuai = Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
-            Debug.Log(SatThuongTuQuai);
-            collision.GetComponent<NhanVat>().SatThuongGanhChieu(SatThuongTuQuai);
-            Destroy(gameObject);
-        }
-        if (collision.CompareTag("QuaiVat") && CoPhaiNhanVat)
-        {
-            int SatThuongTuNhanVat = Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
-            collision.GetComponent<QuanLyQuai>().SatThuongQuaiGanhChieu(SatThuongTuNhanVat);
-            Destroy(gameObject);
-        }
         if (collision.CompareTag("Boss") && CoPhaiNhanVat)
         {
-            int SatThuongTuNhanVat = Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
+            int SatThuongTuNhanVat = Random.Range(quanLyThongSoNhanVat.SatThuongNhoNhat, quanLyThongSoNhanVat.SatThuongLonNhat);
             collision.GetComponent<QuanLyBoss>().SatThuongBossGanhChieu(SatThuongTuNhanVat);
             Destroy(gameObject);
         }
-
     }
 }
+            
+        
+
+  
+

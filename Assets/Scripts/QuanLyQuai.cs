@@ -7,9 +7,7 @@ public class QuanLyQuai : MonoBehaviour
     private NhanVat nhanVat;
     public int SatThuongNhoNhat;
     public int SatThuongLonNhat;
-    public int LuongMau = 100;
-    
-
+   
     public int LuongMau;
     public bool AnimationTanCong;
 
