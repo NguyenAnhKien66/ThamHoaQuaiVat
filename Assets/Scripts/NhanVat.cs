@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NhanVat : MonoBehaviour
 {
+    public QuanLyThongSoNhanVat quanLyThongSoNhanVat;
+    private int kinhNghiemNhanVat;
     public SpriteRenderer QuanLyNhanVat; // Khai bao tham chieu den mot thanh phan SpriteRenderer
-    public float TocDoDiChuyen = 5f; // Khai bao toc do di chuyen mac dinh
-    public float TocDoCuon = 2f; // Khai bao toc do cuon
-    public float ThoiGianCuon; // Khai bao thoi gian cuon
     private Rigidbody2D rb;
     public Vector3 HuongDiChuyen; // Khai bao huong di chuyen nhan vat
     public float HoiChieuCuon = 10f; // Thoi gian cho giua cac lan cuon
@@ -19,14 +20,71 @@ public class NhanVat : MonoBehaviour
     // Tham chieu den thanh ky nang
     public ThanhKyNangNhanVat thanhKyNangNhanVat;
 
+    // hien thi tren giao dien
+    public Slider thanhKinhNghiem;
+    public TextMeshProUGUI textCapDo;
+    private void Start()
+    {
+        kinhNghiemNhanVat = 0;
+       
+    }
+    public void CapNhatKinhNghiem(int kinhNghiem)
+    {
+        kinhNghiemNhanVat += kinhNghiem;
+        if (kinhNghiemNhanVat >= quanLyThongSoNhanVat.KinhNghiemToiDa)
+        {
+            kinhNghiemNhanVat = 0; // Reset Kinh nghiem sau khi moi lan len cap
+            CapNhatCapDo(); // Goi ham thang cap
+        }
+        CapNhatUI();
+    }
+
+    private void CapNhatUI()
+    {
+        Debug.Log("CapNhatUI Called");
+
+        if (thanhKinhNghiem != null)
+        {
+            thanhKinhNghiem.value = ((float)kinhNghiemNhanVat / (float)quanLyThongSoNhanVat.KinhNghiemToiDa)*100;
+            Debug.Log("Kinh Nghiem: " + thanhKinhNghiem.value);
+        }
+        else
+        {
+            Debug.LogError("ThanhKinhNghiem is null");
+        }
+
+        if (textCapDo != null)
+        {
+            textCapDo.text = "Level: " + quanLyThongSoNhanVat.CapDoNhanVat;
+            Debug.Log("Cap Do: " + textCapDo.text);
+        }
+        else
+        {
+            Debug.LogError("TextCapDo is null");
+        }
+    }
+
+
+
+    private void CapNhatCapDo()
+    {
+        quanLyThongSoNhanVat.CapDoNhanVat++;
+
+        quanLyThongSoNhanVat.SatThuongLonNhat += quanLyThongSoNhanVat.SatThuongCongThemKhiThangCap;
+        quanLyThongSoNhanVat.SatThuongNhoNhat += quanLyThongSoNhanVat.SatThuongCongThemKhiThangCap;
+        Debug.Log("Level: " + quanLyThongSoNhanVat.CapDoNhanVat);
+        quanLyThongSoNhanVat.KinhNghiemToiDa= quanLyThongSoNhanVat.CapDoNhanVat * 100;
+        // Them Cac thong so khac
+    }
     private void Update()
     {
         // Lay du lieu tu ban phim
-        HuongDiChuyen.x = Input.GetAxis("Horizontal");
-        HuongDiChuyen.y = Input.GetAxis("Vertical");
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        HuongDiChuyen = new Vector3(horizontalInput, verticalInput, 0);
 
         // Cap nhat vi tri nhan vat
-        transform.position += HuongDiChuyen * TocDoDiChuyen * Time.deltaTime;
+        transform.position += HuongDiChuyen * quanLyThongSoNhanVat.TocDoNhanVat * Time.deltaTime;
 
         // Cap nhat bien TocDo trong Animator
         QuanLyNhanVat.GetComponent<Animator>().SetFloat("TocDo", HuongDiChuyen.sqrMagnitude);
@@ -38,10 +96,10 @@ public class NhanVat : MonoBehaviour
             {
                 // Bat dau cuon
                 QuanLyNhanVat.GetComponent<Animator>().SetBool("Cuon", true);
-                TocDoDiChuyen += TocDoCuon; // Tang toc do di chuyen
+                quanLyThongSoNhanVat.TocDoNhanVat += quanLyThongSoNhanVat.TocDoCuonNhanVat; // Tang toc do di chuyen
                 ThoiGianHoiChieu = HoiChieuCuon; // Reset cooldown
                 DangCuon = true; // Cap nhat trang thai dang cuon
-                StartCoroutine(StopRollingAfterTime(ThoiGianCuon)); // Goi coroutine de dung cuon sau thoi gian dinh truoc
+                StartCoroutine(StopRollingAfterTime(quanLyThongSoNhanVat.ThoiGianCuonNhanVat)); // Goi coroutine de dung cuon sau thoi gian dinh truoc
             }
         }
 
@@ -79,7 +137,7 @@ public class NhanVat : MonoBehaviour
         QuanLyNhanVat.GetComponent<Animator>().SetBool("Cuon", false);
 
         // Giam toc do di chuyen ve gia tri cu
-        TocDoDiChuyen -= ThoiGianCuon;
+        quanLyThongSoNhanVat.TocDoNhanVat -= quanLyThongSoNhanVat.ThoiGianCuonNhanVat;
 
         // Cap nhat trang thai khong con cuon nua
         DangCuon = false;
@@ -90,6 +148,10 @@ public class NhanVat : MonoBehaviour
     {
         thanhMauNhanVat.NhanSatThuong(SatThuong);
     }
-
+    private void OnDestroy()
+    {
+        PlayerPrefs.SetInt("Level", quanLyThongSoNhanVat.CapDoNhanVat);
+        PlayerPrefs.Save();
+    }
 }
     

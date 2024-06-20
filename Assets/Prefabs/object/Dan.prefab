@@ -175,6 +175,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ab49c31aa639440ae3c943bb0914dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SatThuongNhoNhat: 30
-  SatThuongLonNhat: 50
+  quanLyThongSoNhanVat: {fileID: 11400000, guid: 4d3535415c9a09246b23bd4938db445c, type: 2}
   CoPhaiNhanVat: 1

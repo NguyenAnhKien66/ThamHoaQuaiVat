@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class Sung : MonoBehaviour
 {
+    public QuanLyThongSoNhanVat quanLyThongSoNhanVat;
     public GameObject VienDan; // Doi tuong vien dan
     public Transform ViTriBan; // Vi tri ban dan
     public GameObject TiaLua; // Hieu ung tia lua
-
-    public float TocDoban = 1f; // Toc do ban dan
-    public float LucBan; // Luc ban dan
     private float tocdoban; // Bien dem de theo doi thoi gian giua cac lan ban
 
     void Update()
@@ -45,12 +43,12 @@ public class Sung : MonoBehaviour
 
     void BanDan()
     {
-        tocdoban = TocDoban; // Reset tocdoban ve gia tri mac dinh
+        tocdoban = quanLyThongSoNhanVat.TocDoban; // Reset tocdoban ve gia tri mac dinh
         GameObject bulletTmp = Instantiate(VienDan, ViTriBan.position, Quaternion.identity); // Tao vien dan moi
         // Hieu ung tia lua sau moi lan ban
         Instantiate(TiaLua, ViTriBan.position, transform.rotation, transform);
 
         Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>(); // Lay thanh phan Rigidbody2D cua vien dan
-        rb.AddForce(transform.right * LucBan, ForceMode2D.Impulse); // Ap luc len vien dan de ban no
+        rb.AddForce(transform.right * quanLyThongSoNhanVat  .LucBan, ForceMode2D.Impulse); // Ap luc len vien dan de ban no
     }
 }
