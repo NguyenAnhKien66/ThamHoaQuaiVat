@@ -10,8 +10,6 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
     public float thoiGianLapLai = 5f;
     private int soLuongQuai = 1;
 
-   /* GameObject obj;
-    bool ThoatKhoiWhile = false;*/
     private void Start()
     {
         StartCoroutine(SinhQuaiDinhKy());
@@ -28,22 +26,12 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
             {
                 if (quaiPrefab != null)
                 { 
-                    /*obj=GameObject.Find("Boss(Clone)");*/
-                    /*if(obj==null)
-                    {*/
                     Transform viTriNgauNhien = viTriSinhRa[Random.Range(0, viTriSinhRa.Length)];
 
                     // Tạo một Vector3 mới với giá trị Z là 0
                     Vector3 viTriMoi = new Vector3(viTriNgauNhien.position.x, viTriNgauNhien.position.y, 0f);
 
-                    Instantiate(quaiPrefab, viTriMoi, Quaternion.identity);
-                   /* }    */
-                    /*else
-                    {
-                        ThoatKhoiWhile = true;
-                        break;
-
-                    }  */  
+                    Instantiate(quaiPrefab, viTriMoi, Quaternion.identity); 
                     
                 }
                 else
@@ -51,10 +39,6 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
                     Debug.LogWarning("Prefab quái vật đã bị hủy. Không thể sinh ra quái vật.");
                 }
             }
-            /*if(ThoatKhoiWhile)
-            {
-                break;
-            }*/
             soLuongQuai++;
 
             yield return new WaitForSeconds(thoiGianLapLai);
