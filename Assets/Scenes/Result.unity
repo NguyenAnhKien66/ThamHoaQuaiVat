@@ -356,6 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KetquaSoLuongKill: {fileID: 269872160}
   ThoiGianTraiQua: {fileID: 378046977}
+  Capdo: {fileID: 1852712665}
 --- !u!1 &378046975
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KetquaSoLuongKill: {fileID: 269872160}
   ThoiGianTraiQua: {fileID: 378046977}
+  Capdo: {fileID: 1852712665}
 --- !u!1 &523983538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,8 +1296,9 @@ GameObject:
   - component: {fileID: 1852712664}
   - component: {fileID: 1852712666}
   - component: {fileID: 1852712665}
+  - component: {fileID: 1852712667}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: txtLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1417,6 +1420,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852712663}
   m_CullTransparentMesh: 1
+--- !u!114 &1852712667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852712663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfa668b1ec486d43888bc07dc9eeafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KetquaSoLuongKill: {fileID: 269872160}
+  ThoiGianTraiQua: {fileID: 378046977}
+  Capdo: {fileID: 378046977}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

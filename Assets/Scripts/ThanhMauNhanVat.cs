@@ -54,6 +54,9 @@ public class ThanhMauNhanVat : MonoBehaviour
             PlayerPrefs.SetFloat("Time", dongHo.GetThoiGianTroiQua());
             PlayerPrefs.Save();
         }
+        PlayerPrefs.SetInt("Level", GetComponent<NhanVat>().quanLyThongSoNhanVat.CapDoNhanVat);
+        PlayerPrefs.Save();
+
         SceneManager.LoadScene("Result");
         Destroy(gameObject);
     }
