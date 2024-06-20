@@ -1,8 +1,6 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class NhanVat : MonoBehaviour
 {
@@ -19,13 +17,9 @@ public class NhanVat : MonoBehaviour
     // Tham chieu den thanh ky nang
     public ThanhKyNangNhanVat thanhKyNangNhanVat;
 
-    // hien thi tren giao dien
-    public Slider thanhKinhNghiem;
-    public TextMeshProUGUI textCapDo;
     private void Start()
     {
         kinhNghiemNhanVat = 0;
-       
     }
     public void CapNhatKinhNghiem(int kinhNghiem)
     {
@@ -33,46 +27,15 @@ public class NhanVat : MonoBehaviour
         if (kinhNghiemNhanVat >= quanLyThongSoNhanVat.KinhNghiemToiDa)
         {
             kinhNghiemNhanVat = 0; // Reset Kinh nghiem sau khi moi lan len cap
-            CapNhatCapDo(); // Goi ham thang cap
-        }
-        CapNhatUI();
-    }
-
-    private void CapNhatUI()
-    {
-        Debug.Log("CapNhatUI Called");
-
-        if (thanhKinhNghiem != null)
-        {
-            thanhKinhNghiem.value = ((float)kinhNghiemNhanVat / (float)quanLyThongSoNhanVat.KinhNghiemToiDa)*100;
-            Debug.Log("Kinh Nghiem: " + thanhKinhNghiem.value);
-        }
-        else
-        {
-            Debug.LogError("ThanhKinhNghiem is null");
-        }
-
-        if (textCapDo != null)
-        {
-            textCapDo.text = "Level: " + quanLyThongSoNhanVat.CapDoNhanVat;
-            Debug.Log("Cap Do: " + textCapDo.text);
-        }
-        else
-        {
-            Debug.LogError("TextCapDo is null");
+            CapNhatCapDo();
         }
     }
-
-
-
     private void CapNhatCapDo()
     {
         quanLyThongSoNhanVat.CapDoNhanVat++;
-
         quanLyThongSoNhanVat.SatThuongLonNhat += quanLyThongSoNhanVat.SatThuongCongThemKhiThangCap;
         quanLyThongSoNhanVat.SatThuongNhoNhat += quanLyThongSoNhanVat.SatThuongCongThemKhiThangCap;
         Debug.Log("Level: " + quanLyThongSoNhanVat.CapDoNhanVat);
-        quanLyThongSoNhanVat.KinhNghiemToiDa= quanLyThongSoNhanVat.CapDoNhanVat * 100;
         // Them Cac thong so khac
     }
     private void Update()
@@ -84,6 +47,7 @@ public class NhanVat : MonoBehaviour
 
         // Cap nhat vi tri nhan vat
         transform.position += HuongDiChuyen * quanLyThongSoNhanVat.TocDoNhanVat * Time.deltaTime;
+
 
         // Cap nhat bien TocDo trong Animator
         QuanLyNhanVat.GetComponent<Animator>().SetFloat("TocDo", HuongDiChuyen.sqrMagnitude);
@@ -146,10 +110,5 @@ public class NhanVat : MonoBehaviour
     public void SatThuongGanhChieu(int SatThuong)
     {
         thanhMauNhanVat.NhanSatThuong(SatThuong);
-    }
-    private void OnDestroy()
-    {
-        PlayerPrefs.SetInt("Level", quanLyThongSoNhanVat.CapDoNhanVat);
-        PlayerPrefs.Save();
     }
 }
