@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 28087900}
   - component: {fileID: 28087902}
   - component: {fileID: 28087901}
+  - component: {fileID: 28087903}
   m_Layer: 5
   m_Name: ThoiGianST_txt
   m_TagString: Untagged
@@ -257,6 +258,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28087899}
   m_CullTransparentMesh: 1
+--- !u!114 &28087903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28087899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfa668b1ec486d43888bc07dc9eeafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KetquaSoLuongKill: {fileID: 156196513}
+  ThoiGianTraiQua: {fileID: 28087901}
+  Capdo: {fileID: 1006991069}
 --- !u!1 &156196511
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +284,7 @@ GameObject:
   - component: {fileID: 156196512}
   - component: {fileID: 156196514}
   - component: {fileID: 156196513}
+  - component: {fileID: 156196515}
   m_Layer: 5
   m_Name: Giet_txt
   m_TagString: Untagged
@@ -391,6 +408,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156196511}
   m_CullTransparentMesh: 1
+--- !u!114 &156196515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156196511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfa668b1ec486d43888bc07dc9eeafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KetquaSoLuongKill: {fileID: 156196513}
+  ThoiGianTraiQua: {fileID: 28087901}
+  Capdo: {fileID: 1006991069}
 --- !u!1 &205981936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,21 +1492,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000717260}
   m_CullTransparentMesh: 1
---- !u!114 &1852712667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852712663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfa668b1ec486d43888bc07dc9eeafd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KetquaSoLuongKill: {fileID: 269872160}
-  ThoiGianTraiQua: {fileID: 378046977}
-  Capdo: {fileID: 378046977}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

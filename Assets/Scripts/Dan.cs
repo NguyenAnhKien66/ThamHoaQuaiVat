@@ -32,5 +32,16 @@ public class Dan : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        if (collision.CompareTag("Boss") && CoPhaiNhanVat)
+        {
+            int SatThuongTuNhanVat = Random.Range(quanLyThongSoNhanVat.SatThuongNhoNhat, quanLyThongSoNhanVat.SatThuongLonNhat);
+            collision.GetComponent<QuanLyBoss>().SatThuongBossGanhChieu(SatThuongTuNhanVat);
+            Destroy(gameObject);
+        }
     }
 }
+            
+        
+
+  
+

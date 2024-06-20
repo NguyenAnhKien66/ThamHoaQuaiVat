@@ -16,7 +16,7 @@ MonoBehaviour:
   TocDoCuonNhanVat: 1
   ThoiGianCuonNhanVat: 1
   HoiChieuCuonNhanVat: 10
-  MauToiDaNhanVat: 100
+  MauToiDaNhanVat: 1000
   SatThuongNhoNhat: 25
   SatThuongLonNhat: 35
   SatThuongNhoNhatQuai: 1
