@@ -106,6 +106,15 @@ public class QuaiBayAI : MonoBehaviour
             {
                 Dem++; // Chuyen sang diem tiep theo
             }
+            if (force.x != 0)
+            {
+                if (force.x > 0)
+                    transform.localScale = new Vector3(0.15f, 0.15f, 0);
+                else
+                    transform.localScale = new Vector3(-0.15f, 0.15f, 0);
+
+
+            }
             yield return null; // Doi den khung hinh tiep theo
         }
     }

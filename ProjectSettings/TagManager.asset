@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - QuaiVat
+  - Boss
   layers:
   - Default
   - TransparentFX

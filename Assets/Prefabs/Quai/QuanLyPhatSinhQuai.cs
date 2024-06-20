@@ -11,9 +11,12 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
     private int soLuongQuai = 1;
     public float khoangCachMinGiuaCacQuai = 2f; // Khoang cach toi thieu giua cac quai
 
+   /* GameObject obj;
+    bool ThoatKhoiWhile = false;*/
     private void Start()
     {
         StartCoroutine(SinhQuaiDinhKy());
+        Debug.Log("ViTriSinhRa = " + viTriSinhRa[0]);
     }
 
     IEnumerator SinhQuaiDinhKy()
@@ -25,7 +28,10 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
             for (int i = 0; i < soLuongQuai; i++)
             {
                 if (quaiPrefab != null)
-                {
+                { 
+                    /*obj=GameObject.Find("Boss(Clone)");*/
+                    /*if(obj==null)
+                    {*/
                     Transform viTriNgauNhien = viTriSinhRa[Random.Range(0, viTriSinhRa.Length)];
 
                     // Kiem tra vi tri hop le truoc khi sinh quai vat
@@ -48,7 +54,10 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
 
                 yield return new WaitForSeconds(1f); // Đợi 0.1 giây giữa mỗi lần sinh quái
             }
-
+            /*if(ThoatKhoiWhile)
+            {
+                break;
+            }*/
             soLuongQuai++;
 
             yield return new WaitForSeconds(thoiGianLapLai);

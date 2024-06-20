@@ -15,6 +15,7 @@ public class NhanVat : MonoBehaviour
     private float ThoiGianHoiChieu = 0f; // Dem thoi gian con lai cho cooldown
     private bool DangCuon = false; // Bien de kiem tra xem dang cuon hay khong
     public Animator animator; // Khai bao tham chieu den thanh phan Animator
+    
 
     // Tham chieu den thanh ky nang
     public ThanhKyNangNhanVat thanhKyNangNhanVat;
@@ -153,3 +154,4 @@ public class NhanVat : MonoBehaviour
         PlayerPrefs.Save();
     }
 }
+    
