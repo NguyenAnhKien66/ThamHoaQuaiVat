@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c7708a2470c2ce4fb911fef7b0fdb04, type: 3}
   m_Name: QuanLyThongSoNhanVat
   m_EditorClassIdentifier: 
-  TocDoNhanVat: 5
+  TocDoNhanVat: 3
   TocDoCuonNhanVat: 1
   ThoiGianCuonNhanVat: 1
   HoiChieuCuonNhanVat: 10
-  MauToiDaNhanVat: 1000
-  SatThuongNhoNhat: 25
-  SatThuongLonNhat: 35
+  MauToiDaNhanVat: 100
+  SatThuongNhoNhat: 35
+  SatThuongLonNhat: 45
   SatThuongNhoNhatQuai: 1
   SatThuongLonNhatQuai: 3
   TocDoban: 1

@@ -13,7 +13,7 @@ public class QuanLyBoss : MonoBehaviour
 
     void Awake()
     {
-        LuongMau = 100;
+        LuongMau = 10000;
     }
     void Start()
     {
