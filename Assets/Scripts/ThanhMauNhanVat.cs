@@ -1,21 +1,21 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement; // Add this line
+using UnityEngine.SceneManagement; 
 
 public class ThanhMauNhanVat : MonoBehaviour
 {
-    [SerializeField] int LuongMauToiDa;
-    int LuongMauHienTai;
+    [SerializeField] QuanLyThongSoNhanVat quanLyThongSoNhanVat;
+    
     public ThanhMau thanhMau;
 
     public UnityEvent SauKhiMatMang;
 
     private void Start()
     {
-        LuongMauHienTai = LuongMauToiDa;
-        thanhMau.CapnhatMau(LuongMauHienTai, LuongMauToiDa);
+        quanLyThongSoNhanVat.MauHientai = quanLyThongSoNhanVat.MauToiDaNhanVat;
+        thanhMau.CapnhatMau(quanLyThongSoNhanVat.MauHientai, quanLyThongSoNhanVat.MauToiDaNhanVat);
     }
 
     private void OnEnable()
@@ -30,13 +30,15 @@ public class ThanhMauNhanVat : MonoBehaviour
 
     public void NhanSatThuong(int SatThuong)
     {
-        LuongMauHienTai -= SatThuong;
-        if (LuongMauHienTai <= 0)
+        quanLyThongSoNhanVat.MauHientai -= SatThuong;
+
+        Debug.Log("co tru mau");
+        if (quanLyThongSoNhanVat.MauHientai <= 0)
         {
-            LuongMauHienTai = 0;
+            quanLyThongSoNhanVat.MauHientai = 0;
             SauKhiMatMang.Invoke();
         }
-        thanhMau.CapnhatMau(LuongMauHienTai, LuongMauToiDa);
+        thanhMau.CapnhatMau(quanLyThongSoNhanVat.MauHientai, quanLyThongSoNhanVat.MauToiDaNhanVat);
     }
 
     public void Matmang()

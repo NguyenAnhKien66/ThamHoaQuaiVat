@@ -7,15 +7,26 @@ public class QuanLyQuai : MonoBehaviour
     private NhanVat nhanVat;
     public int SatThuongNhoNhat;
     public int SatThuongLonNhat;
-   
     public int LuongMau;
     public bool AnimationTanCong;
 
     GameObject obj;
+    public QuanLyVatPham quanLyVatPham;
 
     void Awake()
     {
         LuongMau = 100;
+
+        // Tìm đối tượng QuanLyVatPham nếu chưa được gán
+        if (quanLyVatPham == null)
+        {
+            quanLyVatPham = FindObjectOfType<QuanLyVatPham>();
+        }
+
+        if (quanLyVatPham == null)
+        {
+            Debug.LogError("QuanLyVatPham not found in the scene. Please ensure it is added and active.");
+        }
     }
 
     public void SatThuongQuaiGanhChieu(int SatThuong, NhanVat nhanVat)
@@ -34,18 +45,27 @@ public class QuanLyQuai : MonoBehaviour
             {
                 this.nhanVat.CapNhatKinhNghiem(10);
                 DemQuaiChet.instance.ThemSoluong(); // Đảm bảo gọi đúng thứ tự cập nhật
+
+                // Kiểm tra quanLyVatPham không null trước khi gọi phương thức
+                if (quanLyVatPham != null)
+                {
+                    quanLyVatPham.RoiVatPham(transform.position); // Gọi phương thức rơi vật phẩm
+                }
+                else
+                {
+                    Debug.LogError("quanLyVatPham is null");
+                }
+
                 Destroy(gameObject);
             }
         }
     }
 
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            //animation quái đánh
+            // animation quái đánh
             if (GetComponent<Animator>() != null && AnimationTanCong)
             {
                 GetComponent<Animator>().SetBool("VaCham", true);
@@ -63,12 +83,12 @@ public class QuanLyQuai : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //Ngừng animation quái đánh
-            if (GetComponent<Animator>() != null&& AnimationTanCong)
+            // Ngừng animation quái đánh
+            if (GetComponent<Animator>() != null && AnimationTanCong)
             {
                 GetComponent<Animator>().SetBool("VaCham", false);
             }
-             
+
             CancelInvoke("SatThuongQuaigayRa");
         }
     }
@@ -82,8 +102,4 @@ public class QuanLyQuai : MonoBehaviour
             nhanVat.SatThuongGanhChieu(SatThuong);
         }
     }
-    
-
-    
-    
 }
