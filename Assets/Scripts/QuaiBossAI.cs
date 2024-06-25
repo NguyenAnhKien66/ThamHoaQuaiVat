@@ -60,9 +60,9 @@ public class QuaiBossAI : MonoBehaviour
             if (force.x != 0)
             {
                 if (force.x > 0)
-                    transform.localScale = new Vector3(-0.3f, 0.3f, 1);
+                    transform.localScale = new Vector3(4, 4, 1);
                 else
-                    transform.localScale = new Vector3(0.3f, 0.3f, 1);
+                    transform.localScale = new Vector3(-4, 4, 1);
             }
             yield return null;
 

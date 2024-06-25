@@ -11,10 +11,6 @@ public class QuanLyBoss : MonoBehaviour
     public int LuongMau;
     public bool AnimationTanCong;
 
-    void Awake()
-    {
-        LuongMau = 10000;
-    }
     void Start()
     {
         
@@ -32,10 +28,6 @@ public class QuanLyBoss : MonoBehaviour
     { 
         if(collision.CompareTag("Player"))
         {         
-            //animator quai danh
-            if(GetComponent<Animator>()!=null&& AnimationTanCong)
-                GetComponent<Animator>().SetBool("VaCham", true);
-
             NhanVat = collision.GetComponent<NhanVat>();
             if(NhanVat != null)
             {
@@ -47,10 +39,6 @@ public class QuanLyBoss : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //ngung animator quai danh
-            if (GetComponent<Animator>() != null && AnimationTanCong)
-                GetComponent<Animator>().SetBool("VaCham", false);
-
             NhanVat = null;
             CancelInvoke("SatThuongBossGayRa");
         }
