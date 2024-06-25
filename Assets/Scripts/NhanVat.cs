@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class NhanVat : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class NhanVat : MonoBehaviour
     private float ThoiGianHoiChieu = 0f; // Dem thoi gian con lai cho cooldown
     private bool DangCuon = false; // Bien de kiem tra xem dang cuon hay khong
     public Animator animator; // Khai bao tham chieu den thanh phan Animator
-    
+    [SerializeField] ThanhMau thanhMau;
 
     // Tham chieu den thanh ky nang
     public ThanhKyNangNhanVat thanhKyNangNhanVat;
@@ -26,7 +27,11 @@ public class NhanVat : MonoBehaviour
     private void Start()
     {
         kinhNghiemNhanVat = 0;
-       
+        quanLyThongSoNhanVat.CapDoNhanVat = 1;
+        quanLyThongSoNhanVat.SatThuongNhoNhat = 20;
+        quanLyThongSoNhanVat.SatThuongLonNhat = 30;
+
+
     }
     public void CapNhatKinhNghiem(int kinhNghiem)
     {
@@ -148,6 +153,35 @@ public class NhanVat : MonoBehaviour
     {
         thanhMauNhanVat.NhanSatThuong(SatThuong);
     }
+    public void NhatVatPham(VatPham vatPham)
+    {
+        if (vatPham != null)
+        {
+            switch (vatPham.loaiVatPham)
+            {
+                case VatPham.LoaiVatPham.TangMau:
+                    quanLyThongSoNhanVat.MauHientai += 10;
+                    Debug.Log("Co nhan them mau ");
+                    
+                    if(quanLyThongSoNhanVat.MauHientai >= 100)
+                    {
+                        quanLyThongSoNhanVat.MauHientai = 100;
+                        Debug.Log("100/100 ");
+                    }
+                    thanhMau.CapnhatMau(quanLyThongSoNhanVat.MauHientai, quanLyThongSoNhanVat.MauToiDaNhanVat);
+                    break;
+                case VatPham.LoaiVatPham.TangDame:
+                    quanLyThongSoNhanVat.SatThuongLonNhat += 5;
+                    quanLyThongSoNhanVat.SatThuongNhoNhat += 5;
+                    break;
+                case VatPham.LoaiVatPham.TangGiap:
+                    Debug.Log("hehe chua co");
+                    break;
+            }
+            Debug.Log("Nhặt được item: " + vatPham.loaiVatPham + " với giá trị: " + 10);
+        }
+    }
+
     private void OnDestroy()
     {
         PlayerPrefs.SetInt("Level", quanLyThongSoNhanVat.CapDoNhanVat);

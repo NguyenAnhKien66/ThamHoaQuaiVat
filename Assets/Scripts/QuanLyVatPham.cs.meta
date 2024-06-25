@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 17c8f4c0f37d0a54aaf8460efc1ad492
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - VatPhamMau: {fileID: 7735406117813296389, guid: 61e3456f7bcab2e44b1a796df3545021, type: 3}
+  - VatPhamGiap: {fileID: 5089449725445408351, guid: 03fc202d2b0be684ca4f29ac31f05c27, type: 3}
+  - VatPhamDame: {fileID: 1109044732426812349, guid: 0a973dad4093e7443a020043947bf2f9, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

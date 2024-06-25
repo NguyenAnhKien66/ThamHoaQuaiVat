@@ -9,6 +9,7 @@ public class QuanLyThongSoNhanVat : ScriptableObject
     public float ThoiGianCuonNhanVat = 1f;
     public float HoiChieuCuonNhanVat = 10f;
     public int MauToiDaNhanVat = 100;
+    public int MauHientai = 100;
 
     // Sat Thuong Gay ra tu nhan Vat
     public int SatThuongNhoNhat;
