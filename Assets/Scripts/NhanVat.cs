@@ -77,6 +77,8 @@ public class NhanVat : MonoBehaviour
 
         quanLyThongSoNhanVat.SatThuongLonNhat += quanLyThongSoNhanVat.SatThuongCongThemKhiThangCap;
         quanLyThongSoNhanVat.SatThuongNhoNhat += quanLyThongSoNhanVat.SatThuongCongThemKhiThangCap;
+        quanLyThongSoNhanVat.TocDoban += 1;
+        quanLyThongSoNhanVat.LucBan += 1;
         Debug.Log("Level: " + quanLyThongSoNhanVat.CapDoNhanVat);
         quanLyThongSoNhanVat.KinhNghiemToiDa= quanLyThongSoNhanVat.CapDoNhanVat * 100;
         // Them Cac thong so khac
@@ -171,8 +173,8 @@ public class NhanVat : MonoBehaviour
                     thanhMau.CapnhatMau(quanLyThongSoNhanVat.MauHientai, quanLyThongSoNhanVat.MauToiDaNhanVat);
                     break;
                 case VatPham.LoaiVatPham.TangDame:
-                    quanLyThongSoNhanVat.SatThuongLonNhat += 5;
-                    quanLyThongSoNhanVat.SatThuongNhoNhat += 5;
+                    quanLyThongSoNhanVat.SatThuongLonNhat += 2;
+                    quanLyThongSoNhanVat.SatThuongNhoNhat += 2;
                     break;
                 case VatPham.LoaiVatPham.TangGiap:
                     Debug.Log("hehe chua co");

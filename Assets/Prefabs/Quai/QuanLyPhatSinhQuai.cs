@@ -7,7 +7,7 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
     public GameObject quaiPrefab;
     public Transform[] viTriSinhRa;
     public float thoiGianBatDau = 2f;
-    public float thoiGianLapLai = 60f;
+    public float thoiGianLapLai = 30f;
     private int soLuongQuai = 1;
     public float khoangCachMinGiuaCacQuai = 2f; // Khoang cach toi thieu giua cac quai
 
