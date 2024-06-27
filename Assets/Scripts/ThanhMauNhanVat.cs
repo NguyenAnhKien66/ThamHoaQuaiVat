@@ -14,7 +14,7 @@ public class ThanhMauNhanVat : MonoBehaviour
 
     private void Start()
     {
-        quanLyThongSoNhanVat.MauHientai = quanLyThongSoNhanVat.MauToiDaNhanVat;
+        quanLyThongSoNhanVat.MauHientai = quanLyThongSoNhanVat.MauToiDaNhanVat; 
         thanhMau.CapnhatMau(quanLyThongSoNhanVat.MauHientai, quanLyThongSoNhanVat.MauToiDaNhanVat);
     }
 
