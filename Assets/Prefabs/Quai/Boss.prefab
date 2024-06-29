@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SatThuongNhoNhat: 4
   SatThuongLonNhat: 6
-  LuongMau: 10000
+  LuongMau: 1000
   AnimationTanCong: 1
 --- !u!95 &5941759120374932330
 Animator:

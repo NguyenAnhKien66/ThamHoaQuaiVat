@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 8254222968374482198}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8, y: 5.58, z: 0}
+  m_LocalPosition: {x: -4.78, y: 9.17, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -189,6 +189,7 @@ MonoBehaviour:
   SatThuongLonNhat: 5
   LuongMau: 50
   AnimationTanCong: 0
+  quanLyVatPham: {fileID: 0}
 --- !u!50 &-5839559755670056081
 Rigidbody2D:
   serializedVersion: 4

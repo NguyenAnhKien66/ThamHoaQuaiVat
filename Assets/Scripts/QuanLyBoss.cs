@@ -25,9 +25,14 @@ public class QuanLyBoss : MonoBehaviour
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
-    { 
-        if(collision.CompareTag("Player"))
-        {         
+    {
+        if (collision.CompareTag("Player"))
+        {
+            // animation tan cong
+            if (GetComponent<Animator>() != null && AnimationTanCong)
+            {
+                GetComponent<Animator>().SetBool("VaCham", true);
+            }
             NhanVat = collision.GetComponent<NhanVat>();
             if(NhanVat != null)
             {
@@ -39,6 +44,11 @@ public class QuanLyBoss : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            //Ngung animation tan cong
+            if (GetComponent<Animator>() != null && AnimationTanCong)
+            {
+                GetComponent<Animator>().SetBool("VaCham", false);
+            }
             NhanVat = null;
             CancelInvoke("SatThuongBossGayRa");
         }

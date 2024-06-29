@@ -11,8 +11,9 @@ public class QuaiCanChienAI : MonoBehaviour
     Coroutine DiChuyenCoroutine;
     public float TocDoDiChuyen;
     public float KhoangCachDiemKeTiep;
-    
 
+    int dem = 0;
+  
     // Start is called before the first frame update
     private void Start()
     {
@@ -55,20 +56,25 @@ public class QuaiCanChienAI : MonoBehaviour
             Vector3 force=direction*TocDoDiChuyen*Time.deltaTime;
             transform.position += force;
 
-            //Animation khi quai di chuyen
-            GetComponent<Animator>().SetFloat("TocDo", direction.sqrMagnitude);
-
             float KhoangCach = Vector2.Distance(transform.position, path.vectorPath[Diem]);
             if(KhoangCach < KhoangCachDiemKeTiep)
             {
                 Diem++;
             }
+           
+                
+           
+           
             if(force.x!=0)
             {
                 if (force.x > 0)
+                {
+
                     transform.localScale = new Vector3(0.15f, 0.15f, 0);
+                }    
+                   
                 else
-                    transform.localScale = new Vector3(-0.15f, 0.15f, 0);
+                    transform.localScale = new Vector3(-0.15f, 0.15f,0);
 
 
             }
