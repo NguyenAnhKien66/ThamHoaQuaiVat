@@ -14,9 +14,8 @@ public class ThanhMau : MonoBehaviour
     {
         LuongMau.fillAmount=(float)LuongMauHienTai/ (float)LuongMauToiDa;
         Mautxt.text= LuongMauHienTai.ToString()+" / "+LuongMauToiDa.ToString();
-
-
     }
+
 
  
 }
