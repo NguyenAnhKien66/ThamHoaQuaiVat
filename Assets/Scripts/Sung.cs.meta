@@ -8,6 +8,7 @@ MonoImporter:
   - VienDan: {instanceID: 0}
   - ViTriBan: {instanceID: 0}
   - TiaLua: {instanceID: 0}
+  - AmThanhDan: {fileID: 8300000, guid: 52a34b07de8cf1548829b398fb2d1d11, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

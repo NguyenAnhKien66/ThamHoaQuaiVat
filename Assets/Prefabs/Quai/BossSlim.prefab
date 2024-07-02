@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 1057734512587843740}
   - component: {fileID: 9158776742424721241}
   - component: {fileID: 7315867484360001107}
-  - component: {fileID: 7979571490766629903}
+  - component: {fileID: 612466396294837}
   m_Layer: 0
   m_Name: BossSlim
-  m_TagString: QuaiVat
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -222,7 +222,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7979571490766629903
+--- !u!114 &612466396294837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,11 +231,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7210530881058903835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0964d0d5d7afa54ca5ec5c26a9da248, type: 3}
+  m_Script: {fileID: 11500000, guid: 6774b4499b5c75a4c9b59bdb3037dbda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SatThuongNhoNhat: 20
-  SatThuongLonNhat: 30
+  SatThuongNhoNhat: 1
+  SatThuongLonNhat: 2
   LuongMau: 1000
   AnimationTanCong: 0
-  quanLyVatPham: {fileID: 0}

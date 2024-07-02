@@ -13,7 +13,7 @@ public class QuaiCanChienAI : MonoBehaviour
     public float KhoangCachDiemKeTiep;
     private Vector3 initialScale;
 
-  
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -24,10 +24,10 @@ public class QuaiCanChienAI : MonoBehaviour
     void TinhToanDuongDi()
     {
         Vector2 MucTieu = TimMucTieu();
-        if(seeker.IsDone())
+        if (seeker.IsDone())
         {
-            seeker.StartPath(transform.position,MucTieu,HoanThanhDuong);
-        }    
+            seeker.StartPath(transform.position, MucTieu, HoanThanhDuong);
+        }
     }
     Vector2 TimMucTieu()
     {
@@ -50,35 +50,36 @@ public class QuaiCanChienAI : MonoBehaviour
     IEnumerator DiChuyenDenMucTieuCoroutine()
     {
         int Diem = 0;
-        
-        while(Diem<path.vectorPath.Count)
+
+        while (Diem < path.vectorPath.Count)
         {
-            Vector2 direction = ((Vector2)path.vectorPath[Diem]-(Vector2)transform.position).normalized;
-            Vector3 force=direction*TocDoDiChuyen*Time.deltaTime;
+            Vector2 direction = ((Vector2)path.vectorPath[Diem] - (Vector2)transform.position).normalized;
+            Vector3 force = direction * TocDoDiChuyen * Time.deltaTime;
             transform.position += force;
 
             float KhoangCach = Vector2.Distance(transform.position, path.vectorPath[Diem]);
-            if(KhoangCach < KhoangCachDiemKeTiep)
+            if (KhoangCach < KhoangCachDiemKeTiep)
             {
                 Diem++;
             }
-           
-                
-           
-           
-            if(force.x!=0)
+
+
+
+
+            if (force.x != 0)
             {
                 if (force.x > 0)
                 {
 
                     transform.localScale = new Vector3(Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
-                }    
-                   
+                }
+
                 else
                     transform.localScale = new Vector3(-Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
 
-        
-            yield return null;
+
+                yield return null;
+            }
         }
-    }   
+    }
 }

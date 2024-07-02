@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,7 +21,18 @@ public class QuanLyBoss : MonoBehaviour
         if(LuongMau <=0)
         {
             Destroy(gameObject);
-           /* SceneManager.LoadScene("Result");*/
+            DuLieuGame gameData = DieuKhienGame.instance.duLieuGame;
+            if (gameData != null && gameData.maps.Length > 0)
+            {
+                int currentSceneIndex = SceneManager.GetActiveScene().buildIndex - 1;
+
+                // Lưu cấp độ
+                gameData.maps[currentSceneIndex].DaHaDuocboss = true; 
+                // Lưu dữ liệu vào file JSON
+                QuanLyLuuTru.LuuGame(gameData);
+
+            }
+            SceneManager.LoadScene("Result");
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

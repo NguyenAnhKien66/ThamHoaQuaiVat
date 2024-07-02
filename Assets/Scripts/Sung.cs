@@ -9,7 +9,12 @@ public class Sung : MonoBehaviour
     public Transform ViTriBan; // Vi tri ban dan
     public GameObject TiaLua; // Hieu ung tia lua
     private float tocdoban; // Bien dem de theo doi thoi gian giua cac lan ban
-
+    public AudioClip AmThanhDan; // am thanh dan
+    private AudioSource NguonAmThanh;
+    private void Start()
+    {
+        NguonAmThanh = GetComponent<AudioSource>();
+    }
     void Update()
     {
         XoaySung(); // Goi ham xoay sung theo vi tri chuot
@@ -48,7 +53,12 @@ public class Sung : MonoBehaviour
         // Hieu ung tia lua sau moi lan ban
         Instantiate(TiaLua, ViTriBan.position, transform.rotation, transform);
 
+        if (AmThanhDan != null)
+        {
+            NguonAmThanh.PlayOneShot(AmThanhDan);
+        }
+
         Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>(); // Lay thanh phan Rigidbody2D cua vien dan
-        rb.AddForce(transform.right * quanLyThongSoNhanVat  .LucBan, ForceMode2D.Impulse); // Ap luc len vien dan de ban no
+        rb.AddForce(transform.right * quanLyThongSoNhanVat.LucBan, ForceMode2D.Impulse); // Ap luc len vien dan de ban no
     }
 }

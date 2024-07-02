@@ -7,4 +7,5 @@ public class DuLieuMap
     public float thoiGianSinhTonLauNhat;
     public int soKillHienTai;
     public int soKillCaoNhat;
+    public bool DaHaDuocboss;
 }

@@ -37,7 +37,7 @@ public class NhanVat : MonoBehaviour
         quanLyThongSoNhanVat.SatThuongNhoNhat = 20;
         quanLyThongSoNhanVat.SatThuongLonNhat = 30;
         quanLyThongSoNhanVat.KinhNghiemToiDa = 100;
-        quanLyThongSoNhanVat.TocDoban = 10;
+        quanLyThongSoNhanVat.TocDoban = 2;
         quanLyThongSoNhanVat.LucBan = 10;
 
 
