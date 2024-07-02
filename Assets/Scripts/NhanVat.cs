@@ -19,6 +19,10 @@ public class NhanVat : MonoBehaviour
     public Animator animator; // Khai bao tham chieu den thanh phan Animator
     [SerializeField] ThanhMau thanhMau;
 
+    //Nghĩa cập nhật 
+    public DieuKhienText DieuKhienText;
+    //
+
     // Tham chieu den thanh ky nang
     public ThanhKyNangNhanVat thanhKyNangNhanVat;
 
@@ -45,6 +49,10 @@ public class NhanVat : MonoBehaviour
         {
             kinhNghiemNhanVat = 0; // Reset Kinh nghiem sau khi moi lan len cap
             CapNhatCapDo(); // Goi ham thang cap
+
+            //Nghĩa cập nhật
+            DieuKhienText.HienThiThangCapTxt();
+            //
         }
         CapNhatUI();
     }
@@ -185,10 +193,18 @@ public class NhanVat : MonoBehaviour
                         Debug.Log("100/100 ");
                     }
                     thanhMau.CapnhatMau(quanLyThongSoNhanVat.MauHientai, quanLyThongSoNhanVat.MauToiDaNhanVat);
+
+                    //Nghĩa cập nhật
+                    DieuKhienText.HienThiCongMauTxt(10);
+                    //
                     break;
                 case VatPham.LoaiVatPham.TangDame:
                     quanLyThongSoNhanVat.SatThuongLonNhat += 2;
                     quanLyThongSoNhanVat.SatThuongNhoNhat += 2;
+
+                    //Nghĩa cập nhật
+                    DieuKhienText.HienThiCongDameTxt(2);
+                    //
                     break;
                 case VatPham.LoaiVatPham.TangGiap:
                     quanLyThongSoNhanVat.GiapHienTai += 5;
