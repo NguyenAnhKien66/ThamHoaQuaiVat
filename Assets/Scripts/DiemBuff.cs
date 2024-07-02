@@ -6,6 +6,7 @@ public class DiemBuff : MonoBehaviour
 {
     [SerializeField] GameObject ConTro;
     public QuanLyThongSoNhanVat quanLyThongSoNhanVat;
+    public DieuKhienText DieuKhienText;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,6 +14,7 @@ public class DiemBuff : MonoBehaviour
         {
             quanLyThongSoNhanVat.SatThuongLonNhat += quanLyThongSoNhanVat.SatThuongCongThemKhiThangCap;
             quanLyThongSoNhanVat.SatThuongNhoNhat += quanLyThongSoNhanVat.SatThuongCongThemKhiThangCap;
+            DieuKhienText.HienThiCongDameTxt(quanLyThongSoNhanVat.SatThuongCongThemKhiThangCap);
             Destroy(gameObject);
             ConTro.SetActive(false);
         }    

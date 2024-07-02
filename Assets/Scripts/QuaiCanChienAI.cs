@@ -11,12 +11,13 @@ public class QuaiCanChienAI : MonoBehaviour
     Coroutine DiChuyenCoroutine;
     public float TocDoDiChuyen;
     public float KhoangCachDiemKeTiep;
+    private Vector3 initialScale;
 
-    int dem = 0;
   
     // Start is called before the first frame update
     private void Start()
     {
+        initialScale = transform.localScale;
         InvokeRepeating("TinhToanDuongDi", 0f, 0.5f);
     }
     //Tinh toan duong di
@@ -70,11 +71,11 @@ public class QuaiCanChienAI : MonoBehaviour
                 if (force.x > 0)
                 {
 
-                    transform.localScale = new Vector3(0.15f, 0.15f, 0);
+                    transform.localScale = new Vector3(Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
                 }    
                    
                 else
-                    transform.localScale = new Vector3(-0.15f, 0.15f,0);
+                    transform.localScale = new Vector3(-Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
 
 
             }

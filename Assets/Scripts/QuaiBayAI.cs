@@ -13,6 +13,8 @@ public class QuaiBayAI : MonoBehaviour
     public float TocDoDiChuyen; // Toc do di chuyen cua quai vat
     public bool CapNhatDuongDi; // Cap nhat duong di lien tuc
     public float KhoangCachTiepTheo; // Khoang cach den diem tiep theo
+    public bool QuaiHuongVeTrai;
+    private Vector3 initialScale;
 
     // Ban dan
     public GameObject Dan; // Doi tuong dan de ban
@@ -22,6 +24,7 @@ public class QuaiBayAI : MonoBehaviour
 
     private void Start()
     {
+        initialScale = transform.localScale;    
         // Goi ham TinhToanDuong moi 0.5 giay de tinh toan duong di
         InvokeRepeating("TinhToanDuong", 0f, 0.5f);
         DichDen = true; // Xac dinh dich den
@@ -109,10 +112,19 @@ public class QuaiBayAI : MonoBehaviour
             if (force.x != 0)
             {
                 if (force.x > 0)
-                    transform.localScale = new Vector3(0.15f, 0.15f, 0);
+                {
+                    if (QuaiHuongVeTrai) //Nếu quái hướng về bên trái
+                        transform.localScale = new Vector3(-Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
+                    else
+                        transform.localScale = new Vector3(Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
+                }
                 else
-                    transform.localScale = new Vector3(-0.15f, 0.15f, 0);
-
+                {
+                    if (QuaiHuongVeTrai) //Nếu quái hướng về bên trái
+                        transform.localScale = new Vector3(Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
+                    else
+                        transform.localScale = new Vector3(-Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
+                }
 
             }
             yield return null; // Doi den khung hinh tiep theo

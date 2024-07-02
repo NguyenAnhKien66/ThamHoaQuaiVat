@@ -216,6 +216,7 @@ MonoBehaviour:
   Seeker: {fileID: 9208641673252886702}
   TocDoDiChuyen: 3
   KhoangCachDiemKeTiep: 0.3
+  BossHuongVeTrai: 1
 --- !u!114 &5074243393920837808
 MonoBehaviour:
   m_ObjectHideFlags: 0

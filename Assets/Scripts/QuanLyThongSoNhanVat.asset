@@ -16,14 +16,14 @@ MonoBehaviour:
   TocDoCuonNhanVat: 1
   ThoiGianCuonNhanVat: 1
   HoiChieuCuonNhanVat: 10
-  MauToiDaNhanVat: 100
-  MauHientai: 7
-  SatThuongNhoNhat: 32
-  SatThuongLonNhat: 42
+  MauToiDaNhanVat: 9999
+  MauHientai: 100
+  SatThuongNhoNhat: 22
+  SatThuongLonNhat: 32
   SatThuongNhoNhatQuai: 1
   SatThuongLonNhatQuai: 3
-  TocDoban: 2
-  LucBan: 11
+  TocDoban: 0.1
+  LucBan: 15
   KinhNghiemToiDa: 200
   SatThuongCongThemKhiThangCap: 5
-  CapDoNhanVat: 2
+  CapDoNhanVat: 1

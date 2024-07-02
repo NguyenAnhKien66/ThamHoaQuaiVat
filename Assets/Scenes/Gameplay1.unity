@@ -106003,6 +106003,7 @@ GameObject:
   - component: {fileID: 362552330}
   - component: {fileID: 362552334}
   - component: {fileID: 362552335}
+  - component: {fileID: 362552336}
   m_Layer: 0
   m_Name: NhanVat
   m_TagString: Player
@@ -106046,6 +106047,7 @@ MonoBehaviour:
   HoiChieuCuon: 10
   animator: {fileID: 0}
   thanhMau: {fileID: 1920415158}
+  DieuKhienText: {fileID: 0}
   thanhKyNangNhanVat: {fileID: 503252120}
   thanhKinhNghiem: {fileID: 81843919}
   textCapDo: {fileID: 1798936773}
@@ -106193,6 +106195,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &362552336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362552327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138173e736159cd41b5b210eb92c2867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ThangCapTxt: {fileID: 0}
+  CongDameTxt: {fileID: 0}
+  CongMauTxt: {fileID: 0}
+  ThoiGianHienThi: 1
 --- !u!1 &462878520
 GameObject:
   m_ObjectHideFlags: 0
@@ -107027,6 +107045,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nut_batdau: {fileID: 0}
   MenuTamDung: {fileID: 1085768054}
+  QLKhoaMap2: {fileID: 0}
+  QLKhoaMap3: {fileID: 0}
+  QLKhoaMap4: {fileID: 0}
+  QLKhoaMap5: {fileID: 0}
+  MapChonTxt: {fileID: 0}
 --- !u!1 &1120331065
 GameObject:
   m_ObjectHideFlags: 0
@@ -107520,7 +107543,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1085768056}
         m_TargetAssemblyTypeName: ChucNang, Assembly-CSharp
         m_MethodName: ThoatGamePlay
         m_Mode: 1

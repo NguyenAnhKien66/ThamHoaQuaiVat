@@ -235,6 +235,7 @@ MonoBehaviour:
   TocDoDiChuyen: 2
   CapNhatDuongDi: 1
   KhoangCachTiepTheo: 1
+  QuaiHuongVeTrai: 1
   Dan: {fileID: 5678471727513526027, guid: 19928545cc75cf243b853273338fc93d, type: 3}
   TocDoDan: 5
   TocDoBan: 10

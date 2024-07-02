@@ -1,4 +1,4 @@
-using Pathfinding;
+﻿using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,9 +11,12 @@ public class QuaiBossAI : MonoBehaviour
     Coroutine DiChuyenCoroutine;
     public float TocDoDiChuyen;
     public float KhoangCachDiemKeTiep;
+    public bool BossHuongVeTrai;
+    private Vector3 initialScale;
     // Start is called before the first frame update
     void Start()
     {
+        initialScale = transform.localScale;
         InvokeRepeating("TinhToanDuongDi", 0f, 0.5f);
     }
     void TinhToanDuongDi()
@@ -60,9 +63,19 @@ public class QuaiBossAI : MonoBehaviour
             if (force.x != 0)
             {
                 if (force.x > 0)
-                    transform.localScale = new Vector3(4, 4, 1);
+                {
+                    if (BossHuongVeTrai) //Nếu boss hướng về bên trái
+                        transform.localScale = new Vector3(-Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
+                    else
+                        transform.localScale = new Vector3(Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
+                }
                 else
-                    transform.localScale = new Vector3(-4, 4, 1);
+                {
+                    if (BossHuongVeTrai) //Nếu boss hướng về bên trái
+                        transform.localScale = new Vector3(Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
+                    else
+                        transform.localScale = new Vector3(-Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
+                }
             }
             yield return null;
 
