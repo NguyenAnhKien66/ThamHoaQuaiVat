@@ -7,7 +7,7 @@ public class QuanLyQuai : MonoBehaviour
     private NhanVat nhanVat;
     public int SatThuongNhoNhat;
     public int SatThuongLonNhat;
-    public int LuongMau;
+    public int LuongMau=100;
     public bool AnimationTanCong;
 
     GameObject obj;
@@ -15,8 +15,6 @@ public class QuanLyQuai : MonoBehaviour
 
     void Awake()
     {
-        LuongMau = 100;
-
         // Tìm đối tượng QuanLyVatPham nếu chưa được gán
         if (quanLyVatPham == null)
         {
@@ -25,7 +23,7 @@ public class QuanLyQuai : MonoBehaviour
 
         if (quanLyVatPham == null)
         {
-            Debug.LogError("QuanLyVatPham not found in the scene. Please ensure it is added and active.");
+            Debug.LogError("QuanLyVatPham khong tim thay");
         }
     }
 

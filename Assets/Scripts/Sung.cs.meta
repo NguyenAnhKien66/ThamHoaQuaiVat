@@ -3,7 +3,11 @@ guid: 19a383f4fa7d31e408a2b5447a57b1aa
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - quanLyThongSoNhanVat: {fileID: 11400000, guid: 4d3535415c9a09246b23bd4938db445c, type: 2}
+  - VienDan: {instanceID: 0}
+  - ViTriBan: {instanceID: 0}
+  - TiaLua: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

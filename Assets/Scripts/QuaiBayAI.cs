@@ -21,7 +21,7 @@ public class QuaiBayAI : MonoBehaviour
     public float TocDoDan; // Toc do di chuyen cua dan
     public float TocDoBan = 10f; // Thoi gian hoi chieu cua viec ban dan
     private float HoiChieu; // Thoi gian hoi chieu cua viec ban dan
-
+    public bool DaoChieu=false;
     private void Start()
     {
         initialScale = transform.localScale;    

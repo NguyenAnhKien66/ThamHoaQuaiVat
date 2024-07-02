@@ -77,8 +77,7 @@ public class QuaiCanChienAI : MonoBehaviour
                 else
                     transform.localScale = new Vector3(-Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
 
-
-            }
+        
             yield return null;
         }
     }   

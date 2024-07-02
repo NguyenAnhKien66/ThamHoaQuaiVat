@@ -408,71 +408,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216296861}
   m_CullTransparentMesh: 1
---- !u!1001 &239612914
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3157096998191099440, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
-      propertyPath: quanLyVatPham
-      value: 
-      objectReference: {fileID: 547717717}
-    - target: {fileID: 3420286654994896267, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5093534153873224192, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
-      propertyPath: m_Name
-      value: QuaiCanChien
-      objectReference: {fileID: 0}
-    - target: {fileID: 7965906834614797664, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 7965906834614797664, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7965906834614797664, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7965906834614797664, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7965906834614797664, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7965906834614797664, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7965906834614797664, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7965906834614797664, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7965906834614797664, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7965906834614797664, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
 --- !u!1 &292596036
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +483,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292596036}
   m_CullTransparentMesh: 1
+--- !u!1 &310686933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 310686936}
+  - component: {fileID: 310686935}
+  - component: {fileID: 310686934}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &310686934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310686933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9842e81a0cb4d1044bcd63f16437f7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duLieuGame:
+    maps: []
+--- !u!114 &310686935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310686933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 679f88e8f4cdb4940a645f6188dd3138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &310686936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310686933}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.2893305, y: -0.38165608, z: -0.04879998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &312361418
 GameObject:
   m_ObjectHideFlags: 0
@@ -16358,7 +16352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde45b1e3ab037c4db8eed8b4954aabb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quaiPrefab: {fileID: 5093534153873224192, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
+  quaiPrefabs:
+  - {fileID: 6781284486299184690, guid: 2d500f2451f71a94f84e598ca9a0117b, type: 3}
   viTriSinhRa:
   - {fileID: 975196633}
   thoiGianBatDau: 2
@@ -16584,7 +16579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde45b1e3ab037c4db8eed8b4954aabb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quaiPrefab: {fileID: 5093534153873224192, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
+  quaiPrefabs:
+  - {fileID: 6781284486299184690, guid: 2d500f2451f71a94f84e598ca9a0117b, type: 3}
   viTriSinhRa:
   - {fileID: 1289611078}
   thoiGianBatDau: 2
@@ -20843,10 +20839,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde45b1e3ab037c4db8eed8b4954aabb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quaiPrefab: {fileID: 8254222968374482198, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
+  quaiPrefabs:
+  - {fileID: 4859121271245160395, guid: 6bef4c519fc49de4c8ad631e066cb57b, type: 3}
   viTriSinhRa:
   - {fileID: 1334614747}
-  thoiGianBatDau: 60
+  thoiGianBatDau: 20
   thoiGianLapLai: 10
   khoangCachMinGiuaCacQuai: 3
 --- !u!4 &1334614747
@@ -237714,75 +237711,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03fc202d2b0be684ca4f29ac31f05c27, type: 3}
---- !u!1001 &8353757747810294889
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 203437671591983945, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: quanLyVatPham
-      value: 
-      objectReference: {fileID: 547717717}
-    - target: {fileID: 1238191311304061751, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238191311304061751, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238191311304061751, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238191311304061751, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238191311304061751, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238191311304061751, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238191311304061751, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238191311304061751, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238191311304061751, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238191311304061751, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4143010907537697579, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: CapNhatDuongDi
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8032685492001947769, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8254222968374482198, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
-      propertyPath: m_Name
-      value: Quaibay
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
 --- !u!1001 &8468228773597855090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -237848,8 +237776,6 @@ SceneRoots:
   - {fileID: 362552329}
   - {fileID: 1508131436}
   - {fileID: 2084277442}
-  - {fileID: 8353757747810294889}
-  - {fileID: 239612914}
   - {fileID: 462878524}
   - {fileID: 891545585}
   - {fileID: 2093371144}
@@ -237863,4 +237789,4 @@ SceneRoots:
   - {fileID: 8468228773597855090}
   - {fileID: 3373299420401502412}
   - {fileID: 547717718}
-  - {fileID: 324602137}
+  - {fileID: 310686936}

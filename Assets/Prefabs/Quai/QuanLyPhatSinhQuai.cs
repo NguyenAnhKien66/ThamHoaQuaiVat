@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class QuanLyPhatSinhQuai : MonoBehaviour
 {
-    public GameObject quaiPrefab;
+    public GameObject[] quaiPrefabs; // Array of different monster prefabs
     public Transform[] viTriSinhRa;
     public float thoiGianBatDau = 2f;
     public float thoiGianLapLai = 30f;
     private int soLuongQuai = 1;
-    public float khoangCachMinGiuaCacQuai = 2f; // Khoang cach toi thieu giua cac quai
+    public float khoangCachMinGiuaCacQuai = 2f; // Minimum distance between monsters
 
     private void Start()
     {
@@ -25,14 +25,17 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
         {
             for (int i = 0; i < soLuongQuai; i++)
             {
-                if (quaiPrefab != null)
-                { 
+                if (quaiPrefabs.Length > 0)
+                {
                     Transform viTriNgauNhien = viTriSinhRa[Random.Range(0, viTriSinhRa.Length)];
 
-                    // Kiem tra vi tri hop le truoc khi sinh quai vat
+                    // Check for valid spawn position before spawning the monster
                     if (KiemTraViTriHopLe(viTriNgauNhien.position))
                     {
-                        // Tạo một Vector3 mới với giá trị Z là 0
+                        // Select a random monster prefab
+                        GameObject quaiPrefab = quaiPrefabs[Random.Range(0, quaiPrefabs.Length)];
+
+                        // Create a new Vector3 with Z value as 0
                         Vector3 viTriMoi = new Vector3(viTriNgauNhien.position.x, viTriNgauNhien.position.y, 0f);
 
                         Instantiate(quaiPrefab, viTriMoi, Quaternion.identity);
@@ -44,10 +47,10 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogWarning("Prefab quái vật đã bị hủy. Không thể sinh ra quái vật.");
+                    Debug.LogWarning("Không có prefab quái vật nào trong mảng. Không thể sinh ra quái vật.");
                 }
 
-                yield return new WaitForSeconds(1f); // Đợi 0.1 giây giữa mỗi lần sinh quái
+                yield return new WaitForSeconds(1f); // Wait 1 second between each monster spawn
             }
             soLuongQuai++;
 

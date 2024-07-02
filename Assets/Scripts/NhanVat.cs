@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
 
@@ -31,9 +32,13 @@ public class NhanVat : MonoBehaviour
     private void Start()
     {
         kinhNghiemNhanVat = 0;
+        quanLyThongSoNhanVat.GiapHienTai = 0;
         quanLyThongSoNhanVat.CapDoNhanVat = 1;
         quanLyThongSoNhanVat.SatThuongNhoNhat = 20;
         quanLyThongSoNhanVat.SatThuongLonNhat = 30;
+        quanLyThongSoNhanVat.KinhNghiemToiDa = 100;
+        quanLyThongSoNhanVat.TocDoban = 10;
+        quanLyThongSoNhanVat.LucBan = 10;
 
 
     }
@@ -159,10 +164,19 @@ public class NhanVat : MonoBehaviour
     }
 
     public ThanhMauNhanVat thanhMauNhanVat;
+    public ThanhGiap thanhGiapNhanVat;
     public void SatThuongGanhChieu(int SatThuong)
     {
-        thanhMauNhanVat.NhanSatThuong(SatThuong);
+        if (quanLyThongSoNhanVat.GiapHienTai > 0)
+        {
+            thanhGiapNhanVat.NhanSatThuong(SatThuong);
+        }
+        else
+        {
+            thanhMauNhanVat.NhanSatThuong(SatThuong);
+        }
     }
+
     public void NhatVatPham(VatPham vatPham)
     {
         if (vatPham != null)
@@ -193,17 +207,41 @@ public class NhanVat : MonoBehaviour
                     //
                     break;
                 case VatPham.LoaiVatPham.TangGiap:
-                    Debug.Log("hehe chua co");
+                    quanLyThongSoNhanVat.GiapHienTai += 5;
+                    if (quanLyThongSoNhanVat.GiapHienTai >= 100)
+                    {
+                        quanLyThongSoNhanVat.GiapHienTai = 100;
+                        Debug.Log("100/100 ");
+                    }
+                    thanhGiapNhanVat.CapnhatGiap(quanLyThongSoNhanVat.GiapHienTai, quanLyThongSoNhanVat.GiapToiDa);
                     break;
             }
             Debug.Log("Nhặt được item: " + vatPham.loaiVatPham + " với giá trị: " + 10);
         }
     }
 
+    
     private void OnDestroy()
     {
-        PlayerPrefs.SetInt("Level", quanLyThongSoNhanVat.CapDoNhanVat);
-        PlayerPrefs.Save();
+        // Kiểm tra và lưu cấp độ hiện tại và cao nhất
+        DuLieuGame gameData = DieuKhienGame.instance.duLieuGame;
+        if (gameData != null && gameData.maps.Length > 0)
+        {
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex - 1;
+
+            // Lưu cấp độ
+            gameData.maps[currentSceneIndex].CapHienTai = quanLyThongSoNhanVat.CapDoNhanVat;
+            if (gameData.maps[currentSceneIndex].CapHienTai >= gameData.maps[currentSceneIndex].CapCaoNhat)
+            {
+                gameData.maps[currentSceneIndex].CapCaoNhat = gameData.maps[currentSceneIndex].CapHienTai;
+            }
+            PlayerPrefs.SetInt("CapCaoNhat", gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].CapCaoNhat);
+            PlayerPrefs.SetInt("CapHienTai", gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].CapHienTai);
+            // Lưu dữ liệu vào file JSON
+            QuanLyLuuTru.LuuGame(gameData);
+            
+        }
     }
+
 }
-    
+
