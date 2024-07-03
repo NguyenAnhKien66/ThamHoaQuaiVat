@@ -161,5 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c34a81fec3568f54a9dce6e9cbcd24f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConTro: {fileID: 0}
+  ConTro: {fileID: 8025949623084486526, guid: 2a749834b9d0c6e45ab7c016e5b88828, type: 3}
   quanLyThongSoNhanVat: {fileID: 11400000, guid: 4d3535415c9a09246b23bd4938db445c, type: 2}
+  DieuKhienText: {fileID: 0}

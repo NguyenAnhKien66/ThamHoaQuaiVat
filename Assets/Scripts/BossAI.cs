@@ -2,6 +2,7 @@ using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossAI : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class BossAI : MonoBehaviour
     public bool CapNhatDuongDi; // Cap nhat duong di lien tuc
     public float KhoangCachTiepTheo; // Khoang cach den diem tiep theo
     private Vector3 initialScale;
+
     // Ban dan
     public GameObject Dan; // Doi tuong dan de ban
     public float TocDoDan; // Toc do di chuyen cua dan

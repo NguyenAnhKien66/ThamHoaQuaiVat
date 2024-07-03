@@ -2382,6 +2382,7 @@ MonoBehaviour:
   VienDan: {fileID: 278823866704907309, guid: d7b043c502c991c40991b0e04ab010ea, type: 3}
   ViTriBan: {fileID: 936908491}
   TiaLua: {fileID: 3680348624768178883, guid: bee5babefa1ed1341abe85191fb8d9d4, type: 3}
+  AmThanhDan: {fileID: 0}
 --- !u!212 &936908493
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2778,6 +2779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1172148210}
   - component: {fileID: 1172148209}
+  - component: {fileID: 1172148211}
   m_Layer: 0
   m_Name: DiemSinhBoss
   m_TagString: Untagged
@@ -2801,6 +2803,7 @@ MonoBehaviour:
   viTriSinhRa:
   - {fileID: 1172148210}
   thoiGianXuatHien: 1
+  AmThanh: {fileID: 8300000, guid: ffdca19bd1a51794fa7cc8e850048ad7, type: 3}
 --- !u!4 &1172148210
 Transform:
   m_ObjectHideFlags: 0
@@ -386030,3 +386033,4 @@ SceneRoots:
   - {fileID: 3373299420401502412}
   - {fileID: 547717718}
   - {fileID: 2021697098}
+  - {fileID: 1934694337}
