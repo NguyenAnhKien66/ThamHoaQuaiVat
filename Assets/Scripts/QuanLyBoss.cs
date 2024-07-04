@@ -26,7 +26,7 @@ public class QuanLyBoss : MonoBehaviour
             {
                 int currentSceneIndex = SceneManager.GetActiveScene().buildIndex - 1;
 
-                // Lưu cấp độ
+                // Lưu thông tin đã hạ được boss
                 gameData.maps[currentSceneIndex].DaHaDuocboss = true; 
                 // Lưu dữ liệu vào file JSON
                 QuanLyLuuTru.LuuGame(gameData);

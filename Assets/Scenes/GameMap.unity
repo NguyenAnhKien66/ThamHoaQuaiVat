@@ -657,6 +657,7 @@ GameObject:
   m_Component:
   - component: {fileID: 244884258}
   - component: {fileID: 244884259}
+  - component: {fileID: 244884260}
   m_Layer: 5
   m_Name: CacMap
   m_TagString: Untagged
@@ -712,6 +713,22 @@ MonoBehaviour:
   m_Spacing: {x: 20, y: 20}
   m_Constraint: 2
   m_ConstraintCount: 2
+--- !u!114 &244884260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244884257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270f8fb8a26dc1242850c11ff259d608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QLKhoaMap2: {fileID: 630085208}
+  QLKhoaMap3: {fileID: 1905449681}
+  QLKhoaMap4: {fileID: 1244998080}
+  QLKhoaMap5: {fileID: 831360774}
 --- !u!1 &302683658
 GameObject:
   m_ObjectHideFlags: 0

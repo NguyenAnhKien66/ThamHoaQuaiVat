@@ -1,15 +1,16 @@
-Shader "Unlit/NewUnlitShader"
+﻿Shader "Unlit/NewUnlitShader"
 {
-    Properties
+   Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}
-        _Color ("Main Color", Color) = (1,1,1,1)
+        _MainTex ("Sprite Texture", 2D) = "white" {}
+        _Color ("Tint", Color) = (1, 1, 1, 1)
         _Intensity ("Glow Intensity", Range(0, 10)) = 1
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "Queue"="Transparent" "RenderType"="Transparent" }
         LOD 100
+
 
         Pass
         {
@@ -22,15 +23,18 @@ Shader "Unlit/NewUnlitShader"
             {
                 float4 vertex : POSITION;
                 float2 texcoord : TEXCOORD0;
+                float4 color : COLOR;
             };
 
             struct v2f
             {
                 float2 texcoord : TEXCOORD0;
                 float4 vertex : SV_POSITION;
+                fixed4 color : COLOR;
             };
 
             sampler2D _MainTex;
+            float4 _MainTex_ST;
             fixed4 _Color;
             float _Intensity;
 
@@ -38,17 +42,17 @@ Shader "Unlit/NewUnlitShader"
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.texcoord = v.texcoord;
+                o.texcoord = TRANSFORM_TEX(v.texcoord, _MainTex);
+                o.color = v.color * _Color;
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed4 texcol = tex2D(_MainTex, i.texcoord) * _Color;
-                texcol.rgb *= _Intensity; // Increase intensity of the color
-                texcol.rgb = saturate(texcol.rgb); // Limit color values to [0, 1]
-                texcol.a = 1.0; // Ensure alpha is set to 1 to prevent unwanted edges
-                return texcol;
+                fixed4 col = tex2D(_MainTex, i.texcoord) * i.color;
+                clip(col.a - 0.01); // Bỏ các pixel có alpha < 0.01
+                col.rgb *= _Intensity; // Tạo intensity của màu
+                return col;
             }
             ENDCG
         }

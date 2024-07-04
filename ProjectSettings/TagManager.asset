@@ -7,6 +7,7 @@ TagManager:
   - QuaiVat
   - Boss
   - Tuong
+  - Pauseable
   layers:
   - Default
   - TransparentFX
