@@ -10,6 +10,7 @@ public class QuanLyBoss : MonoBehaviour
     public int SatThuongLonNhat;
     public int LuongMau;
     public bool AnimationTanCong;
+    public QuanLyThongSoNhanVat quanLyThongSoNhanVat;
 
     void Start()
     {
@@ -21,17 +22,57 @@ public class QuanLyBoss : MonoBehaviour
         if(LuongMau <=0)
         {
             Destroy(gameObject);
-            DuLieuGame gameData = DieuKhienGame.instance.duLieuGame;
+            /*DuLieuGame gameData = DieuKhienGame.instance.duLieuGame;
             if (gameData != null && gameData.maps.Length > 0)
             {
                 int currentSceneIndex = SceneManager.GetActiveScene().buildIndex - 1;
 
-                // Lưu cấp độ
+               
                 gameData.maps[currentSceneIndex].DaHaDuocboss = true; 
                 // Lưu dữ liệu vào file JSON
                 QuanLyLuuTru.LuuGame(gameData);
 
+            }*/
+            DuLieuGame gameData = DieuKhienGame.instance.duLieuGame;
+            if (gameData != null && gameData.maps.Length > 0)
+            {
+                // Lưu số lượng kills
+                if (DemQuaiChet.instance != null)
+                {
+                    gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].soKillHienTai = DemQuaiChet.instance.LaySoLuongHienTai();
+                    if (gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].soKillHienTai >= gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].soKillCaoNhat)
+                    {
+                        gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].soKillCaoNhat = gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].soKillHienTai;
+                    }
+                }
+
+                // Lưu thời gian trôi qua
+                DongHo dongHo = FindObjectOfType<DongHo>();
+                if (dongHo != null)
+                {
+                    gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].thoiGianSinhTonHienTai = dongHo.GetThoiGianTroiQua();
+                    if (gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].thoiGianSinhTonHienTai >= gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].thoiGianSinhTonLauNhat)
+                    {
+                        gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].thoiGianSinhTonLauNhat = gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].thoiGianSinhTonHienTai;
+                    }
+                }
+                gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].DaHaDuocboss = true;
+                gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].CapHienTai = quanLyThongSoNhanVat.CapDoNhanVat;
+                if (gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].CapHienTai >= gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].CapCaoNhat)
+                {
+                    gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].CapCaoNhat = gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].CapHienTai;
+                }
+                // Lưu dữ liệu vào file JSON
+                QuanLyLuuTru.LuuGame(gameData);
+                // Lưu dữ liệu vào PlayerPrefs để truy cập ở Scene Result
+                PlayerPrefs.SetInt("soKillHienTai", gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].soKillHienTai);
+                PlayerPrefs.SetFloat("thoiGianSinhTonHienTai", gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].thoiGianSinhTonHienTai);
+                PlayerPrefs.SetInt("soKillCaoNhat", gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].soKillCaoNhat);
+                PlayerPrefs.SetFloat("thoiGianSinhTonLauNhat", gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].thoiGianSinhTonLauNhat);
+                PlayerPrefs.SetInt("CapCaoNhat", gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].CapCaoNhat);
+                PlayerPrefs.SetInt("CapHienTai", gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].CapHienTai);
             }
+
             SceneManager.LoadScene("Result");
         }
     }

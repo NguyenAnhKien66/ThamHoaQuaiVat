@@ -12,6 +12,7 @@ public class NhanVat : MonoBehaviour
     private int kinhNghiemNhanVat;
     public SpriteRenderer QuanLyNhanVat; // Khai bao tham chieu den mot thanh phan SpriteRenderer
     private Rigidbody2D rb;
+    public Sung sung;
     public Vector3 HuongDiChuyen; // Khai bao huong di chuyen nhan vat
     public float HoiChieuCuon = 10f; // Thoi gian cho giua cac lan cuon
     private float ThoiGianHoiChieu = 0f; // Dem thoi gian con lai cho cooldown
@@ -34,11 +35,10 @@ public class NhanVat : MonoBehaviour
         kinhNghiemNhanVat = 0;
         quanLyThongSoNhanVat.GiapHienTai = 0;
         quanLyThongSoNhanVat.CapDoNhanVat = 1;
-        quanLyThongSoNhanVat.SatThuongNhoNhat = 20;
+        quanLyThongSoNhanVat.SatThuongNhoNhat = 25;
         quanLyThongSoNhanVat.SatThuongLonNhat = 30;
         quanLyThongSoNhanVat.KinhNghiemToiDa = 100;
-        quanLyThongSoNhanVat.TocDoban = 2;
-        quanLyThongSoNhanVat.LucBan = 10;
+        
 
 
     }
@@ -82,16 +82,19 @@ public class NhanVat : MonoBehaviour
         }
     }
 
-
+   
 
     private void CapNhatCapDo()
     {
         quanLyThongSoNhanVat.CapDoNhanVat++;
-
         quanLyThongSoNhanVat.SatThuongLonNhat += quanLyThongSoNhanVat.SatThuongCongThemKhiThangCap;
         quanLyThongSoNhanVat.SatThuongNhoNhat += quanLyThongSoNhanVat.SatThuongCongThemKhiThangCap;
-        quanLyThongSoNhanVat.TocDoban += 1;
-        quanLyThongSoNhanVat.LucBan += 1;
+
+        if (sung != null)
+        {
+            sung.CapNhatTocDoDan();
+        }
+
         Debug.Log("Level: " + quanLyThongSoNhanVat.CapDoNhanVat);
         quanLyThongSoNhanVat.KinhNghiemToiDa= quanLyThongSoNhanVat.CapDoNhanVat * 100;
         // Them Cac thong so khac

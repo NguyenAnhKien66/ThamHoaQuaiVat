@@ -1,4 +1,4 @@
-using Pathfinding;
+﻿using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -62,9 +62,6 @@ public class QuaiCanChienAI : MonoBehaviour
             {
                 Diem++;
             }
-
-
-
 
             if (force.x != 0)
             {

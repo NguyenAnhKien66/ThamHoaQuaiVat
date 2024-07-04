@@ -193,8 +193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seeker: {fileID: 1573759026005701500}
-  TocDoDiChuyen: 3
-  KhoangCachDiemKeTiep: 0.3
+  TocDoDiChuyen: 2
+  KhoangCachDiemKeTiep: 0.5
 --- !u!114 &3569269594640929676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,11 +207,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0964d0d5d7afa54ca5ec5c26a9da248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SatThuongNhoNhat: 2
-  SatThuongLonNhat: 4
-  LuongMau: 100
+  SatThuongNhoNhat: 1
+  SatThuongLonNhat: 2
+  LuongMau: 20
   AnimationTanCong: 1
+  KinhNghiemNhanDuoc: 20
   quanLyVatPham: {fileID: 0}
+  MauToiDa: 80
+  MauHienTai: 0
 --- !u!95 &6398183010098175103
 Animator:
   serializedVersion: 5

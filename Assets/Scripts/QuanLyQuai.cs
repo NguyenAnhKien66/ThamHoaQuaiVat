@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class QuanLyQuai : MonoBehaviour
@@ -7,15 +6,45 @@ public class QuanLyQuai : MonoBehaviour
     private NhanVat nhanVat;
     public int SatThuongNhoNhat;
     public int SatThuongLonNhat;
-    public int LuongMau=100;
+    public int LuongMau = 100;
     public bool AnimationTanCong;
-
-    GameObject obj;
+    public int KinhNghiemNhanDuoc;
     public QuanLyVatPham quanLyVatPham;
+    public int MauToiDa = 100;
+    public int MauHienTai;
+    public float ThoiGianTangMau = 60f;
+
+    private void Start()
+    {
+        // Lượng máu của quái được thiết lập tại thời điểm sinh ra
+        MauHienTai = LuongMau;
+        Debug.Log("Bắt đầu với lượng máu: " + MauHienTai);
+
+        StartCoroutine(TangMauTheoThoiGian());
+    }
+
+    IEnumerator TangMauTheoThoiGian()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(ThoiGianTangMau);
+            Debug.Log("Kiểm tra tăng máu, MauHienTai: " + MauHienTai + ", MauToiDa: " + MauToiDa);
+
+            if (MauHienTai < MauToiDa)
+            {
+                MauHienTai += 20;
+                if (MauHienTai > MauToiDa)
+                {
+                    MauHienTai = MauToiDa;
+                }
+                LuongMau = MauHienTai;
+                Debug.Log("Đã tăng lượng máu của quái lên " + MauHienTai);
+            }
+        }
+    }
 
     void Awake()
     {
-        // Tìm đối tượng QuanLyVatPham nếu chưa được gán
         if (quanLyVatPham == null)
         {
             quanLyVatPham = FindObjectOfType<QuanLyVatPham>();
@@ -23,7 +52,7 @@ public class QuanLyQuai : MonoBehaviour
 
         if (quanLyVatPham == null)
         {
-            Debug.LogError("QuanLyVatPham khong tim thay");
+            Debug.LogError("QuanLyVatPham không tìm thấy");
         }
     }
 
@@ -41,13 +70,12 @@ public class QuanLyQuai : MonoBehaviour
         {
             if (this.nhanVat != null)
             {
-                this.nhanVat.CapNhatKinhNghiem(10);
-                DemQuaiChet.instance.ThemSoluong(); // Đảm bảo gọi đúng thứ tự cập nhật
+                this.nhanVat.CapNhatKinhNghiem(KinhNghiemNhanDuoc);
+                DemQuaiChet.instance.ThemSoluong();
 
-                // Kiểm tra quanLyVatPham không null trước khi gọi phương thức
                 if (quanLyVatPham != null)
                 {
-                    quanLyVatPham.RoiVatPham(transform.position); // Gọi phương thức rơi vật phẩm
+                    quanLyVatPham.RoiVatPham(transform.position);
                 }
                 else
                 {
@@ -63,7 +91,6 @@ public class QuanLyQuai : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            // animation quái đánh
             if (GetComponent<Animator>() != null && AnimationTanCong)
             {
                 GetComponent<Animator>().SetBool("VaCham", true);
@@ -81,7 +108,6 @@ public class QuanLyQuai : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            // Ngừng animation quái đánh
             if (GetComponent<Animator>() != null && AnimationTanCong)
             {
                 GetComponent<Animator>().SetBool("VaCham", false);
@@ -95,7 +121,7 @@ public class QuanLyQuai : MonoBehaviour
     {
         if (nhanVat != null)
         {
-            int SatThuong = UnityEngine.Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
+            int SatThuong = Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
             Debug.Log("Player nhận sát thương " + SatThuong);
             nhanVat.SatThuongGanhChieu(SatThuong);
         }

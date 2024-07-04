@@ -106495,6 +106495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quanLyThongSoNhanVat: {fileID: 11400000, guid: 4d3535415c9a09246b23bd4938db445c, type: 2}
   QuanLyNhanVat: {fileID: 345543593}
+  sung: {fileID: 936908492}
   HuongDiChuyen: {x: 0, y: 0, z: 0}
   HoiChieuCuon: 10
   animator: {fileID: 0}
@@ -107560,6 +107561,9 @@ MonoBehaviour:
   VienDan: {fileID: 278823866704907309, guid: d7b043c502c991c40991b0e04ab010ea, type: 3}
   ViTriBan: {fileID: 936908491}
   TiaLua: {fileID: 3680348624768178883, guid: bee5babefa1ed1341abe85191fb8d9d4, type: 3}
+  TocDoban: 2
+  TocDobanGiamKhiLenCap: 0.15
+  LucBan: 10
   AmThanhDan: {fileID: 8300000, guid: 52a34b07de8cf1548829b398fb2d1d11, type: 3}
 --- !u!212 &936908493
 SpriteRenderer:
@@ -107879,9 +107883,16 @@ MonoBehaviour:
   - {fileID: 8130044134383232721, guid: f5249aa5e50b54d44ba3042213b31bca, type: 3}
   viTriSinhRa:
   - {fileID: 975196633}
-  thoiGianBatDau: 2
-  thoiGianLapLai: 20
-  khoangCachMinGiuaCacQuai: 2
+  thoiGianBatDau: 5
+  thoiGianLapLai: 10
+  khoangCachMinGiuaCacQuai: 3
+  soLuongQuaiYeuCau: 3
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 2
+  soLuongQuaiDot3: 3
+  soLuongQuaiDot4: 4
+  soLuongQuaiDot5: 5
+  soLuongQuaiDot6: 6
 --- !u!4 &975196633
 Transform:
   m_ObjectHideFlags: 0
@@ -108265,10 +108276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da4e38d75926ce948a8837b250cb5169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quaiBossPf: {fileID: 7210530881058903835, guid: d7638157c4c5ef94fb679be3d57b8657, type: 3}
+  quaiBossPf: {fileID: 7210530881058903835, guid: c41e16ca7c5c0e74b8151934f9068c0c, type: 3}
   viTriSinhRa:
   - {fileID: 1172148210}
-  thoiGianXuatHien: 10
+  thoiGianXuatHien: 420
   AmThanh: {fileID: 8300000, guid: ffdca19bd1a51794fa7cc8e850048ad7, type: 3}
 --- !u!4 &1172148210
 Transform:
@@ -108507,9 +108518,16 @@ MonoBehaviour:
   - {fileID: 8130044134383232721, guid: f5249aa5e50b54d44ba3042213b31bca, type: 3}
   viTriSinhRa:
   - {fileID: 1289611078}
-  thoiGianBatDau: 2
-  thoiGianLapLai: 20
-  khoangCachMinGiuaCacQuai: 2
+  thoiGianBatDau: 0
+  thoiGianLapLai: 10
+  khoangCachMinGiuaCacQuai: 3
+  soLuongQuaiYeuCau: 3
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 2
+  soLuongQuaiDot3: 3
+  soLuongQuaiDot4: 4
+  soLuongQuaiDot5: 5
+  soLuongQuaiDot6: 6
 --- !u!4 &1289611078
 Transform:
   m_ObjectHideFlags: 0
@@ -108559,9 +108577,16 @@ MonoBehaviour:
   - {fileID: 8386353616448192074, guid: 8bfabf05f7b62114bac1b35f9af654a8, type: 3}
   viTriSinhRa:
   - {fileID: 1334614747}
-  thoiGianBatDau: 20
+  thoiGianBatDau: 60
   thoiGianLapLai: 60
   khoangCachMinGiuaCacQuai: 2
+  soLuongQuaiYeuCau: 3
+  soLuongQuaiDot1: 2
+  soLuongQuaiDot2: 2
+  soLuongQuaiDot3: 3
+  soLuongQuaiDot4: 4
+  soLuongQuaiDot5: 5
+  soLuongQuaiDot6: 6
 --- !u!4 &1334614747
 Transform:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ public class DieuKhienGame : MonoBehaviour
 {
     public static DieuKhienGame instance;
     public DuLieuGame duLieuGame;
-    private const int soMap = 5;
+    private const int soMap = 6;
 
     void Awake()
     {

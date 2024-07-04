@@ -16,6 +16,7 @@ public class BossAI : MonoBehaviour
     public float KhoangCachTiepTheo; // Khoang cach den diem tiep theo
     private Vector3 initialScale;
 
+
     // Ban dan
     public GameObject Dan; // Doi tuong dan de ban
     public float TocDoDan; // Toc do di chuyen cua dan
