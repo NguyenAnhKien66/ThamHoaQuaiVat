@@ -2381,7 +2381,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nut_batdau: {fileID: 0}
-  MenuTamDung: {fileID: 1061131909}
   QLKhoaMap2: {fileID: 0}
   QLKhoaMap3: {fileID: 0}
   QLKhoaMap4: {fileID: 0}
@@ -35965,6 +35964,7 @@ MonoBehaviour:
   ThangCapTxt: {fileID: 398412397}
   CongDameTxt: {fileID: 594319378}
   CongMauTxt: {fileID: 797338275}
+  CongGiapTxt: {fileID: 0}
   ThoiGianHienThi: 1
 --- !u!212 &1804478862
 SpriteRenderer:
@@ -36006,7 +36006,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
