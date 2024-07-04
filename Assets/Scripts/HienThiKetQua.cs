@@ -17,7 +17,7 @@ public class HienThiKetQua : MonoBehaviour
 
         // Lay So Luong kills Hien Tai Tu PlayerPrefs
         int killsHienTai = PlayerPrefs.GetInt("soKillHienTai", 0);
-        KetquaSoLuongKill.text = "Số Quái đã bị hạ: " + killsHienTai;
+        KetquaSoLuongKill.text = "Số quái bị hạ: " + killsHienTai;
 
         // Lay thoi gian ton tai Hien Tai tu PlayerPrefs
         float thoiGianHienTai = PlayerPrefs.GetFloat("thoiGianSinhTonHienTai", 0f);
@@ -27,17 +27,17 @@ public class HienThiKetQua : MonoBehaviour
 
         // Lay Cap Hien Tai Tu PlayerPrefs
         int capHienTai = PlayerPrefs.GetInt("CapHienTai", 1);
-        Capdo.text = "Cấp độ " + capHienTai;
+        Capdo.text = "Cấp độ: " + capHienTai;
 
         // Lay So Luong kills Cao Nhat Tu PlayerPrefs
         int killsCaoNhat = PlayerPrefs.GetInt("soKillCaoNhat", 0);
-        SoKillCaoNhat.text = "Số Quái cao nhất: " + killsCaoNhat;
+        SoKillCaoNhat.text = "Số quái bị hạ cao nhất: " + killsCaoNhat;
 
         // Lay thoi gian ton tai Cao Nhat tu PlayerPrefs
         float thoiGianCaoNhat = PlayerPrefs.GetFloat("thoiGianSinhTonLauNhat", 0f);
         int PhutCaoNhat = Mathf.FloorToInt(thoiGianCaoNhat / 60);
         int GiayCaoNhat = Mathf.FloorToInt(thoiGianCaoNhat % 60);
-        ThoiGianSinhTonLauNhat.text = string.Format("Thời gian tồn tại cao nhất: {0:00}:{1:00}", PhutCaoNhat, GiayCaoNhat);
+        ThoiGianSinhTonLauNhat.text = string.Format("Thời gian tồn tại lâu nhất: {0:00}:{1:00}", PhutCaoNhat, GiayCaoNhat);
 
         // Lay Cap Cao Nhat Tu PlayerPrefs
         int capCaoNhat = PlayerPrefs.GetInt("CapCaoNhat", 1);

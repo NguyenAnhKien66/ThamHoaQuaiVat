@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,18 +10,23 @@ public class ChucNang : MonoBehaviour
 {
     int ChonMap = 1; //map được chọn    
     public Button nut_batdau;
-    [SerializeField] GameObject MenuTamDung;
+
     [SerializeField] GameObject QLKhoaMap2;
     [SerializeField] GameObject QLKhoaMap3;
     [SerializeField] GameObject QLKhoaMap4;
     [SerializeField] GameObject QLKhoaMap5;
     public TextMeshProUGUI MapChonTxt;
+
+  
+
+
     void Start()
     {
         if (nut_batdau != null)
         {
             nut_batdau.onClick.AddListener(BatDau);
         }
+        
     }
 
     // Update is called once per frame
@@ -117,25 +123,6 @@ public class ChucNang : MonoBehaviour
     {
         SceneManager.LoadScene("GameMap"); 
     }
-    //Chuc nang pause
-    public void TamDung()
-    {
-        MenuTamDung.SetActive(true);
-        Time.timeScale = 0;
-    }
-    public void ThoatGamePlay()
-    {
-        SceneManager.LoadScene("GameMap");
-        Time.timeScale = 1;
-    }
-    public void TiepTuc()
-    {
-        MenuTamDung.SetActive(false);
-        Time.timeScale = 1;
-    }   
-    public void BatDauLai()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1;
-    }
+   
+   
 }

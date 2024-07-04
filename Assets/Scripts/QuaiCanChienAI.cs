@@ -66,14 +66,9 @@ public class QuaiCanChienAI : MonoBehaviour
             if (force.x != 0)
             {
                 if (force.x > 0)
-                {
-
                     transform.localScale = new Vector3(Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
-                }
-
                 else
                     transform.localScale = new Vector3(-Mathf.Abs(initialScale.x), initialScale.y, initialScale.z);
-
 
                 yield return null;
             }

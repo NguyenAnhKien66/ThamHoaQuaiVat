@@ -211,6 +211,10 @@ public class NhanVat : MonoBehaviour
                     break;
                 case VatPham.LoaiVatPham.TangGiap:
                     quanLyThongSoNhanVat.GiapHienTai += 5;
+
+                    //Nghĩa cập nhật
+                    DieuKhienText.HienThiCongGiapTxt(5);
+                    //
                     if (quanLyThongSoNhanVat.GiapHienTai >= 100)
                     {
                         quanLyThongSoNhanVat.GiapHienTai = 100;

@@ -8,6 +8,7 @@ public class DieuKhienText : MonoBehaviour
     public TextMeshProUGUI ThangCapTxt;
     public TextMeshProUGUI CongDameTxt;
     public TextMeshProUGUI CongMauTxt;
+    public TextMeshProUGUI CongGiapTxt;
     public float ThoiGianHienThi = 2.0f; // Thời gian hiển thị text
     
     void Start()
@@ -16,6 +17,7 @@ public class DieuKhienText : MonoBehaviour
         ThangCapTxt.gameObject.SetActive(false);
         CongDameTxt.gameObject.SetActive(false);
         CongMauTxt.gameObject.SetActive(false); 
+        CongGiapTxt.gameObject.SetActive(false);
     }
     //Hiện Thăng Cấp Txt
     public void HienThiThangCapTxt()
@@ -65,6 +67,23 @@ public class DieuKhienText : MonoBehaviour
         yield return new WaitForSeconds(thoigian);
         //Ẩn text
         CongMauTxt.gameObject.SetActive(false);
+
+    }
+    //Hiện Cộng Giáp Txt
+    public void HienThiCongGiapTxt(int giapduoccong)
+    {
+        //Hiển thị text
+        CongGiapTxt.text = "+" + giapduoccong.ToString() + " giáp";
+        CongGiapTxt.gameObject.SetActive(true);
+
+        // Bắt đầu coroutine để ẩn văn bản sau một khoảng thời gian
+        StartCoroutine(AnCongGiapTxtSauTG(ThoiGianHienThi));
+    }
+    private IEnumerator AnCongGiapTxtSauTG(float thoigian)
+    {
+        yield return new WaitForSeconds(thoigian);
+        //Ẩn text
+        CongGiapTxt.gameObject.SetActive(false);
 
     }
 
