@@ -847,6 +847,7 @@ GameObject:
   - component: {fileID: 884150773}
   - component: {fileID: 884150776}
   - component: {fileID: 884150777}
+  - component: {fileID: 884150778}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -929,12 +930,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nut_batdau: {fileID: 0}
-  MenuTamDung: {fileID: 0}
   QLKhoaMap2: {fileID: 0}
   QLKhoaMap3: {fileID: 0}
   QLKhoaMap4: {fileID: 0}
   QLKhoaMap5: {fileID: 0}
   MapChonTxt: {fileID: 0}
+--- !u!114 &884150778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884150772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf727ba0aa5ada94d8d088d9d4eb2488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BatAm: {fileID: 0}
+  TatAm: {fileID: 0}
+  NhacNen: {fileID: 1580947208}
 --- !u!1 &1006991067
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,8 +12,11 @@ public class DiaDiem : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            txtDiaDiem.text=TenDiaDiem;
-            txtDiaDiem.gameObject.SetActive(true);
+            if(txtDiaDiem != null)
+            {
+                txtDiaDiem.text = TenDiaDiem;
+                txtDiaDiem.gameObject.SetActive(true);
+            }      
         }
     }
 
@@ -21,7 +24,8 @@ public class DiaDiem : MonoBehaviour
     {
        if(collision.CompareTag("Player"))
         {
-            txtDiaDiem.gameObject.SetActive(false);
+            if(txtDiaDiem != null)
+                txtDiaDiem.gameObject.SetActive(false);
         }
     }
 }

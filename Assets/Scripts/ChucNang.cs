@@ -123,6 +123,14 @@ public class ChucNang : MonoBehaviour
     {
         SceneManager.LoadScene("GameMap"); 
     }
-   
-   
+    //Quản lý trạng thái âm thanh
+    public void BatAm()
+    {
+        AmThanh.bAmThanh = false;
+    }
+    public void TatAm()
+    {
+        AmThanh.bAmThanh = true;
+    }
+
 }
