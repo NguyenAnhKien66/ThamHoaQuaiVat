@@ -1,6 +1,7 @@
 [System.Serializable]
 public class DuLieuMap
 {
+    
     public int CapHienTai;
     public int CapCaoNhat;
     public float thoiGianSinhTonHienTai;

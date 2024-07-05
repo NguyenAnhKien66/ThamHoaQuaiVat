@@ -801,7 +801,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nut_batdau: {fileID: 509605656}
-  MenuTamDung: {fileID: 0}
   QLKhoaMap2: {fileID: 0}
   QLKhoaMap3: {fileID: 0}
   QLKhoaMap4: {fileID: 0}
