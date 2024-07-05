@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ChucNangMenuPause : MonoBehaviour
 {
     [SerializeField] GameObject MenuTamDung;
+
     void Start()
     {
         if (MenuTamDung == null)
@@ -33,5 +36,13 @@ public class ChucNangMenuPause : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
+    }
+    public void BatAm()
+    {
+        AmThanh.bAmThanh = false;
+    }
+    public void TatAm()
+    {
+        AmThanh.bAmThanh = true;
     }
 }
