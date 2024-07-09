@@ -5,7 +5,8 @@ public class DemQuaiChet : MonoBehaviour
 {
     public static DemQuaiChet instance;
     public TextMeshProUGUI DemQuaiChettxt;
-    private int DemSoLuongQuaiChet;
+    //Nghĩa cập nhật
+    public int DemSoLuongQuaiChet;
 
     private void Start()
     {
@@ -31,7 +32,7 @@ public class DemQuaiChet : MonoBehaviour
         CapNhatSoLuongQuaiChet();
     }
 
-    private void CapNhatSoLuongQuaiChet()
+    public void CapNhatSoLuongQuaiChet()
     {
         if (DemQuaiChettxt != null)
         {

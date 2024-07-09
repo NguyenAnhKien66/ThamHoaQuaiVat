@@ -40,6 +40,7 @@ public class ChucNang : MonoBehaviour
     public void BatDau()
     {
         SceneManager.LoadScene("GameMap");
+        PlayerPrefs.SetInt("TiepTuc", 0);
     }
     public void ThoatGame()
     {
@@ -52,7 +53,7 @@ public class ChucNang : MonoBehaviour
     public void Map1()
     {
         ChonMap = 1;
-        MapChonTxt.text = "Map "+ChonMap;
+        MapChonTxt.text = "Bạn chọn: Map "+ChonMap;
     }
     public void Map2()
     {
@@ -60,7 +61,7 @@ public class ChucNang : MonoBehaviour
         if (QLKhoaMap2.activeSelf == false)
         {
             ChonMap = 2;
-            MapChonTxt.text = "Map " + ChonMap;
+            MapChonTxt.text = "Bạn chọn: Map " + ChonMap;
         }
     }
     public void Map3()
@@ -69,7 +70,7 @@ public class ChucNang : MonoBehaviour
         if (QLKhoaMap3.activeSelf == false)
         {
             ChonMap = 3;
-            MapChonTxt.text = "Map " + ChonMap;
+            MapChonTxt.text = "Bạn chọn: Map " + ChonMap;
         }
     }
     public void Map4()
@@ -78,7 +79,7 @@ public class ChucNang : MonoBehaviour
         if (QLKhoaMap4.activeSelf == false)
         {
             ChonMap = 4;
-            MapChonTxt.text = "Map " + ChonMap;
+            MapChonTxt.text = "Bạn chọn: Map " + ChonMap;
         }
     }
     public void Map5()
@@ -87,11 +88,12 @@ public class ChucNang : MonoBehaviour
         if (QLKhoaMap5.activeSelf == false)
         {
             ChonMap = 5;
-            MapChonTxt.text = "Map " + ChonMap;
+            MapChonTxt.text = "Bạn chọn: Map " + ChonMap;
         }
     }
     public void Choi()
     {
+        PlayerPrefs.SetInt("TiepTuc", 0);
         if (ChonMap == 1)
         {
             //Vào màn hình chơi game của map 1

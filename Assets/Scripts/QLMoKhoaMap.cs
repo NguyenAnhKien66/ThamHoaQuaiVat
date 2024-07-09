@@ -9,7 +9,7 @@ public class QLMoKhoaMap : MonoBehaviour
     [SerializeField] GameObject QLKhoaMap4;
     [SerializeField] GameObject QLKhoaMap5;
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         MoKhoaMap();
     }
@@ -19,6 +19,7 @@ public class QLMoKhoaMap : MonoBehaviour
         if(DieuKhienGame.instance!=null)
         {
             DuLieuGame gameData = DieuKhienGame.instance.duLieuGame;
+
             //Dieu kien mo map
             if (gameData.maps[0].DaHaDuocboss == true)
             {
@@ -36,7 +37,8 @@ public class QLMoKhoaMap : MonoBehaviour
             {
                 QLKhoaMap5.SetActive(false);
             }
-        }    
+        }
+           
             
 
         

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,7 +39,12 @@ public class Dan : MonoBehaviour
             collision.GetComponent<QuanLyBoss>().SatThuongBossGanhChieu(SatThuongTuNhanVat);
             Destroy(gameObject);
         }
+        if (collision.CompareTag("Tuong"))
+        {
+            Destroy(gameObject);
+        }
     }
+
 }
             
         

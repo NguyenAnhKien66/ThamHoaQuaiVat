@@ -9,15 +9,29 @@ public class QLSinhBoss : MonoBehaviour
     public float thoiGianXuatHien;
     public AudioClip AmThanh; // am thanh 
     private AudioSource NguonAmThanh;
+    float ThoiGianTroiQua;
     void Start()
     {
         NguonAmThanh = GetComponent<AudioSource>();
-        StartCoroutine(SinhBoss());
+        if (PlayerPrefs.GetInt("TiepTuc") == 1)
+        {
+            ThoiGianTroiQua = PlayerPrefs.GetFloat("TGSinhTon"); ;
+        }
+        else
+        {
+            ThoiGianTroiQua = 0f;
+        }
+        if (PlayerPrefs.GetInt("TiepTuc")==0 || PlayerPrefs.GetInt("CoDuLieuBoss") == 0)
+        {
+            StartCoroutine(SinhBoss());
+        }
+        
+        
     }
     IEnumerator SinhBoss()
     {
         float thoiGianCanhBao = 5f; 
-        yield return new WaitForSeconds(thoiGianXuatHien - thoiGianCanhBao);
+        yield return new WaitForSeconds(thoiGianXuatHien - thoiGianCanhBao- ThoiGianTroiQua);
 
         if (AmThanh != null)
         {
