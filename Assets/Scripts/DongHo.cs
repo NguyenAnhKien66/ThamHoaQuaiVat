@@ -1,11 +1,12 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DongHo : MonoBehaviour
 {
     public TextMeshProUGUI DongHotxt;  
-    private float ThoiGianTroiQua;  
+    //Nghĩa cập nhật public
+    public float ThoiGianTroiQua;  
 
     void Start()
     {

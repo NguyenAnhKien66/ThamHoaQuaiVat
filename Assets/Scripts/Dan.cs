@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,17 +34,17 @@ public class Dan : MonoBehaviour
             }
         }
         if (collision.CompareTag("Boss") && CoPhaiNhanVat)
-            {
-                int SatThuongTuNhanVat = Random.Range(quanLyThongSoNhanVat.SatThuongNhoNhat, quanLyThongSoNhanVat.SatThuongLonNhat);
-                collision.GetComponent<QuanLyBoss>().SatThuongBossGanhChieu(SatThuongTuNhanVat);
-                Destroy(gameObject);
-            }
-
-            if (collision.CompareTag("Tuong"))
-                {
-                    Destroy(gameObject);
-                }
+        {
+            int SatThuongTuNhanVat = Random.Range(quanLyThongSoNhanVat.SatThuongNhoNhat, quanLyThongSoNhanVat.SatThuongLonNhat);
+            collision.GetComponent<QuanLyBoss>().SatThuongBossGanhChieu(SatThuongTuNhanVat);
+            Destroy(gameObject);
+        }
+        if (collision.CompareTag("Tuong"))
+        {
+            Destroy(gameObject);
+        }
     }
+
 }
             
         

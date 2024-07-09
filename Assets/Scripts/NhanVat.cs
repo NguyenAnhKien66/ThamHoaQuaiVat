@@ -4,18 +4,18 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
+
 
 public class NhanVat : MonoBehaviour
 {
     public QuanLyThongSoNhanVat quanLyThongSoNhanVat;
-    private int kinhNghiemNhanVat;
+    public int kinhNghiemNhanVat; //Nghĩa cập nhật public
     public SpriteRenderer QuanLyNhanVat; // Khai bao tham chieu den mot thanh phan SpriteRenderer
     private Rigidbody2D rb;
     public Sung sung;
     public Vector3 HuongDiChuyen; // Khai bao huong di chuyen nhan vat
     public float HoiChieuCuon = 10f; // Thoi gian cho giua cac lan cuon
-    private float ThoiGianHoiChieu = 0f; // Dem thoi gian con lai cho cooldown
+    public float ThoiGianHoiChieu = 0f; // Dem thoi gian con lai cho cooldown
     private bool DangCuon = false; // Bien de kiem tra xem dang cuon hay khong
     public Animator animator; // Khai bao tham chieu den thanh phan Animator
     [SerializeField] ThanhMau thanhMau;
@@ -56,8 +56,8 @@ public class NhanVat : MonoBehaviour
         }
         CapNhatUI();
     }
-
-    private void CapNhatUI()
+    //Nghĩa cập nhật
+    public void CapNhatUI()
     {
         Debug.Log("CapNhatUI Called");
 
