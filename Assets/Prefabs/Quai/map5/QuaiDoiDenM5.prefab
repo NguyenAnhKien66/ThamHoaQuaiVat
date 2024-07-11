@@ -237,10 +237,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SatThuongNhoNhat: 1
   SatThuongLonNhat: 2
-  LuongMau: 20
+  LuongMau: 30
   AnimationTanCong: 0
-  KinhNghiemNhanDuoc: 10
+  KinhNghiemNhanDuoc: 15
   quanLyVatPham: {fileID: 0}
-  MauToiDa: 100
+  MauToiDa: 110
   MauHienTai: 0
-  ThoiGianTangMau: 120
+  ThoiGianTangMau: 60

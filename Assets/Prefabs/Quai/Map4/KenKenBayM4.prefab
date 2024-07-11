@@ -215,7 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DiChuyenNgaunhien: 0
   seeker: {fileID: 5473088145061604022}
-  TocDoDiChuyen: 3
+  TocDoDiChuyen: 2.75
   CapNhatDuongDi: 1
   KhoangCachTiepTheo: 1
   QuaiHuongVeTrai: 1
@@ -239,8 +239,8 @@ MonoBehaviour:
   SatThuongLonNhat: 2
   LuongMau: 20
   AnimationTanCong: 0
-  KinhNghiemNhanDuoc: 15
+  KinhNghiemNhanDuoc: 20
   quanLyVatPham: {fileID: 0}
   MauToiDa: 120
   MauHienTai: 0
-  ThoiGianTangMau: 60
+  ThoiGianTangMau: 75

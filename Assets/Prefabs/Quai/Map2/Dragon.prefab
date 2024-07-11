@@ -166,12 +166,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DiChuyenNgaunhien: 0
   seeker: {fileID: 9158776742424721241}
-  TocDoDiChuyen: 3
+  TocDoDiChuyen: 3.5
   CapNhatDuongDi: 1
   KhoangCachTiepTheo: 1
   Dan: {fileID: 5678471727513526027, guid: 31f711b43907359418e513b92e67fc44, type: 3}
   TocDoDan: 10
-  TocDoBan: 2
+  TocDoBan: 1
   SucManhDanhGan: 5
 --- !u!114 &9158776742424721241
 MonoBehaviour:
@@ -234,8 +234,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6774b4499b5c75a4c9b59bdb3037dbda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SatThuongNhoNhat: 5
-  SatThuongLonNhat: 5
+  SatThuongNhoNhat: 2
+  SatThuongLonNhat: 3
   LuongMau: 3000
   AnimationTanCong: 0
   quanLyThongSoNhanVat: {fileID: 11400000, guid: 4d3535415c9a09246b23bd4938db445c, type: 2}
+  bossAI: {fileID: 1057734512587843740}
+  quaiBossAI: {fileID: 0}

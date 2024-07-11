@@ -106159,6 +106159,7 @@ MonoBehaviour:
   quanLyThongSoNhanVat: {fileID: 11400000, guid: 4d3535415c9a09246b23bd4938db445c, type: 2}
   thanhMau: {fileID: 1920415158}
   thanhGiap: {fileID: 843375683}
+  ConTro: {fileID: 1147031993}
 --- !u!114 &179004153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107342,7 +107343,7 @@ MonoBehaviour:
   VatPhamMau: {fileID: 7735406117813296389, guid: 61e3456f7bcab2e44b1a796df3545021, type: 3}
   VatPhamGiap: {fileID: 5089449725445408351, guid: 03fc202d2b0be684ca4f29ac31f05c27, type: 3}
   VatPhamDame: {fileID: 1109044732426812349, guid: 0a973dad4093e7443a020043947bf2f9, type: 3}
-  tileroi: 0.5
+  tileroi: 0.3
 --- !u!4 &547717718
 Transform:
   m_ObjectHideFlags: 0
@@ -108615,17 +108616,17 @@ MonoBehaviour:
   - {fileID: 8130044134383232721, guid: f5249aa5e50b54d44ba3042213b31bca, type: 3}
   viTriSinhRa:
   - {fileID: 975196633}
-  thoiGianBatDau: 5
+  thoiGianBatDau: 0
   thoiGianLapLai: 10
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 60
+  soLuongQuaiYeuCau: 2
+  ThoiGianTangMau: 120
   soLuongQuaiDot1: 1
   soLuongQuaiDot2: 2
   soLuongQuaiDot3: 3
   soLuongQuaiDot4: 4
   soLuongQuaiDot5: 5
-  soLuongQuaiDot6: 6
+  soLuongQuaiDot6: 5
 --- !u!4 &975196633
 Transform:
   m_ObjectHideFlags: 0
@@ -109149,7 +109150,7 @@ MonoBehaviour:
   quaiBossPf: {fileID: 7210530881058903835, guid: d7638157c4c5ef94fb679be3d57b8657, type: 3}
   viTriSinhRa:
   - {fileID: 1172148210}
-  thoiGianXuatHien: 10
+  thoiGianXuatHien: 5
   AmThanh: {fileID: 8300000, guid: ffdca19bd1a51794fa7cc8e850048ad7, type: 3}
 --- !u!4 &1172148210
 Transform:
@@ -109575,13 +109576,13 @@ MonoBehaviour:
   thoiGianLapLai: 10
   khoangCachMinGiuaCacQuai: 3
   soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 60
+  ThoiGianTangMau: 120
   soLuongQuaiDot1: 1
   soLuongQuaiDot2: 2
   soLuongQuaiDot3: 3
   soLuongQuaiDot4: 4
   soLuongQuaiDot5: 5
-  soLuongQuaiDot6: 6
+  soLuongQuaiDot6: 5
 --- !u!4 &1289611078
 Transform:
   m_ObjectHideFlags: 0
@@ -109708,17 +109709,17 @@ MonoBehaviour:
   - {fileID: 8386353616448192074, guid: 8bfabf05f7b62114bac1b35f9af654a8, type: 3}
   viTriSinhRa:
   - {fileID: 1334614747}
-  thoiGianBatDau: 20
-  thoiGianLapLai: 60
+  thoiGianBatDau: 0
+  thoiGianLapLai: 30
   khoangCachMinGiuaCacQuai: 2
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 60
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 120
   soLuongQuaiDot1: 2
   soLuongQuaiDot2: 2
-  soLuongQuaiDot3: 3
-  soLuongQuaiDot4: 4
-  soLuongQuaiDot5: 5
-  soLuongQuaiDot6: 6
+  soLuongQuaiDot3: 2
+  soLuongQuaiDot4: 3
+  soLuongQuaiDot5: 3
+  soLuongQuaiDot6: 3
 --- !u!4 &1334614747
 Transform:
   m_ObjectHideFlags: 0

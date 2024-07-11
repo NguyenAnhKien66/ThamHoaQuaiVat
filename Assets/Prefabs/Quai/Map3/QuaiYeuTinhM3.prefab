@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seeker: {fileID: 2858592820587642768}
-  TocDoDiChuyen: 3
+  TocDoDiChuyen: 2.5
   KhoangCachDiemKeTiep: 1
 --- !u!114 &5571095898046780214
 MonoBehaviour:
@@ -234,6 +234,6 @@ MonoBehaviour:
   AnimationTanCong: 1
   KinhNghiemNhanDuoc: 15
   quanLyVatPham: {fileID: 0}
-  MauToiDa: 100
+  MauToiDa: 110
   MauHienTai: 0
-  ThoiGianTangMau: 60
+  ThoiGianTangMau: 75

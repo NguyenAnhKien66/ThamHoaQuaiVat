@@ -58,6 +58,7 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
             }
             else
             {
+                thoiGianLapLai = 20f;
                 SoluongPhatSinh = soLuongQuaiYeuCau;
             }
 
