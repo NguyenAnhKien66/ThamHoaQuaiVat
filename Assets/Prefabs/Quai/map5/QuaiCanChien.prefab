@@ -33,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.93, y: 0.17, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -207,15 +207,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0964d0d5d7afa54ca5ec5c26a9da248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SatThuongNhoNhat: 2
-  SatThuongLonNhat: 4
-  LuongMau: 20
+  SatThuongNhoNhat: 1
+  SatThuongLonNhat: 2
+  LuongMau: 30
   AnimationTanCong: 1
-  KinhNghiemNhanDuoc: 10
+  KinhNghiemNhanDuoc: 15
   quanLyVatPham: {fileID: 0}
-  MauToiDa: 100
+  MauToiDa: 110
   MauHienTai: 0
-  ThoiGianTangMau: 120
+  ThoiGianTangMau: 60
 --- !u!95 &6640808849880356678
 Animator:
   serializedVersion: 5

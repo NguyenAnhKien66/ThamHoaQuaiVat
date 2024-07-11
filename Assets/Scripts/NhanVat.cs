@@ -38,10 +38,13 @@ public class NhanVat : MonoBehaviour
         quanLyThongSoNhanVat.SatThuongNhoNhat = 25;
         quanLyThongSoNhanVat.SatThuongLonNhat = 30;
         quanLyThongSoNhanVat.KinhNghiemToiDa = 100;
+        quanLyThongSoNhanVat.TocDoNhanVat = 3;
+        
         
 
 
     }
+
     public void CapNhatKinhNghiem(int kinhNghiem)
     {
         kinhNghiemNhanVat += kinhNghiem;
@@ -187,7 +190,7 @@ public class NhanVat : MonoBehaviour
             switch (vatPham.loaiVatPham)
             {
                 case VatPham.LoaiVatPham.TangMau:
-                    quanLyThongSoNhanVat.MauHientai += 10;
+                    quanLyThongSoNhanVat.MauHientai += 5;
                     Debug.Log("Co nhan them mau ");
                     
                     if(quanLyThongSoNhanVat.MauHientai >= 100)
@@ -198,7 +201,7 @@ public class NhanVat : MonoBehaviour
                     thanhMau.CapnhatMau(quanLyThongSoNhanVat.MauHientai, quanLyThongSoNhanVat.MauToiDaNhanVat);
 
                     //Nghĩa cập nhật
-                    DieuKhienText.HienThiCongMauTxt(10);
+                    DieuKhienText.HienThiCongMauTxt(5);
                     //
                     break;
                 case VatPham.LoaiVatPham.TangDame:
@@ -210,10 +213,10 @@ public class NhanVat : MonoBehaviour
                     //
                     break;
                 case VatPham.LoaiVatPham.TangGiap:
-                    quanLyThongSoNhanVat.GiapHienTai += 5;
+                    quanLyThongSoNhanVat.GiapHienTai += 2;
 
                     //Nghĩa cập nhật
-                    DieuKhienText.HienThiCongGiapTxt(5);
+                    DieuKhienText.HienThiCongGiapTxt(2);
                     //
                     if (quanLyThongSoNhanVat.GiapHienTai >= 100)
                     {

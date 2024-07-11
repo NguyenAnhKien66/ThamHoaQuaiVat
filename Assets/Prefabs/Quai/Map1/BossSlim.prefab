@@ -234,8 +234,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6774b4499b5c75a4c9b59bdb3037dbda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SatThuongNhoNhat: 3
-  SatThuongLonNhat: 4
-  LuongMau: 100
+  SatThuongNhoNhat: 2
+  SatThuongLonNhat: 3
+  LuongMau: 2000
   AnimationTanCong: 0
   quanLyThongSoNhanVat: {fileID: 11400000, guid: 4d3535415c9a09246b23bd4938db445c, type: 2}
+  bossAI: {fileID: 1057734512587843740}
+  quaiBossAI: {fileID: 0}

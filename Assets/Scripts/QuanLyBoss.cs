@@ -11,10 +11,37 @@ public class QuanLyBoss : MonoBehaviour
     public int LuongMau;
     public bool AnimationTanCong;
     public QuanLyThongSoNhanVat quanLyThongSoNhanVat;
-
+    private float ThoiGianBatDau; 
+    private bool DuyNhat = false; 
+    public BossAI bossAI;
+    public QuaiBossAI quaiBossAI;
     void Start()
     {
-        
+        ThoiGianBatDau = 0f; //n
+    }
+
+    private void Update()
+    {
+        ThoiGianBatDau += Time.deltaTime;
+        if (ThoiGianBatDau >= 300f && DuyNhat == false)
+        {
+            TangChiSoBoss();
+            DuyNhat = true;
+        }
+    }
+    private void TangChiSoBoss()
+    {
+        SatThuongLonNhat += 10;
+        SatThuongNhoNhat += 10;
+        if (bossAI != null)
+        {
+            bossAI.TocDoDiChuyen = 6f;
+        }
+
+        if (quaiBossAI != null)
+        {
+            quaiBossAI.TocDoDiChuyen = 6f;
+        }
     }
     public void SatThuongBossGanhChieu(int SatThuong)
     {

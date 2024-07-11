@@ -1697,17 +1697,17 @@ MonoBehaviour:
   - {fileID: 3039496229987354256, guid: d6c4ab183596571478db0662061626a3, type: 3}
   viTriSinhRa:
   - {fileID: 216717936}
-  thoiGianBatDau: 2
-  thoiGianLapLai: 6
+  thoiGianBatDau: 0
+  thoiGianLapLai: 7
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 60
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 75
   soLuongQuaiDot1: 1
-  soLuongQuaiDot2: 2
-  soLuongQuaiDot3: 2
-  soLuongQuaiDot4: 3
-  soLuongQuaiDot5: 4
-  soLuongQuaiDot6: 4
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 1
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 3
 --- !u!4 &216717936
 Transform:
   m_ObjectHideFlags: 0
@@ -3882,16 +3882,16 @@ MonoBehaviour:
   viTriSinhRa:
   - {fileID: 861237789}
   thoiGianBatDau: 0
-  thoiGianLapLai: 6
+  thoiGianLapLai: 7
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 60
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 75
   soLuongQuaiDot1: 1
-  soLuongQuaiDot2: 2
-  soLuongQuaiDot3: 2
-  soLuongQuaiDot4: 3
-  soLuongQuaiDot5: 4
-  soLuongQuaiDot6: 4
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 1
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 3
 --- !u!4 &861237789
 Transform:
   m_ObjectHideFlags: 0
@@ -3957,9 +3957,9 @@ MonoBehaviour:
   VienDan: {fileID: 278823866704907309, guid: d7b043c502c991c40991b0e04ab010ea, type: 3}
   ViTriBan: {fileID: 936908491}
   TiaLua: {fileID: 3680348624768178883, guid: bee5babefa1ed1341abe85191fb8d9d4, type: 3}
-  TocDoban: 2.5
-  TocDobanGiamKhiLenCap: 0.1
-  LucBan: 12
+  TocDoban: 2.3
+  TocDobanGiamKhiLenCap: 0.15
+  LucBan: 14
   AmThanhDan: {fileID: 8300000, guid: 52a34b07de8cf1548829b398fb2d1d11, type: 3}
   GapDoiDan: 1
   DieuKienGapDoiDan: 5
@@ -77595,7 +77595,7 @@ MonoBehaviour:
   quaiBossPf: {fileID: 2145671636273209115, guid: fb2b028c13f1b6e4bb65c879e12f43fb, type: 3}
   viTriSinhRa:
   - {fileID: 1172148210}
-  thoiGianXuatHien: 10
+  thoiGianXuatHien: 420
   AmThanh: {fileID: 8300000, guid: ffdca19bd1a51794fa7cc8e850048ad7, type: 3}
 --- !u!4 &1172148210
 Transform:
@@ -77874,16 +77874,16 @@ MonoBehaviour:
   viTriSinhRa:
   - {fileID: 1289611078}
   thoiGianBatDau: 0
-  thoiGianLapLai: 6
+  thoiGianLapLai: 7
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 60
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 75
   soLuongQuaiDot1: 1
-  soLuongQuaiDot2: 2
-  soLuongQuaiDot3: 2
-  soLuongQuaiDot4: 3
-  soLuongQuaiDot5: 4
-  soLuongQuaiDot6: 4
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 1
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 3
 --- !u!4 &1289611078
 Transform:
   m_ObjectHideFlags: 0
@@ -84928,16 +84928,16 @@ MonoBehaviour:
   viTriSinhRa:
   - {fileID: 1334614747}
   thoiGianBatDau: 0
-  thoiGianLapLai: 30
+  thoiGianLapLai: 15
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 60
-  soLuongQuaiDot1: 2
-  soLuongQuaiDot2: 2
-  soLuongQuaiDot3: 3
-  soLuongQuaiDot4: 4
-  soLuongQuaiDot5: 5
-  soLuongQuaiDot6: 6
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 75
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 2
+  soLuongQuaiDot4: 3
+  soLuongQuaiDot5: 3
+  soLuongQuaiDot6: 5
 --- !u!4 &1334614747
 Transform:
   m_ObjectHideFlags: 0
@@ -85526,79 +85526,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1001 &1552692818
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3039496229987354256, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: m_Name
-      value: QuaiYeuTinhM3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3039496229987354256, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5571095898046780214, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: quanLyVatPham
-      value: 
-      objectReference: {fileID: 547717717}
-    - target: {fileID: 5571095898046780214, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: SatThuongLonNhat
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5571095898046780214, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: SatThuongNhoNhat
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7323850490751738223, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 7323850490751738223, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 7323850490751738223, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7323850490751738223, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7323850490751738223, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7323850490751738223, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7323850490751738223, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7323850490751738223, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7323850490751738223, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7323850490751738223, guid: d6c4ab183596571478db0662061626a3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d6c4ab183596571478db0662061626a3, type: 3}
 --- !u!1 &1619803317
 GameObject:
   m_ObjectHideFlags: 0
@@ -86011,17 +85938,17 @@ MonoBehaviour:
   - {fileID: 3039496229987354256, guid: d6c4ab183596571478db0662061626a3, type: 3}
   viTriSinhRa:
   - {fileID: 1668388739}
-  thoiGianBatDau: 3
-  thoiGianLapLai: 6
+  thoiGianBatDau: 0
+  thoiGianLapLai: 7
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 60
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 75
   soLuongQuaiDot1: 1
-  soLuongQuaiDot2: 2
-  soLuongQuaiDot3: 2
-  soLuongQuaiDot4: 3
-  soLuongQuaiDot5: 4
-  soLuongQuaiDot6: 4
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 1
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 3
 --- !u!4 &1668388739
 Transform:
   m_ObjectHideFlags: 0
@@ -86070,17 +85997,17 @@ MonoBehaviour:
   - {fileID: 3039496229987354256, guid: d6c4ab183596571478db0662061626a3, type: 3}
   viTriSinhRa:
   - {fileID: 1685737639}
-  thoiGianBatDau: 1
-  thoiGianLapLai: 6
+  thoiGianBatDau: 0
+  thoiGianLapLai: 7
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 60
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 75
   soLuongQuaiDot1: 1
-  soLuongQuaiDot2: 2
-  soLuongQuaiDot3: 2
-  soLuongQuaiDot4: 3
-  soLuongQuaiDot5: 4
-  soLuongQuaiDot6: 4
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 1
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 3
 --- !u!4 &1685737639
 Transform:
   m_ObjectHideFlags: 0
@@ -86544,79 +86471,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828218826}
   m_CullTransparentMesh: 1
---- !u!1001 &1831689602
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2638074961161696711, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2638074961161696711, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2638074961161696711, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 2638074961161696711, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 2638074961161696711, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2638074961161696711, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2638074961161696711, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2638074961161696711, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2638074961161696711, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2638074961161696711, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2638074961161696711, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2638074961161696711, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4282571440180015595, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: quanLyVatPham
-      value: 
-      objectReference: {fileID: 547717717}
-    - target: {fileID: 8659336740944308147, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_Name
-      value: QuaiMaM3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8659336740944308147, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
 --- !u!1 &1843191992
 GameObject:
   m_ObjectHideFlags: 0
@@ -86851,17 +86705,17 @@ MonoBehaviour:
   - {fileID: 8659336740944308147, guid: 6e2451c4d4e3ad54a9099bec782a101b, type: 3}
   viTriSinhRa:
   - {fileID: 2082939805}
-  thoiGianBatDau: 15
-  thoiGianLapLai: 30
+  thoiGianBatDau: 0
+  thoiGianLapLai: 15
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 60
-  soLuongQuaiDot1: 2
-  soLuongQuaiDot2: 2
-  soLuongQuaiDot3: 3
-  soLuongQuaiDot4: 4
-  soLuongQuaiDot5: 5
-  soLuongQuaiDot6: 6
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 75
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 2
+  soLuongQuaiDot4: 3
+  soLuongQuaiDot5: 3
+  soLuongQuaiDot6: 5
 --- !u!4 &2082939805
 Transform:
   m_ObjectHideFlags: 0
@@ -189607,8 +189461,6 @@ SceneRoots:
   - {fileID: 1399281156}
   - {fileID: 1514864863}
   - {fileID: 2093371144}
-  - {fileID: 1552692818}
-  - {fileID: 1831689602}
   - {fileID: 1334614747}
   - {fileID: 2082939805}
   - {fileID: 1289611078}

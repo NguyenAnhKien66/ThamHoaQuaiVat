@@ -350,14 +350,14 @@ MonoBehaviour:
   thoiGianBatDau: 0
   thoiGianLapLai: 5
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 120
-  soLuongQuaiDot1: 20
-  soLuongQuaiDot2: 20
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 60
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 1
   soLuongQuaiDot3: 2
-  soLuongQuaiDot4: 3
-  soLuongQuaiDot5: 3
-  soLuongQuaiDot6: 4
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 3
 --- !u!4 &172032185
 Transform:
   m_ObjectHideFlags: 0
@@ -407,17 +407,17 @@ MonoBehaviour:
   - {fileID: 35337885393256441, guid: 530435ad3b3659e4c80cc510e346cf88, type: 3}
   viTriSinhRa:
   - {fileID: 214241659}
-  thoiGianBatDau: 5
+  thoiGianBatDau: 0
   thoiGianLapLai: 5
   khoangCachMinGiuaCacQuai: 4
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 120
-  soLuongQuaiDot1: 20
-  soLuongQuaiDot2: 20
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 60
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 1
   soLuongQuaiDot3: 2
-  soLuongQuaiDot4: 3
-  soLuongQuaiDot5: 3
-  soLuongQuaiDot6: 4
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 3
 --- !u!4 &214241659
 Transform:
   m_ObjectHideFlags: 0
@@ -279122,17 +279122,17 @@ MonoBehaviour:
   - {fileID: 35337885393256441, guid: 530435ad3b3659e4c80cc510e346cf88, type: 3}
   viTriSinhRa:
   - {fileID: 782992068}
-  thoiGianBatDau: 2
+  thoiGianBatDau: 0
   thoiGianLapLai: 5
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 120
-  soLuongQuaiDot1: 20
-  soLuongQuaiDot2: 20
-  soLuongQuaiDot3: 20
-  soLuongQuaiDot4: 20
-  soLuongQuaiDot5: 3
-  soLuongQuaiDot6: 4
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 60
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 2
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 3
 --- !u!4 &782992068
 Transform:
   m_ObjectHideFlags: 0
@@ -279316,17 +279316,17 @@ MonoBehaviour:
   - {fileID: 5093534153873224192, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
   viTriSinhRa:
   - {fileID: 791875837}
-  thoiGianBatDau: 3
+  thoiGianBatDau: 0
   thoiGianLapLai: 5
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 120
-  soLuongQuaiDot1: 20
-  soLuongQuaiDot2: 20
-  soLuongQuaiDot3: 20
-  soLuongQuaiDot4: 30
-  soLuongQuaiDot5: 30
-  soLuongQuaiDot6: 40
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 60
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 2
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 3
 --- !u!4 &791875837
 Transform:
   m_ObjectHideFlags: 0
@@ -279584,16 +279584,16 @@ MonoBehaviour:
   viTriSinhRa:
   - {fileID: 835815475}
   thoiGianBatDau: 0
-  thoiGianLapLai: 5
+  thoiGianLapLai: 15
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 120
-  soLuongQuaiDot1: 20
-  soLuongQuaiDot2: 20
-  soLuongQuaiDot3: 20
-  soLuongQuaiDot4: 4
-  soLuongQuaiDot5: 5
-  soLuongQuaiDot6: 5
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 60
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 1
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 2
 --- !u!4 &835815475
 Transform:
   m_ObjectHideFlags: 0
@@ -280170,9 +280170,9 @@ MonoBehaviour:
   VienDan: {fileID: 278823866704907309, guid: d7b043c502c991c40991b0e04ab010ea, type: 3}
   ViTriBan: {fileID: 936908491}
   TiaLua: {fileID: 3680348624768178883, guid: bee5babefa1ed1341abe85191fb8d9d4, type: 3}
-  TocDoban: 2
-  TocDobanGiamKhiLenCap: 0.1
-  LucBan: 10
+  TocDoban: 2.3
+  TocDobanGiamKhiLenCap: 0.15
+  LucBan: 15
   AmThanhDan: {fileID: 8300000, guid: 52a34b07de8cf1548829b398fb2d1d11, type: 3}
   GapDoiDan: 1
   DieuKienGapDoiDan: 5
@@ -281551,17 +281551,17 @@ MonoBehaviour:
   - {fileID: 5093534153873224192, guid: 33fc80ae26f2d314baaef4937380e7f6, type: 3}
   viTriSinhRa:
   - {fileID: 1289611078}
-  thoiGianBatDau: 1
+  thoiGianBatDau: 0
   thoiGianLapLai: 5
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 120
-  soLuongQuaiDot1: 20
-  soLuongQuaiDot2: 20
-  soLuongQuaiDot3: 20
-  soLuongQuaiDot4: 20
-  soLuongQuaiDot5: 20
-  soLuongQuaiDot6: 4
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 60
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 2
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 3
 --- !u!4 &1289611078
 Transform:
   m_ObjectHideFlags: 0
@@ -286809,17 +286809,17 @@ MonoBehaviour:
   - {fileID: 8254222968374482198, guid: eb0198c2902fc80408928fe0f48f3105, type: 3}
   viTriSinhRa:
   - {fileID: 1334614747}
-  thoiGianBatDau: 2
-  thoiGianLapLai: 5
+  thoiGianBatDau: 0
+  thoiGianLapLai: 15
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 120
-  soLuongQuaiDot1: 20
-  soLuongQuaiDot2: 20
-  soLuongQuaiDot3: 30
-  soLuongQuaiDot4: 40
-  soLuongQuaiDot5: 50
-  soLuongQuaiDot6: 50
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 60
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 1
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 2
 --- !u!4 &1334614747
 Transform:
   m_ObjectHideFlags: 0
@@ -287466,17 +287466,17 @@ MonoBehaviour:
   - {fileID: 35337885393256441, guid: 530435ad3b3659e4c80cc510e346cf88, type: 3}
   viTriSinhRa:
   - {fileID: 1505510126}
-  thoiGianBatDau: 4
+  thoiGianBatDau: 0
   thoiGianLapLai: 5
   khoangCachMinGiuaCacQuai: 4
-  soLuongQuaiYeuCau: 3
-  ThoiGianTangMau: 120
-  soLuongQuaiDot1: 20
-  soLuongQuaiDot2: 20
+  soLuongQuaiYeuCau: 1
+  ThoiGianTangMau: 60
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 1
   soLuongQuaiDot3: 2
-  soLuongQuaiDot4: 3
-  soLuongQuaiDot5: 3
-  soLuongQuaiDot6: 4
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 3
 --- !u!4 &1505510126
 Transform:
   m_ObjectHideFlags: 0
