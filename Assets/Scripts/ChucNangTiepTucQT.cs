@@ -14,7 +14,7 @@ public class ChucNangTiepTucQT : MonoBehaviour
     public QuanLyThongSoNhanVat quanLyThongSoNhanVat;
     public ThanhMau thanhMau;
     public ThanhGiap thanhGiap;
-    /*public GameObject quaiPrefab; // Prefab của quái để tạo lại quái*/
+    public GameObject ConTro;
 
     // Start is called before the first frame update
     void Start()
@@ -78,7 +78,7 @@ public class ChucNangTiepTucQT : MonoBehaviour
         int mauNVHienTai = PlayerPrefs.GetInt("MauNVHienTai");
         quanLyThongSoNhanVat.MauHientai = mauNVHienTai;
         thanhMau.CapnhatMau(quanLyThongSoNhanVat.MauHientai, quanLyThongSoNhanVat.MauToiDaNhanVat);
-        //Khôi phục lượng mana hiện tại
+        //Khôi phục thanh hồi chiêu
         float ThoiGianHoiChieuNV = PlayerPrefs.GetFloat("ThoiGianHoiChieuNV");
         float HoiChieuCuonNV = PlayerPrefs.GetFloat("HoiChieuCuonNV");
         NhanVatS.ThoiGianHoiChieu = ThoiGianHoiChieuNV;
@@ -89,7 +89,11 @@ public class ChucNangTiepTucQT : MonoBehaviour
         int giapNVHienTai = PlayerPrefs.GetInt("GiapNVHienTai");
         quanLyThongSoNhanVat.GiapHienTai = giapNVHienTai;
         thanhGiap.CapnhatGiap(quanLyThongSoNhanVat.GiapHienTai, quanLyThongSoNhanVat.GiapToiDa);
-
+        //Khôi phục sát thương của nhân vật
+        int satThuongNhoNhat= PlayerPrefs.GetInt("SatThuongNhoNhatNV");
+        int satThuongLonNhat = PlayerPrefs.GetInt("SatThuongLonNhatNV");
+        quanLyThongSoNhanVat.SatThuongNhoNhat= satThuongNhoNhat;
+        quanLyThongSoNhanVat.SatThuongLonNhat=satThuongLonNhat;
         //Khôi phục số kill 
         int soKillNV = PlayerPrefs.GetInt("SoKillNV");
         DemQuaiChet.instance.DemSoLuongQuaiChet = soKillNV;
@@ -127,13 +131,31 @@ public class ChucNangTiepTucQT : MonoBehaviour
                     enemy.name = tenQuaiPrefabs + "(Clone)"; // Đặt lại tên với (Clone)
                     enemy.GetComponent<QuanLyQuai>().LuongMau = data.mau;
                 }
-                else
-                {
-                    DemQuaiChet.instance.DemSoLuongQuaiChet = 0;
-                    DemQuaiChet.instance.CapNhatSoLuongQuaiChet();
-                }
+                
             }
         }
+        //Khôi phục item rơi
+        if (PlayerPrefs.HasKey("CacItem"))
+        {
+            string json2 = PlayerPrefs.GetString("CacItem");
+            ItemDataList itemDataList = JsonUtility.FromJson<ItemDataList>(json2);
+
+            foreach (ItemData data in itemDataList.items)
+            {
+                Vector3 positem = new Vector3(data.posX, data.posY, data.posZ);
+                //Tạo item dựa vào tên item prefabs đã lưu
+                string tenItemPrefabs = data.tenItem.Replace("(Clone)", "").Trim();
+                GameObject itemPrefab = Resources.Load<GameObject>("Item/" + tenItemPrefabs);
+                if (itemPrefab != null)
+                {
+                    GameObject item = Instantiate(itemPrefab, positem, Quaternion.identity);
+                    item.name = tenItemPrefabs + "(Clone)"; // Đặt lại tên với (Clone)
+
+                }
+                
+            }
+        }
+
         //Khôi phục trạng thái boss
         if (PlayerPrefs.GetInt("CoDuLieuBoss") == 1) //Có dữ liệu boss thì mới khôi phục
         {
@@ -153,6 +175,19 @@ public class ChucNangTiepTucQT : MonoBehaviour
             }
         }
 
+        //Khôi phục trạng thái điểm buff
+        GameObject DiemBuff = GameObject.Find("DiemBuff");
+        
+        if(DiemBuff!=null)
+        {
+            if (PlayerPrefs.GetInt("TonTaiDiemBuff") == 0)
+            {
+                Destroy(DiemBuff.gameObject);
+                ConTro.SetActive(false);
+            }
+        }    
+        
+
     }
     void ResetDuLieu()
     {
@@ -169,6 +204,16 @@ public class ChucNangTiepTucQT : MonoBehaviour
         public EnemyDataList(List<EnemyData> enemies)
         {
             this.enemies = enemies;
+        }
+    }
+    [System.Serializable]
+    private class ItemDataList
+    {
+        public List<ItemData> items;
+
+        public ItemDataList(List<ItemData> items)
+        {
+            this.items = items;
         }
     }
 }
@@ -188,5 +233,21 @@ public class EnemyData
         this.posZ = position.z;
         this.mau = mau;
         this.tenQuaiPrefabs = tenQuaiPrefabs;
+    }
+}
+[System.Serializable]
+public class ItemData
+{
+    public float posX;
+    public float posY;
+    public float posZ;
+    public string tenItem;
+
+    public ItemData(Vector3 position, string tenItem)
+    {
+        this.posX = position.x;
+        this.posY = position.y;
+        this.posZ = position.z;
+        this.tenItem = tenItem;
     }
 }

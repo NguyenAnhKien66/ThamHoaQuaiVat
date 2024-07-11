@@ -106159,6 +106159,8 @@ MonoBehaviour:
   quanLyThongSoNhanVat: {fileID: 11400000, guid: 4d3535415c9a09246b23bd4938db445c, type: 2}
   thanhMau: {fileID: 1920415158}
   thanhGiap: {fileID: 843375683}
+  ConTro: {fileID: 1147031993}
+  itemPrefabt: {fileID: 7735406117813296389, guid: 61e3456f7bcab2e44b1a796df3545021, type: 3}
 --- !u!114 &179004153
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -189256,6 +189256,7 @@ MonoBehaviour:
   quanLyThongSoNhanVat: {fileID: 11400000, guid: 4d3535415c9a09246b23bd4938db445c, type: 2}
   thanhMau: {fileID: 88991867}
   thanhGiap: {fileID: 506500243}
+  ConTro: {fileID: 1849342370}
 --- !u!1 &2146068005
 GameObject:
   m_ObjectHideFlags: 0

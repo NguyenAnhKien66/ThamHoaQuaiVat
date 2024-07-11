@@ -240273,6 +240273,7 @@ MonoBehaviour:
   quanLyThongSoNhanVat: {fileID: 11400000, guid: 4d3535415c9a09246b23bd4938db445c, type: 2}
   thanhMau: {fileID: 1911504526}
   thanhGiap: {fileID: 136419482}
+  ConTro: {fileID: 1387498724}
 --- !u!114 &2093371147
 MonoBehaviour:
   m_ObjectHideFlags: 0
