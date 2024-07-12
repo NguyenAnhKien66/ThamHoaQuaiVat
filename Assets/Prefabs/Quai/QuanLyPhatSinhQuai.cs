@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class QuanLyPhatSinhQuai : MonoBehaviour
 {
@@ -16,11 +17,24 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
     public int soLuongQuaiDot4 = 1;
     public int soLuongQuaiDot5 = 1;
     public int soLuongQuaiDot6 = 1;
-    private int SoluongPhatSinh;
+
+    private int[] soLuongQuaiChoMoiDot; // Mảng lưu số lượng quái cần sinh cho mỗi đợt
+    public Dictionary<Transform, int> soLuongQuaiDaPhatSinh; // Dictionary lưu số lượng quái đã sinh từng cổng
+    public int soluong;
     private float thoiGianDaTroiQua = 0f; // Thời gian đã trôi qua
 
     private void Start()
     {
+        // Khởi tạo mảng lưu trữ số lượng quái vật cho từng đợt và số lượng đã sinh ra
+        soLuongQuaiChoMoiDot = new int[] { soLuongQuaiDot1, soLuongQuaiDot2, soLuongQuaiDot3, soLuongQuaiDot4, soLuongQuaiDot5, soLuongQuaiDot6 };
+        soLuongQuaiDaPhatSinh = new Dictionary<Transform, int>();
+
+        // Khởi tạo số lượng đã sinh cho từng cổng
+        foreach (Transform viTri in viTriSinhRa)
+        {
+            soLuongQuaiDaPhatSinh[viTri] = 0;
+        }
+
         StartCoroutine(SinhQuaiDinhKy());
     }
 
@@ -32,80 +46,74 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
         {
             thoiGianDaTroiQua += thoiGianLapLai;
 
-            if (thoiGianDaTroiQua > 60f && thoiGianDaTroiQua < 120f)
+            // Lấy số lượng quái cần sinh cho đợt hiện tại dựa vào thời gian đã trôi qua
+            int indexDotSinh = Mathf.FloorToInt(thoiGianDaTroiQua / 60f);
+            if (indexDotSinh < soLuongQuaiChoMoiDot.Length)
             {
-                SoluongPhatSinh = soLuongQuaiDot1;
-            }
-            else if (thoiGianDaTroiQua < 180f)
-            {
-                SoluongPhatSinh = soLuongQuaiDot2;
-            }
-            else if (thoiGianDaTroiQua < 240f)
-            {
-                SoluongPhatSinh = soLuongQuaiDot3;
-            }
-            else if (thoiGianDaTroiQua < 300f)
-            {
-                SoluongPhatSinh = soLuongQuaiDot4;
-            }
-            else if (thoiGianDaTroiQua < 360f)
-            {
-                SoluongPhatSinh = soLuongQuaiDot5;
-            }
-            else if (thoiGianDaTroiQua < 420f)
-            {
-                SoluongPhatSinh = soLuongQuaiDot6;
-            }
-            else
-            {
-                thoiGianLapLai = 20f;
-                SoluongPhatSinh = soLuongQuaiYeuCau;
-            }
+                int soluongCanSinh = soLuongQuaiChoMoiDot[indexDotSinh];
 
-            // Sinh ra các quái vật
-            for (int i = 0; i < SoluongPhatSinh; i++)
-            {
-                if (quaiPrefabs.Length > 0)
+                // Kiểm tra số lượng quái đã sinh ra từ cổng tương ứng và sinh quái
+                for (int i = 0; i < soluongCanSinh; i++)
                 {
-                    Transform viTriNgauNhien = viTriSinhRa[Random.Range(0, viTriSinhRa.Length)];
-
-                    // Kiểm tra vị trí sinh ra có hợp lệ không
-                    if (KiemTraViTriHopLe(viTriNgauNhien.position))
+                    if (quaiPrefabs.Length > 0)
                     {
-                        GameObject quaiPrefab = quaiPrefabs[Random.Range(0, quaiPrefabs.Length)];
-                        Vector3 viTriMoi = new Vector3(viTriNgauNhien.position.x, viTriNgauNhien.position.y, 0f);
+                        Transform viTriNgauNhien = viTriSinhRa[Random.Range(0, viTriSinhRa.Length)];
 
-                        GameObject quaiInstance = Instantiate(quaiPrefab, viTriMoi, Quaternion.identity);
-
-                        // Tính toán lượng máu dựa trên thời gian đã trôi qua
-                        QuanLyQuai quanLyQuai = quaiInstance.GetComponent<QuanLyQuai>();
-                        if (quanLyQuai != null)
+                        // Kiểm tra vị trí sinh ra có hợp lệ không
+                        if (KiemTraViTriHopLe(viTriNgauNhien.position))
                         {
-                            float thoiGianDaTroiQuaQuai = Time.timeSinceLevelLoad;
-                            quanLyQuai.LuongMau = 20 + ((int)(thoiGianDaTroiQuaQuai / ThoiGianTangMau) * 20);
-                            quanLyQuai.MauHienTai = quanLyQuai.LuongMau;
-
-                            if (quanLyQuai.MauHienTai > quanLyQuai.MauToiDa)
+                            // Kiểm tra số lượng đã sinh từ cổng này có vượt quá giới hạn không
+                            if (soLuongQuaiDaPhatSinh[viTriNgauNhien] < 60)
                             {
-                                quanLyQuai.MauHienTai = quanLyQuai.MauToiDa;
-                            }
+                                GameObject quaiPrefab = quaiPrefabs[Random.Range(0, quaiPrefabs.Length)];
+                                Vector3 viTriMoi = new Vector3(viTriNgauNhien.position.x, viTriNgauNhien.position.y, 0f);
 
-                            Debug.Log("Quái mới sinh ra với lượng máu: " + quanLyQuai.MauHienTai);
+                                GameObject quaiInstance = Instantiate(quaiPrefab, viTriMoi, Quaternion.identity);
+
+                                // Tính toán lượng máu dựa trên thời gian đã trôi qua
+                                QuanLyQuai quanLyQuai = quaiInstance.GetComponent<QuanLyQuai>();
+                                if (quanLyQuai != null)
+                                {
+                                    float thoiGianDaTroiQuaQuai = Time.timeSinceLevelLoad;
+                                    quanLyQuai.LuongMau = 20 + ((int)(thoiGianDaTroiQuaQuai / ThoiGianTangMau) * 20);
+                                    quanLyQuai.MauHienTai = quanLyQuai.LuongMau;
+
+                                    if (quanLyQuai.MauHienTai > quanLyQuai.MauToiDa)
+                                    {
+                                        quanLyQuai.MauHienTai = quanLyQuai.MauToiDa;
+                                    }
+
+                                    Debug.Log("Quái mới sinh ra với lượng máu: " + quanLyQuai.MauHienTai);
+                                }
+
+                                // Đã sinh ra một quái vật từ cổng này, cập nhật số lượng đã sinh
+                                soLuongQuaiDaPhatSinh[viTriNgauNhien]++;
+                                soluong = soLuongQuaiDaPhatSinh[viTriNgauNhien];
+                                Debug.Log("Đã sinh ra " + soLuongQuaiDaPhatSinh[viTriNgauNhien] + " quái từ cổng này.");
+                            }
+                            else
+                            {
+                                Debug.LogWarning("Đã đạt giới hạn số lượng quái từ cổng này (80 quái).");
+                            }
+                        }
+                        else
+                        {
+                            Debug.LogWarning("Không thể sinh ra quái vật tại vị trí này do quái vật đã có quá gần.");
                         }
                     }
                     else
                     {
-                        Debug.LogWarning("Không thể sinh ra quái vật tại vị trí này do quái vật đã có quá gần.");
+                        Debug.LogWarning("Không có prefab quái vật nào trong mảng. Không thể sinh ra quái vật.");
                     }
-                }
-                else
-                {
-                    Debug.LogWarning("Không có prefab quái vật nào trong mảng. Không thể sinh ra quái vật.");
-                }
 
-                yield return new WaitForSeconds(1f); // Chờ 1 giây giữa mỗi lần sinh quái vật
+                    yield return new WaitForSeconds(1f); // Chờ 1 giây giữa mỗi lần sinh quái vật
+                }
             }
-
+            else
+            {
+                thoiGianLapLai = 20f;
+                // Đã đạt yêu cầu số lượng quái vật, có thể làm gì đó khi đạt điều kiện
+            }
             // Chờ đợi khoảng thời gian lặp lại
             yield return new WaitForSeconds(thoiGianLapLai);
         }

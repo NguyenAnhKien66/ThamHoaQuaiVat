@@ -106751,7 +106751,7 @@ Transform:
   m_GameObject: {fileID: 312361418}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.5, y: 0.36, z: -10}
+  m_LocalPosition: {x: 34.84, y: -30.83, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -106822,7 +106822,7 @@ GameObject:
   - component: {fileID: 345543592}
   - component: {fileID: 345543593}
   - component: {fileID: 345543594}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: QuanLyNhanVat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106932,7 +106932,7 @@ GameObject:
   - component: {fileID: 362552334}
   - component: {fileID: 362552335}
   - component: {fileID: 362552336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NhanVat
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -106948,7 +106948,7 @@ Transform:
   m_GameObject: {fileID: 362552327}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.5, y: 0.36, z: 0}
+  m_LocalPosition: {x: 34.84, y: -30.83, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -107013,7 +107013,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.07691224, y: -3.8426018}
@@ -107601,6 +107601,10 @@ PrefabInstance:
       value: ConTro
       objectReference: {fileID: 0}
     - target: {fileID: 8025949623084486526, guid: 2a749834b9d0c6e45ab7c016e5b88828, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025949623084486526, guid: 2a749834b9d0c6e45ab7c016e5b88828, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -108124,7 +108128,7 @@ GameObject:
   - component: {fileID: 936908493}
   - component: {fileID: 936908492}
   - component: {fileID: 936908494}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sung
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108623,14 +108627,15 @@ MonoBehaviour:
   thoiGianBatDau: 0
   thoiGianLapLai: 10
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 2
+  soLuongQuaiYeuCau: 3
   ThoiGianTangMau: 120
-  soLuongQuaiDot1: 1
+  soLuongQuaiDot1: 2
   soLuongQuaiDot2: 2
   soLuongQuaiDot3: 3
   soLuongQuaiDot4: 4
   soLuongQuaiDot5: 5
   soLuongQuaiDot6: 5
+  soluong: 0
 --- !u!4 &975196633
 Transform:
   m_ObjectHideFlags: 0
@@ -109154,7 +109159,7 @@ MonoBehaviour:
   quaiBossPf: {fileID: 7210530881058903835, guid: c41e16ca7c5c0e74b8151934f9068c0c, type: 3}
   viTriSinhRa:
   - {fileID: 1172148210}
-  thoiGianXuatHien: 5
+  thoiGianXuatHien: 420
   AmThanh: {fileID: 8300000, guid: ffdca19bd1a51794fa7cc8e850048ad7, type: 3}
 --- !u!4 &1172148210
 Transform:
@@ -109581,12 +109586,13 @@ MonoBehaviour:
   khoangCachMinGiuaCacQuai: 3
   soLuongQuaiYeuCau: 3
   ThoiGianTangMau: 120
-  soLuongQuaiDot1: 1
+  soLuongQuaiDot1: 2
   soLuongQuaiDot2: 2
   soLuongQuaiDot3: 3
   soLuongQuaiDot4: 4
   soLuongQuaiDot5: 5
   soLuongQuaiDot6: 5
+  soluong: 0
 --- !u!4 &1289611078
 Transform:
   m_ObjectHideFlags: 0
@@ -109695,7 +109701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1334614746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109714,16 +109720,17 @@ MonoBehaviour:
   viTriSinhRa:
   - {fileID: 1334614747}
   thoiGianBatDau: 0
-  thoiGianLapLai: 30
+  thoiGianLapLai: 5
   khoangCachMinGiuaCacQuai: 2
   soLuongQuaiYeuCau: 1
   ThoiGianTangMau: 120
-  soLuongQuaiDot1: 2
+  soLuongQuaiDot1: 60
   soLuongQuaiDot2: 2
   soLuongQuaiDot3: 2
   soLuongQuaiDot4: 3
   soLuongQuaiDot5: 3
   soLuongQuaiDot6: 3
+  soluong: 0
 --- !u!4 &1334614747
 Transform:
   m_ObjectHideFlags: 0
@@ -118871,7 +118878,7 @@ Transform:
   m_GameObject: {fileID: 1508131434}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.5, y: 0.36, z: -10}
+  m_LocalPosition: {x: 34.84, y: -30.83, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -248099,7 +248106,7 @@ MonoBehaviour:
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
     cacheStartup: 0
-  showNavGraphs: 1
+  showNavGraphs: 0
   showUnwalkableNodes: 1
   debugMode: 0
   debugFloor: 0
@@ -248362,11 +248369,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1929328191691919146, guid: f5249aa5e50b54d44ba3042213b31bca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.1
+      value: 27.2
       objectReference: {fileID: 0}
     - target: {fileID: 1929328191691919146, guid: f5249aa5e50b54d44ba3042213b31bca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.1
+      value: -28.1
       objectReference: {fileID: 0}
     - target: {fileID: 1929328191691919146, guid: f5249aa5e50b54d44ba3042213b31bca, type: 3}
       propertyPath: m_LocalPosition.z
@@ -248409,10 +248416,16 @@ PrefabInstance:
       value: QuaiCanChien02
       objectReference: {fileID: 0}
     - target: {fileID: 8130044134383232721, guid: f5249aa5e50b54d44ba3042213b31bca, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130044134383232721, guid: f5249aa5e50b54d44ba3042213b31bca, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -248427,11 +248440,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5915379070322941791, guid: 6a30a4028bc40294880eb019158a399e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.5
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5915379070322941791, guid: 6a30a4028bc40294880eb019158a399e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -28.4
       objectReference: {fileID: 0}
     - target: {fileID: 5915379070322941791, guid: 6a30a4028bc40294880eb019158a399e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -248468,6 +248481,10 @@ PrefabInstance:
     - target: {fileID: 6264075948511495821, guid: 6a30a4028bc40294880eb019158a399e, type: 3}
       propertyPath: m_Name
       value: QuaiCanChien01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264075948511495821, guid: 6a30a4028bc40294880eb019158a399e, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6264075948511495821, guid: 6a30a4028bc40294880eb019158a399e, type: 3}
       propertyPath: m_IsActive
