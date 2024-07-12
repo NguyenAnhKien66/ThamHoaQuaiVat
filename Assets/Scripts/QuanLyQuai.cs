@@ -1,26 +1,25 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class QuanLyQuai : MonoBehaviour
 {
-    private NhanVat nhanVat;
-    public int SatThuongNhoNhat;
-    public int SatThuongLonNhat;
-    public int LuongMau = 100;
-    public bool AnimationTanCong;
-    public int KinhNghiemNhanDuoc;
-    public QuanLyVatPham quanLyVatPham;
-    public int MauToiDa = 100;
-    public int MauHienTai;
-    public float ThoiGianTangMau = 60f;
+    private NhanVat nhanVat; // Player character
+    public int SatThuongNhoNhat; // Minimum damage
+    public int SatThuongLonNhat; // Maximum damage
+    public int LuongMau = 100; // Health
+    public bool AnimationTanCong; // Attack animation flag
+    public int KinhNghiemNhanDuoc; // Experience points gained upon defeat
+    public QuanLyVatPham quanLyVatPham; // Item manager
+    public int MauToiDa = 100; // Maximum health
+    public int MauHienTai; // Current health
+    public float ThoiGianTangMau = 60f; // Health regeneration interval
 
     private void Start()
     {
-        // Lượng máu của quái được thiết lập tại thời điểm sinh ra
-        MauHienTai = LuongMau;
-        Debug.Log("Bắt đầu với lượng máu: " + MauHienTai);
-
-        StartCoroutine(TangMauTheoThoiGian());
+        MauHienTai = LuongMau; // Set initial health
+        Debug.Log("Starting with health: " + MauHienTai);
+        StartCoroutine(TangMauTheoThoiGian()); // Start health regeneration
     }
 
     IEnumerator TangMauTheoThoiGian()
@@ -28,7 +27,7 @@ public class QuanLyQuai : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(ThoiGianTangMau);
-            Debug.Log("Kiểm tra tăng máu, MauHienTai: " + MauHienTai + ", MauToiDa: " + MauToiDa);
+            Debug.Log("Checking health regeneration, MauHienTai: " + MauHienTai + ", MauToiDa: " + MauToiDa);
 
             if (MauHienTai < MauToiDa)
             {
@@ -38,7 +37,7 @@ public class QuanLyQuai : MonoBehaviour
                     MauHienTai = MauToiDa;
                 }
                 LuongMau = MauHienTai;
-                Debug.Log("Đã tăng lượng máu của quái lên " + MauHienTai);
+                Debug.Log("Increased monster health to " + MauHienTai);
             }
         }
     }
@@ -52,7 +51,7 @@ public class QuanLyQuai : MonoBehaviour
 
         if (quanLyVatPham == null)
         {
-            Debug.LogError("QuanLyVatPham không tìm thấy");
+            Debug.LogError("QuanLyVatPham not found");
         }
     }
 
@@ -63,7 +62,7 @@ public class QuanLyQuai : MonoBehaviour
         if (LuongMau > 0)
         {
             LuongMau -= SatThuong;
-            Debug.Log("Quái nhận sát thương " + SatThuong + ". Lượng máu còn lại: " + LuongMau);
+            Debug.Log("Monster took damage " + SatThuong + ". Remaining health: " + LuongMau);
         }
 
         if (LuongMau <= 0)
@@ -82,9 +81,16 @@ public class QuanLyQuai : MonoBehaviour
                     Debug.LogError("quanLyVatPham is null");
                 }
 
+                FindObjectOfType<QuanLyPhatSinhQuai>().demquai();
+                /*ReturnToPool(); */// Return to pool upon death
                 Destroy(gameObject);
             }
         }
+    }
+
+    void ReturnToPool()
+    {
+        gameObject.SetActive(false); // Disable for reuse
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -122,8 +128,9 @@ public class QuanLyQuai : MonoBehaviour
         if (nhanVat != null)
         {
             int SatThuong = Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
-            Debug.Log("Player nhận sát thương " + SatThuong);
+            Debug.Log("Player took damage " + SatThuong);
             nhanVat.SatThuongGanhChieu(SatThuong);
+            
         }
     }
 }

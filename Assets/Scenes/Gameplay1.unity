@@ -106972,7 +106972,7 @@ MonoBehaviour:
   quanLyThongSoNhanVat: {fileID: 11400000, guid: 4d3535415c9a09246b23bd4938db445c, type: 2}
   kinhNghiemNhanVat: 0
   QuanLyNhanVat: {fileID: 345543593}
-  sung: {fileID: 936908492}
+  sung: {fileID: 0}
   HuongDiChuyen: {x: 0, y: 0, z: 0}
   HoiChieuCuon: 10
   ThoiGianHoiChieu: 0
@@ -108167,7 +108167,7 @@ MonoBehaviour:
   ViTriBan: {fileID: 936908491}
   TiaLua: {fileID: 3680348624768178883, guid: bee5babefa1ed1341abe85191fb8d9d4, type: 3}
   TocDoban: 2
-  TocDobanGiamKhiLenCap: 0.15
+  TocDobanGiamKhiLenCap: 0.1
   LucBan: 10
   AmThanhDan: {fileID: 8300000, guid: 52a34b07de8cf1548829b398fb2d1d11, type: 3}
   GapDoiDan: 0
@@ -108627,15 +108627,16 @@ MonoBehaviour:
   thoiGianBatDau: 0
   thoiGianLapLai: 10
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
+  soLuongQuaiYeuCau: 1
   ThoiGianTangMau: 120
   soLuongQuaiDot1: 2
   soLuongQuaiDot2: 2
-  soLuongQuaiDot3: 3
-  soLuongQuaiDot4: 4
-  soLuongQuaiDot5: 5
-  soLuongQuaiDot6: 5
+  soLuongQuaiDot3: 2
+  soLuongQuaiDot4: 3
+  soLuongQuaiDot5: 3
+  soLuongQuaiDot6: 3
   soluong: 0
+  soluongchet: 0
 --- !u!4 &975196633
 Transform:
   m_ObjectHideFlags: 0
@@ -109156,7 +109157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da4e38d75926ce948a8837b250cb5169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quaiBossPf: {fileID: 7210530881058903835, guid: c41e16ca7c5c0e74b8151934f9068c0c, type: 3}
+  quaiBossPf: {fileID: 7210530881058903835, guid: d7638157c4c5ef94fb679be3d57b8657, type: 3}
   viTriSinhRa:
   - {fileID: 1172148210}
   thoiGianXuatHien: 420
@@ -109577,22 +109578,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quaiPrefabs:
-  - {fileID: 6264075948511495821, guid: 6a30a4028bc40294880eb019158a399e, type: 3}
   - {fileID: 8130044134383232721, guid: f5249aa5e50b54d44ba3042213b31bca, type: 3}
+  - {fileID: 6264075948511495821, guid: 6a30a4028bc40294880eb019158a399e, type: 3}
   viTriSinhRa:
   - {fileID: 1289611078}
   thoiGianBatDau: 0
   thoiGianLapLai: 10
   khoangCachMinGiuaCacQuai: 3
-  soLuongQuaiYeuCau: 3
+  soLuongQuaiYeuCau: 1
   ThoiGianTangMau: 120
   soLuongQuaiDot1: 2
   soLuongQuaiDot2: 2
-  soLuongQuaiDot3: 3
-  soLuongQuaiDot4: 4
-  soLuongQuaiDot5: 5
-  soLuongQuaiDot6: 5
+  soLuongQuaiDot3: 2
+  soLuongQuaiDot4: 3
+  soLuongQuaiDot5: 3
+  soLuongQuaiDot6: 3
   soluong: 0
+  soluongchet: 0
 --- !u!4 &1289611078
 Transform:
   m_ObjectHideFlags: 0
@@ -109724,13 +109726,14 @@ MonoBehaviour:
   khoangCachMinGiuaCacQuai: 2
   soLuongQuaiYeuCau: 1
   ThoiGianTangMau: 120
-  soLuongQuaiDot1: 60
-  soLuongQuaiDot2: 2
-  soLuongQuaiDot3: 2
-  soLuongQuaiDot4: 3
-  soLuongQuaiDot5: 3
-  soLuongQuaiDot6: 3
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 1
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 2
   soluong: 0
+  soluongchet: 0
 --- !u!4 &1334614747
 Transform:
   m_ObjectHideFlags: 0
