@@ -13,14 +13,14 @@ public class QuaiCanChienAI : MonoBehaviour
     public float KhoangCachDiemKeTiep;
     private Vector3 initialScale;
 
-
     // Start is called before the first frame update
     private void Start()
     {
         initialScale = transform.localScale;
         InvokeRepeating("TinhToanDuongDi", 0f, 0.5f);
     }
-    //Tinh toan duong di
+
+    // Tinh toan duong di
     void TinhToanDuongDi()
     {
         Vector2 MucTieu = TimMucTieu();
@@ -29,24 +29,31 @@ public class QuaiCanChienAI : MonoBehaviour
             seeker.StartPath(transform.position, MucTieu, HoanThanhDuong);
         }
     }
+
     Vector2 TimMucTieu()
     {
         Vector3 ViTriNhanVat = FindObjectOfType<NhanVat>().transform.position;
         return ViTriNhanVat;
     }
+
     void HoanThanhDuong(Path p)
     {
         if (p.error) return;
         path = p;
         Debug.Log("path = " + path);
-        //Di chuyen den muc tieu
-        DiChuyenDenMucTieu();
+        // Di chuyen den muc tieu
+        if (gameObject.activeInHierarchy)
+        {
+            DiChuyenDenMucTieu();
+        }
     }
+
     void DiChuyenDenMucTieu()
     {
         if (DiChuyenCoroutine != null) StopCoroutine(DiChuyenCoroutine);
         DiChuyenCoroutine = StartCoroutine(DiChuyenDenMucTieuCoroutine());
     }
+
     IEnumerator DiChuyenDenMucTieuCoroutine()
     {
         int Diem = 0;
