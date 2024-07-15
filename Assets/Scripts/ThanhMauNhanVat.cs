@@ -33,6 +33,7 @@ public class ThanhMauNhanVat : MonoBehaviour
         {
             quanLyThongSoNhanVat.MauHientai = 0;
             SauKhiMatMang.Invoke();
+            PlayerPrefs.SetInt("KqBoss", 0);
         }
         thanhMau.CapnhatMau(quanLyThongSoNhanVat.MauHientai, quanLyThongSoNhanVat.MauToiDaNhanVat);
     }

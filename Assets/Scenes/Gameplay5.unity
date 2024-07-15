@@ -358,6 +358,9 @@ MonoBehaviour:
   soLuongQuaiDot4: 2
   soLuongQuaiDot5: 2
   soLuongQuaiDot6: 3
+  soluong: 0
+  soluongchet: 0
+  gioiHanQuai: 25
 --- !u!4 &172032185
 Transform:
   m_ObjectHideFlags: 0
@@ -418,6 +421,9 @@ MonoBehaviour:
   soLuongQuaiDot4: 2
   soLuongQuaiDot5: 2
   soLuongQuaiDot6: 3
+  soluong: 0
+  soluongchet: 0
+  gioiHanQuai: 25
 --- !u!4 &214241659
 Transform:
   m_ObjectHideFlags: 0
@@ -279133,6 +279139,9 @@ MonoBehaviour:
   soLuongQuaiDot4: 2
   soLuongQuaiDot5: 2
   soLuongQuaiDot6: 3
+  soluong: 0
+  soluongchet: 0
+  gioiHanQuai: 25
 --- !u!4 &782992068
 Transform:
   m_ObjectHideFlags: 0
@@ -279205,7 +279214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "C\u1EA5p \u0111\u1ED9: 1"
+  m_text: 'Level: 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -279239,7 +279248,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -279327,6 +279336,9 @@ MonoBehaviour:
   soLuongQuaiDot4: 2
   soLuongQuaiDot5: 2
   soLuongQuaiDot6: 3
+  soluong: 0
+  soluongchet: 0
+  gioiHanQuai: 25
 --- !u!4 &791875837
 Transform:
   m_ObjectHideFlags: 0
@@ -279591,9 +279603,12 @@ MonoBehaviour:
   soLuongQuaiDot1: 1
   soLuongQuaiDot2: 1
   soLuongQuaiDot3: 1
-  soLuongQuaiDot4: 2
-  soLuongQuaiDot5: 2
+  soLuongQuaiDot4: 1
+  soLuongQuaiDot5: 1
   soLuongQuaiDot6: 2
+  soluong: 0
+  soluongchet: 0
+  gioiHanQuai: 15
 --- !u!4 &835815475
 Transform:
   m_ObjectHideFlags: 0
@@ -281428,6 +281443,9 @@ MonoBehaviour:
   soLuongQuaiDot4: 2
   soLuongQuaiDot5: 2
   soLuongQuaiDot6: 3
+  soluong: 0
+  soluongchet: 0
+  gioiHanQuai: 25
 --- !u!4 &1289611078
 Transform:
   m_ObjectHideFlags: 0
@@ -286683,9 +286701,12 @@ MonoBehaviour:
   soLuongQuaiDot1: 1
   soLuongQuaiDot2: 1
   soLuongQuaiDot3: 1
-  soLuongQuaiDot4: 2
-  soLuongQuaiDot5: 2
+  soLuongQuaiDot4: 1
+  soLuongQuaiDot5: 1
   soLuongQuaiDot6: 2
+  soluong: 0
+  soluongchet: 0
+  gioiHanQuai: 15
 --- !u!4 &1334614747
 Transform:
   m_ObjectHideFlags: 0
@@ -287222,6 +287243,9 @@ MonoBehaviour:
   soLuongQuaiDot4: 2
   soLuongQuaiDot5: 2
   soLuongQuaiDot6: 3
+  soluong: 0
+  soluongchet: 0
+  gioiHanQuai: 25
 --- !u!4 &1505510126
 Transform:
   m_ObjectHideFlags: 0

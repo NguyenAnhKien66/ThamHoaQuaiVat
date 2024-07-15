@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class QuanLyQuai : MonoBehaviour
 {
-    private NhanVat nhanVat; // Player character
-    public int SatThuongNhoNhat; // Minimum damage
-    public int SatThuongLonNhat; // Maximum damage
-    public int LuongMau = 100; // Health
-    public bool AnimationTanCong; // Attack animation flag
-    public int KinhNghiemNhanDuoc; // Experience points gained upon defeat
-    public QuanLyVatPham quanLyVatPham; // Item manager
-    public int MauToiDa = 100; // Maximum health
-    public int MauHienTai; // Current health
-    public float ThoiGianTangMau = 60f; // Health regeneration interval
+    private NhanVat nhanVat; 
+    public int SatThuongNhoNhat; 
+    public int SatThuongLonNhat;
+    public int LuongMau = 100; 
+    public bool AnimationTanCong; 
+    public int KinhNghiemNhanDuoc;
+    public QuanLyVatPham quanLyVatPham;
+    public int MauToiDa = 100;
+    public int MauHienTai;
+    public float ThoiGianTangMau = 60f;
 
     private void Start()
     {
-        MauHienTai = LuongMau; // Set initial health
+        MauHienTai = LuongMau; 
         Debug.Log("Starting with health: " + MauHienTai);
-        StartCoroutine(TangMauTheoThoiGian()); // Start health regeneration
+        StartCoroutine(TangMauTheoThoiGian()); 
     }
 
     IEnumerator TangMauTheoThoiGian()
@@ -82,7 +82,7 @@ public class QuanLyQuai : MonoBehaviour
                 }
 
                 FindObjectOfType<QuanLyPhatSinhQuai>().demquai();
-                /*ReturnToPool(); */// Return to pool upon death
+                /*ReturnToPool(); */
                 Destroy(gameObject);
             }
         }
@@ -90,7 +90,7 @@ public class QuanLyQuai : MonoBehaviour
 
     void ReturnToPool()
     {
-        gameObject.SetActive(false); // Disable for reuse
+        gameObject.SetActive(false); 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

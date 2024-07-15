@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class NhanVat : MonoBehaviour
 {
     public QuanLyThongSoNhanVat quanLyThongSoNhanVat;
-    public int kinhNghiemNhanVat; //Nghĩa cập nhật public
+    public int kinhNghiemNhanVat; 
     public SpriteRenderer QuanLyNhanVat; // Khai bao tham chieu den mot thanh phan SpriteRenderer
     private Rigidbody2D rb;
     public Sung sung;
@@ -20,9 +20,7 @@ public class NhanVat : MonoBehaviour
     public Animator animator; // Khai bao tham chieu den thanh phan Animator
     [SerializeField] ThanhMau thanhMau;
 
-    //Nghĩa cập nhật 
     public DieuKhienText DieuKhienText;
-    //
 
     // Tham chieu den thanh ky nang
     public ThanhKyNangNhanVat thanhKyNangNhanVat;
@@ -53,13 +51,11 @@ public class NhanVat : MonoBehaviour
             kinhNghiemNhanVat = 0; // Reset Kinh nghiem sau khi moi lan len cap
             CapNhatCapDo(); // Goi ham thang cap
 
-            //Nghĩa cập nhật
             DieuKhienText.HienThiThangCapTxt();
-            //
+
         }
         CapNhatUI();
     }
-    //Nghĩa cập nhật
     public void CapNhatUI()
     {
         Debug.Log("CapNhatUI Called");
@@ -200,24 +196,23 @@ public class NhanVat : MonoBehaviour
                     }
                     thanhMau.CapnhatMau(quanLyThongSoNhanVat.MauHientai, quanLyThongSoNhanVat.MauToiDaNhanVat);
 
-                    //Nghĩa cập nhật
                     DieuKhienText.HienThiCongMauTxt(5);
-                    //
+
                     break;
                 case VatPham.LoaiVatPham.TangDame:
                     quanLyThongSoNhanVat.SatThuongLonNhat += 2;
                     quanLyThongSoNhanVat.SatThuongNhoNhat += 2;
 
-                    //Nghĩa cập nhật
+
                     DieuKhienText.HienThiCongDameTxt(2);
-                    //
+
                     break;
                 case VatPham.LoaiVatPham.TangGiap:
                     quanLyThongSoNhanVat.GiapHienTai += 2;
 
-                    //Nghĩa cập nhật
+
                     DieuKhienText.HienThiCongGiapTxt(2);
-                    //
+
                     if (quanLyThongSoNhanVat.GiapHienTai >= 100)
                     {
                         quanLyThongSoNhanVat.GiapHienTai = 100;

@@ -84,6 +84,7 @@ public class QuanLyBoss : MonoBehaviour
                     }
                 }
                 gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].DaHaDuocboss = true;
+                PlayerPrefs.SetInt("KqBoss", 1);
                 gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].CapHienTai = quanLyThongSoNhanVat.CapDoNhanVat;
                 if (gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].CapHienTai >= gameData.maps[SceneManager.GetActiveScene().buildIndex - 1].CapCaoNhat)
                 {

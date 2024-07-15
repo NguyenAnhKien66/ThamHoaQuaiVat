@@ -18167,12 +18167,15 @@ MonoBehaviour:
   khoangCachMinGiuaCacQuai: 3
   soLuongQuaiYeuCau: 1
   ThoiGianTangMau: 90
-  soLuongQuaiDot1: 2
-  soLuongQuaiDot2: 3
-  soLuongQuaiDot3: 4
-  soLuongQuaiDot4: 4
-  soLuongQuaiDot5: 6
-  soLuongQuaiDot6: 6
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 2
+  soLuongQuaiDot3: 2
+  soLuongQuaiDot4: 3
+  soLuongQuaiDot5: 4
+  soLuongQuaiDot6: 4
+  soluong: 0
+  soluongchet: 0
+  gioiHanQuai: 50
 --- !u!4 &975196633
 Transform:
   m_ObjectHideFlags: 0
@@ -18222,16 +18225,19 @@ MonoBehaviour:
   viTriSinhRa:
   - {fileID: 1025430351}
   thoiGianBatDau: 0
-  thoiGianLapLai: 15
+  thoiGianLapLai: 20
   khoangCachMinGiuaCacQuai: 3
   soLuongQuaiYeuCau: 1
   ThoiGianTangMau: 90
   soLuongQuaiDot1: 1
-  soLuongQuaiDot2: 2
-  soLuongQuaiDot3: 2
-  soLuongQuaiDot4: 3
-  soLuongQuaiDot5: 3
-  soLuongQuaiDot6: 5
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 1
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 2
+  soluong: 0
+  soluongchet: 0
+  gioiHanQuai: 40
 --- !u!4 &1025430351
 Transform:
   m_ObjectHideFlags: 0
@@ -18919,12 +18925,15 @@ MonoBehaviour:
   khoangCachMinGiuaCacQuai: 3
   soLuongQuaiYeuCau: 1
   ThoiGianTangMau: 90
-  soLuongQuaiDot1: 2
-  soLuongQuaiDot2: 3
-  soLuongQuaiDot3: 4
-  soLuongQuaiDot4: 4
-  soLuongQuaiDot5: 6
-  soLuongQuaiDot6: 6
+  soLuongQuaiDot1: 1
+  soLuongQuaiDot2: 2
+  soLuongQuaiDot3: 2
+  soLuongQuaiDot4: 3
+  soLuongQuaiDot5: 4
+  soLuongQuaiDot6: 4
+  soluong: 0
+  soluongchet: 0
+  gioiHanQuai: 50
 --- !u!4 &1289611078
 Transform:
   m_ObjectHideFlags: 0
@@ -23262,16 +23271,19 @@ MonoBehaviour:
   viTriSinhRa:
   - {fileID: 1334614747}
   thoiGianBatDau: 0
-  thoiGianLapLai: 15
+  thoiGianLapLai: 20
   khoangCachMinGiuaCacQuai: 3
   soLuongQuaiYeuCau: 1
   ThoiGianTangMau: 90
   soLuongQuaiDot1: 1
-  soLuongQuaiDot2: 2
-  soLuongQuaiDot3: 2
-  soLuongQuaiDot4: 3
-  soLuongQuaiDot5: 3
-  soLuongQuaiDot6: 5
+  soLuongQuaiDot2: 1
+  soLuongQuaiDot3: 1
+  soLuongQuaiDot4: 2
+  soLuongQuaiDot5: 2
+  soLuongQuaiDot6: 2
+  soluong: 0
+  soluongchet: 0
+  gioiHanQuai: 40
 --- !u!4 &1334614747
 Transform:
   m_ObjectHideFlags: 0
@@ -23910,7 +23922,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "C\u1EA5p \u0111\u1ED9: 1"
+  m_text: 'Level: 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -9,6 +9,7 @@ public class HienThiKetQua : MonoBehaviour
     public TextMeshProUGUI SoKillCaoNhat;
     public TextMeshProUGUI ThoiGianSinhTonLauNhat;
     public TextMeshProUGUI CapCaoNhat;
+    public TextMeshProUGUI KQThangThua;
 
     void Start()
     {
@@ -42,5 +43,16 @@ public class HienThiKetQua : MonoBehaviour
         // Lay Cap Cao Nhat Tu PlayerPrefs
         int capCaoNhat = PlayerPrefs.GetInt("CapCaoNhat", 1);
         CapCaoNhat.text = "Cấp độ cao nhất: " + capCaoNhat;
+
+        //Lay ket qua thang hoac thua
+        if(PlayerPrefs.GetInt("KqBoss")==1)
+        {
+            KQThangThua.text = "Chiến thắng";
+        }
+        else
+        {
+            KQThangThua.text = "Thua";
+        }
+        
     }
 }

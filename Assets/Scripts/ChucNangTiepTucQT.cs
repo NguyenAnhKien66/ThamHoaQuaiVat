@@ -19,6 +19,7 @@ public class ChucNangTiepTucQT : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*ResetDuLieu();*/
         if (TiepTucQT != null)
         {
             // Kiểm tra xem game đã được lưu hay chưa

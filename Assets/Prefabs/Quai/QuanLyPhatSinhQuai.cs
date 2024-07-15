@@ -5,14 +5,14 @@ using System.Collections.Generic;
 
 public class QuanLyPhatSinhQuai : MonoBehaviour
 {
-    public GameObject[] quaiPrefabs; // Array of monster prefabs
-    public Transform[] viTriSinhRa; // Spawn points
-    public float thoiGianBatDau = 2f; // Delay before starting to spawn
-    public float thoiGianLapLai = 60f; // Interval between spawns
-    public float khoangCachMinGiuaCacQuai = 2f; // Minimum distance between monsters
-    public int soLuongQuaiYeuCau = 3; // Required number of monsters after 7 minutes
+    public GameObject[] quaiPrefabs; 
+    public Transform[] viTriSinhRa; 
+    public float thoiGianBatDau = 2f;
+    public float thoiGianLapLai = 60f; 
+    public float khoangCachMinGiuaCacQuai = 2f; 
+    public int soLuongQuaiYeuCau = 3; 
     public float ThoiGianTangMau = 60f;
-    public int soLuongQuaiDot1 = 1; // Initial number of monsters spawned
+    public int soLuongQuaiDot1 = 1; 
     public int soLuongQuaiDot2 = 1;
     public int soLuongQuaiDot3 = 1;
     public int soLuongQuaiDot4 = 1;
@@ -20,9 +20,10 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
     public int soLuongQuaiDot6 = 1;
     public int soluong = 0;
     public int soluongchet = 0;
-    private int[] soLuongQuaiChoMoiDot; // Array storing the number of monsters per wave
-    public Dictionary<Transform, int> soLuongQuaiDaPhatSinh; // Dictionary tracking the number of monsters spawned per portal
-    private float thoiGianDaTroiQua = 0f; // Elapsed time
+    private int[] soLuongQuaiChoMoiDot; 
+    public Dictionary<Transform, int> soLuongQuaiDaPhatSinh; 
+    private float thoiGianDaTroiQua = 0f;
+    public int gioiHanQuai=0;
 
     private void Start()
     {
@@ -58,9 +59,9 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
 
                         if (KiemTraViTriHopLe(viTriNgauNhien.position))
                         {
-                            if (soLuongQuaiDaPhatSinh[viTriNgauNhien] < 60)
+                            if (soLuongQuaiDaPhatSinh[viTriNgauNhien] < gioiHanQuai)
                             {
-                                // Spawn new monster
+                                
                                 GameObject quaiPrefab = quaiPrefabs[Random.Range(0, quaiPrefabs.Length)];
                                 Vector3 viTriMoi = new Vector3(viTriNgauNhien.position.x, viTriNgauNhien.position.y, 0f);
                                 GameObject quaiInstance = Instantiate(quaiPrefab, viTriMoi, Quaternion.identity);
@@ -108,17 +109,17 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
                         Debug.LogWarning("No monster prefabs in the array. Cannot spawn monsters.");
                     }
 
-                    yield return new WaitForSeconds(1f); // Wait 1 second between spawns
+                    yield return new WaitForSeconds(1f); 
                 }
             }
 
-            yield return new WaitForSeconds(thoiGianLapLai); // Wait for the next spawn interval
+            yield return new WaitForSeconds(thoiGianLapLai); 
         }
     }
 
     IEnumerator TaiSinh()
     {
-        yield return new WaitForSeconds(1f); // Wait 1 second for respawn
+        yield return new WaitForSeconds(1f); 
 
         foreach (Transform viTri in viTriSinhRa)
         {
@@ -130,8 +131,7 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
                     {
                         quai.transform.position = viTri.position;
                         quai.SetActive(true);
-                        soLuongQuaiDaPhatSinh[viTri]++;
-                        Debug.Log("Respawned dead monster at this portal.");
+                        soLuongQuaiDaPhatSinh[viTri]++;  
                         break;
                     }
                 }
@@ -142,7 +142,7 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
     public void demquai()
     {
         soluongchet++;
-        /*StartCoroutine(TaiSinh());*/ // Call TaiSinh to respawn a monster immediately after one dies
+        /*StartCoroutine(TaiSinh());*/ 
     }
 
     bool KiemTraViTriHopLe(Vector3 viTri)
