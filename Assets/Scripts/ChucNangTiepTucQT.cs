@@ -72,100 +72,101 @@ public class ChucNangTiepTucQT : MonoBehaviour
     {
         yield return null;
         //Khôi phục vị trí nhân vật
-        string json = File.ReadAllText(Application.persistentDataPath + "/savefile.json");
-        GameData gameData = JsonUtility.FromJson<GameData>(json);
-
-        NhanVatG.transform.position = gameData.ViTriNhanVat;
-        //Khôi phục lượng máu hiện tại
-        quanLyThongSoNhanVat.MauHientai = gameData.MauNVHienTai;
-        thanhMau.CapnhatMau(quanLyThongSoNhanVat.MauHientai, quanLyThongSoNhanVat.MauToiDaNhanVat);
-        //Khôi phục thanh hồi chiêu
-        NhanVatS.ThoiGianHoiChieu = gameData.ThoiGianHoiChieuNV;
-        NhanVatS.HoiChieuCuon = gameData.HoiChieuCuonNV;
-        ThanhKyNangNhanVat thanhKyNangNhanVat = FindObjectOfType<ThanhKyNangNhanVat>();
-        thanhKyNangNhanVat.CapNhatHoiChieu(1 - NhanVatS.ThoiGianHoiChieu / NhanVatS.HoiChieuCuon);
-        //Khôi phục lượng giáp hiện tại
-        quanLyThongSoNhanVat.GiapHienTai = gameData.GiapNVHienTai;
-        thanhGiap.CapnhatGiap(quanLyThongSoNhanVat.GiapHienTai, quanLyThongSoNhanVat.GiapToiDa);
-        //Khôi phục sát thương của nhân vật      
-        quanLyThongSoNhanVat.SatThuongNhoNhat = gameData.SatThuongNhoNhatNV;
-        quanLyThongSoNhanVat.SatThuongLonNhat = gameData.SatThuongLonNhatNV;
-        //Khôi phục số kill 
-        DemQuaiChet.instance.DemSoLuongQuaiChet = gameData.SoKillNV;
-        DemQuaiChet.instance.CapNhatSoLuongQuaiChet();
-
-        //Khôi phục cấp độ và kinh nghiệm             
-        quanLyThongSoNhanVat.CapDoNhanVat = gameData.CapDoNV;
-        NhanVatS.kinhNghiemNhanVat = gameData.KinhNghiemNV;
-        NhanVatS.CapNhatUI();
-
-        //Khôi phục thời gian
-        DongHo DongHo = FindObjectOfType<DongHo>();
-        if (DongHo != null)
+        if (File.Exists(Application.persistentDataPath + "/savefile.json"))
         {
+            string json = File.ReadAllText(Application.persistentDataPath + "/savefile.json");
+            GameData gameData = JsonUtility.FromJson<GameData>(json);
 
-            DongHo.ThoiGianTroiQua = gameData.TGSinhTon;
-        }
-        // Khôi phục trạng thái của các quái
-        foreach (var enemyData in gameData.CacQuai)
-        {
-            //Tạo quái dựa vào tên quái prefabs đã lưu
-            string tenQuaiPrefabs = enemyData.tenQuaiPrefabs.Replace("(Clone)", "").Trim();
-            GameObject quaiPrefab = Resources.Load<GameObject>("AllQuai/" + tenQuaiPrefabs);
-            if (quaiPrefab != null)
+            NhanVatG.transform.position = gameData.ViTriNhanVat;
+            //Khôi phục lượng máu hiện tại
+            quanLyThongSoNhanVat.MauHientai = gameData.MauNVHienTai;
+            thanhMau.CapnhatMau(quanLyThongSoNhanVat.MauHientai, quanLyThongSoNhanVat.MauToiDaNhanVat);
+            //Khôi phục thanh hồi chiêu
+            NhanVatS.ThoiGianHoiChieu = gameData.ThoiGianHoiChieuNV;
+            NhanVatS.HoiChieuCuon = gameData.HoiChieuCuonNV;
+            ThanhKyNangNhanVat thanhKyNangNhanVat = FindObjectOfType<ThanhKyNangNhanVat>();
+            thanhKyNangNhanVat.CapNhatHoiChieu(1 - NhanVatS.ThoiGianHoiChieu / NhanVatS.HoiChieuCuon);
+            //Khôi phục lượng giáp hiện tại
+            quanLyThongSoNhanVat.GiapHienTai = gameData.GiapNVHienTai;
+            thanhGiap.CapnhatGiap(quanLyThongSoNhanVat.GiapHienTai, quanLyThongSoNhanVat.GiapToiDa);
+            //Khôi phục sát thương của nhân vật      
+            quanLyThongSoNhanVat.SatThuongNhoNhat = gameData.SatThuongNhoNhatNV;
+            quanLyThongSoNhanVat.SatThuongLonNhat = gameData.SatThuongLonNhatNV;
+            //Khôi phục số kill 
+            DemQuaiChet.instance.DemSoLuongQuaiChet = gameData.SoKillNV;
+            DemQuaiChet.instance.CapNhatSoLuongQuaiChet();
+
+            //Khôi phục cấp độ và kinh nghiệm             
+            quanLyThongSoNhanVat.CapDoNhanVat = gameData.CapDoNV;
+            NhanVatS.kinhNghiemNhanVat = gameData.KinhNghiemNV;
+            NhanVatS.CapNhatUI();
+
+            //Khôi phục thời gian
+            DongHo DongHo = FindObjectOfType<DongHo>();
+            if (DongHo != null)
             {
-                GameObject enemy = Instantiate(quaiPrefab, enemyData.position, Quaternion.identity);
-                QuanLyQuai quanLyQuai = enemy.GetComponent<QuanLyQuai>();
-                if (quanLyQuai != null)
-                {
-                    quanLyQuai.LuongMau = enemyData.mau;
-                }
+
+                DongHo.ThoiGianTroiQua = gameData.TGSinhTon;
             }
-        }
-        //Khôi phục item rơi
-        
-        foreach (var itemData in gameData.CacItem)
-        {
-            string tenItemPrefabs = itemData.tenItem.Replace("(Clone)", "").Trim();
-            GameObject itemPrefab = Resources.Load<GameObject>("Item/" + tenItemPrefabs);
-            if (itemPrefab != null)
+            // Khôi phục trạng thái của các quái
+            foreach (var enemyData in gameData.CacQuai)
             {
-                Instantiate(itemPrefab, itemData.position, Quaternion.identity);
-            }
-        }
-
-        //Khôi phục trạng thái boss
-        if (PlayerPrefs.GetInt("CoDuLieuBoss") == 1) //Có dữ liệu boss thì mới khôi phục
-        {
-            if (gameData.Boss != null)
-            {
-                string tenBossDaChinh = gameData.Boss.tenBossPrefabs.Replace("(Clone)", "").Trim();
-                GameObject bossPrefab = Resources.Load<GameObject>("AllQuai/" + tenBossDaChinh);
-                if (bossPrefab != null)
+                //Tạo quái dựa vào tên quái prefabs đã lưu
+                string tenQuaiPrefabs = enemyData.tenQuaiPrefabs.Replace("(Clone)", "").Trim();
+                GameObject quaiPrefab = Resources.Load<GameObject>("AllQuai/" + tenQuaiPrefabs);
+                if (quaiPrefab != null)
                 {
-                    GameObject boss = Instantiate(bossPrefab, gameData.Boss.position, Quaternion.identity);
-                    QuanLyBoss quanLyBoss = boss.GetComponent<QuanLyBoss>();
-                    if (quanLyBoss != null)
+                    GameObject enemy = Instantiate(quaiPrefab, enemyData.position, Quaternion.identity);
+                    QuanLyQuai quanLyQuai = enemy.GetComponent<QuanLyQuai>();
+                    if (quanLyQuai != null)
                     {
-                        quanLyBoss.LuongMau = gameData.Boss.mauBoss;
+                        quanLyQuai.LuongMau = enemyData.mau;
                     }
                 }
             }
-        }
-        
-        //Khôi phục trạng thái điểm buff
-        GameObject DiemBuff = GameObject.Find("DiemBuff");
+            //Khôi phục item rơi
 
-        if (DiemBuff != null)
-        {
-            if (PlayerPrefs.GetInt("TonTaiDiemBuff") == 0)
+            foreach (var itemData in gameData.CacItem)
             {
-                Destroy(DiemBuff.gameObject);
-                ConTro.SetActive(false);
+                string tenItemPrefabs = itemData.tenItem.Replace("(Clone)", "").Trim();
+                GameObject itemPrefab = Resources.Load<GameObject>("Item/" + tenItemPrefabs);
+                if (itemPrefab != null)
+                {
+                    Instantiate(itemPrefab, itemData.position, Quaternion.identity);
+                }
+            }
+
+            //Khôi phục trạng thái boss
+            if (PlayerPrefs.GetInt("CoDuLieuBoss") == 1) //Có dữ liệu boss thì mới khôi phục
+            {
+                if (gameData.Boss != null)
+                {
+                    string tenBossDaChinh = gameData.Boss.tenBossPrefabs.Replace("(Clone)", "").Trim();
+                    GameObject bossPrefab = Resources.Load<GameObject>("AllQuai/" + tenBossDaChinh);
+                    if (bossPrefab != null)
+                    {
+                        GameObject boss = Instantiate(bossPrefab, gameData.Boss.position, Quaternion.identity);
+                        QuanLyBoss quanLyBoss = boss.GetComponent<QuanLyBoss>();
+                        if (quanLyBoss != null)
+                        {
+                            quanLyBoss.LuongMau = gameData.Boss.mauBoss;
+                        }
+                    }
+                }
+            }
+
+            //Khôi phục trạng thái điểm buff
+            GameObject DiemBuff = GameObject.Find("DiemBuff");
+
+            if (DiemBuff != null)
+            {
+                if (PlayerPrefs.GetInt("TonTaiDiemBuff") == 0)
+                {
+                    Destroy(DiemBuff.gameObject);
+                    ConTro.SetActive(false);
+                }
             }
         }
-
-
     }
     void ResetDuLieu()
     {
