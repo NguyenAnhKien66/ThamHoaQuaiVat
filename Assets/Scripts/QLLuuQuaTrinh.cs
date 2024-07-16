@@ -1,13 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class QLLuuQuaTrinh : MonoBehaviour
 {
-    public GameObject HopThoaiLuu; 
-    public Button NutCo;   
+    public GameObject HopThoaiLuu;
+    public Button NutCo;
     public Button NutKhong;
     //Đối tượng lưu dữ liệu
     public GameObject NhanVatG;
@@ -29,19 +31,19 @@ public class QLLuuQuaTrinh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(HienHopThoaiLuu)
+        if (HienHopThoaiLuu)
         {
             HopThoaiLuu.SetActive(true);
             HienHopThoaiLuu = false;
-        }    
+        }
     }
     void OnApplicationQuit()
     {
-        if(!ChoThoat)
+        if (!ChoThoat)
         {
-            HienHopThoaiLuu=true;
+            HienHopThoaiLuu = true;
             Application.CancelQuit();
-        }      
+        }
     }
     void LuuVaThoatGame()
     {
@@ -50,61 +52,56 @@ public class QLLuuQuaTrinh : MonoBehaviour
         //Thoát sau khi lưu
         ChoThoat = true;
         Application.Quit();
-    }    
+    }
     void KhongLuuVaThoatGame()
     {
         //Thoát mà không lưu
         ChoThoat = true;
         Application.Quit();
-    }    
+    }
     void LuuTrangThaiGame()
     {
+        GameData gameData = new GameData(); 
         //Lưu màn hình map
-        int ViTriManHinh=SceneManager.GetActiveScene().buildIndex;
-        PlayerPrefs.SetInt("ViTriManHinh", ViTriManHinh);
+        gameData.ViTriManHinh = SceneManager.GetActiveScene().buildIndex;
+
         //Lưu vị trí của người chơi
-        Vector3 ViTriNhanVat = NhanVatG.transform.position;
-        PlayerPrefs.SetFloat("NhanVatX", ViTriNhanVat.x);
-        PlayerPrefs.SetFloat("NhanVatY", ViTriNhanVat.y);
-        PlayerPrefs.SetFloat("NhanVatZ", ViTriNhanVat.z);
+        gameData.ViTriNhanVat = NhanVatG.transform.position;
+
         //Lưu lượng máu hiện tại
-        int MauHienTai = quanLyThongSoNhanVat.MauHientai;
-        PlayerPrefs.SetInt("MauNVHienTai", MauHienTai);
+        gameData.MauNVHienTai = quanLyThongSoNhanVat.MauHientai;
+
         //Lưu thanh hồi chiêu
-        float ThoiGianHoiChieu =NhanVatS.ThoiGianHoiChieu;
-        float HoiChieuCuon = NhanVatS.HoiChieuCuon;
-        PlayerPrefs.SetFloat("ThoiGianHoiChieuNV", ThoiGianHoiChieu);
-        PlayerPrefs.SetFloat("HoiChieuCuonNV", HoiChieuCuon);
+        gameData.ThoiGianHoiChieuNV = NhanVatS.ThoiGianHoiChieu;
+        gameData.HoiChieuCuonNV = NhanVatS.HoiChieuCuon;
+        
         //Lưu lượng giáp hiện tại
-        int GiapHienTai = quanLyThongSoNhanVat.GiapHienTai;
-        PlayerPrefs.SetInt("GiapNVHienTai", GiapHienTai);
+        gameData.GiapNVHienTai = quanLyThongSoNhanVat.GiapHienTai;
+
         //Lưu sát thương nhân vật
-        int SatThuongNhoNhatNV = quanLyThongSoNhanVat.SatThuongNhoNhat;
-        int SatThuongLonNhatNV = quanLyThongSoNhanVat.SatThuongLonNhat;
-        PlayerPrefs.SetInt("SatThuongNhoNhatNV", SatThuongNhoNhatNV);
-        PlayerPrefs.SetInt("SatThuongLonNhatNV", SatThuongLonNhatNV);
+        gameData.SatThuongNhoNhatNV = quanLyThongSoNhanVat.SatThuongNhoNhat;
+        gameData.SatThuongLonNhatNV = quanLyThongSoNhanVat.SatThuongLonNhat;
+
         //Lưu số kill
         if (DemQuaiChet.instance != null)
         {
-            int SoKill=DemQuaiChet.instance.LaySoLuongHienTai();
-            PlayerPrefs.SetInt("SoKillNV", SoKill);
+            gameData.SoKillNV = DemQuaiChet.instance.LaySoLuongHienTai();
         }
         //Lưu cấp độ và kinh nghiệm
-        int CapDo = quanLyThongSoNhanVat.CapDoNhanVat;
-        int KinhNghiem = NhanVatS.kinhNghiemNhanVat;
-        PlayerPrefs.SetInt("CapDoNV", CapDo);
-        PlayerPrefs.SetInt("KinhNghiemNV", KinhNghiem);
+        gameData.CapDoNV = quanLyThongSoNhanVat.CapDoNhanVat;
+        gameData.KinhNghiemNV = NhanVatS.kinhNghiemNhanVat;
+
         //Lưu thời gian
         DongHo DongHo = FindObjectOfType<DongHo>();
-        if( DongHo != null )
+        if (DongHo != null)
         {
-            float TGSinhTon = DongHo.GetThoiGianTroiQua();
-            PlayerPrefs.SetFloat("TGSinhTon", TGSinhTon);
+            gameData.TGSinhTon = DongHo.GetThoiGianTroiQua();
+            
         }
 
         // Lưu trạng thái của các quái
-        List<EnemyData> enemyDataList = new List<EnemyData>();
-        bool CoQuai = false;
+        gameData.CacQuai = new List<EnemyData>();
+/*        bool CoQuai = false;*/
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("QuaiVat"))
         {
             if (enemy != null)
@@ -112,50 +109,30 @@ public class QLLuuQuaTrinh : MonoBehaviour
                 Vector3 position = enemy.transform.position;
                 int mau = enemy.GetComponent<QuanLyQuai>().LuongMau;
                 string tenQuaiPrefabs = GetPrefabNameWithoutExtension(enemy.name);
-                enemyDataList.Add(new EnemyData(position, mau, tenQuaiPrefabs)); //Lưu vị trí, máu và tên của từng quái vào danh sách
-                CoQuai = true;
+                gameData.CacQuai.Add(new EnemyData(position, mau, tenQuaiPrefabs));
             }
-        }
-        if (CoQuai)
-        {
-            string json = JsonUtility.ToJson(new EnemyDataList(enemyDataList)); //add danh sách dữ liệu các quái vào file json
-            PlayerPrefs.SetString("CacQuai", json);
         }
 
         //Lưu item rơi
-        List<ItemData> itemDataList = new List<ItemData>();
-        bool CoItem=false;
+        gameData.CacItem = new List<ItemData>();
+        /*        bool CoItem = false;*/
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("VatPham"))
         {
             if (item != null)
             {
                 Vector3 positem = item.transform.position;
                 string tenItem = GetPrefabNameWithoutExtension(item.name);
-                itemDataList.Add(new ItemData(positem, tenItem)); //Lưu vị trí và tên của từng item vào danh sách
-                CoItem = true;
+                gameData.CacItem.Add(new ItemData(positem, tenItem));
             }
         }
-        if (CoItem)
-        {
-            string json2 = JsonUtility.ToJson(new ItemDataList(itemDataList)); //add danh sách dữ liệu các quái vào file json
-            PlayerPrefs.SetString("CacItem", json2);
-        }
+
         // Lưu trạng thái của boss
-        GameObject BossG= GameObject.FindWithTag("Boss");
+        GameObject BossG = GameObject.FindWithTag("Boss");
         QuanLyBoss BossS = FindObjectOfType<QuanLyBoss>();
-        if(BossG != null && BossS!=null)
+        if (BossG != null && BossS != null)
         {
-            //Lưu vị trí boss
-            Vector3 position= BossG.transform.position;
-            PlayerPrefs.SetFloat("BossX", position.x);
-            PlayerPrefs.SetFloat("BossY", position.y);
-            PlayerPrefs.SetFloat("BossZ", position.z);
-            //Lưu máu boss
-            int mauBoss = BossS.LuongMau;
-            PlayerPrefs.SetInt("MauBoss", mauBoss);
-            //Lưu tên boss 
-            string tenBossPrefabs= GetPrefabNameWithoutExtension(BossG.name);
-            PlayerPrefs.SetString("TenBoss",tenBossPrefabs);
+            Vector3 position = BossG.transform.position;
+            gameData.Boss = new BossData(position, BossS.LuongMau, GetPrefabNameWithoutExtension(BossG.name));
             PlayerPrefs.SetInt("CoDuLieuBoss", 1); //Có dữ liệu
         }
         else
@@ -172,9 +149,10 @@ public class QLLuuQuaTrinh : MonoBehaviour
         {
             PlayerPrefs.SetInt("TonTaiDiemBuff", 1);
         }
+        //Lưu dư liệu vào json
+        string json = JsonUtility.ToJson(gameData);
+        File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
 
-        // Đánh dấu rằng game đã được lưu
-        PlayerPrefs.SetInt("DaLuuGame", 1);
 
         PlayerPrefs.Save(); // Đảm bảo dữ liệu được lưu ngay lập tức
 
@@ -190,24 +168,67 @@ public class QLLuuQuaTrinh : MonoBehaviour
         }
         return fullName;
     }
-    [System.Serializable]
-    private class EnemyDataList
+    [Serializable]
+    public class GameData
     {
-        public List<EnemyData> enemies;
+        public int ViTriManHinh;
+        public Vector3 ViTriNhanVat;
+        public int MauNVHienTai;
+        public float ThoiGianHoiChieuNV;
+        public float HoiChieuCuonNV;
+        public int GiapNVHienTai;
+        public int SatThuongNhoNhatNV;
+        public int SatThuongLonNhatNV;
+        public int SoKillNV;
+        public int CapDoNV;
+        public int KinhNghiemNV;
+        public float TGSinhTon;
+        public List<EnemyData> CacQuai;
+        public List<ItemData> CacItem;
+        public BossData Boss;
+        public bool TonTaiDiemBuff;
+    }
+    [System.Serializable]
+    public class EnemyData
+    {
+        public Vector3 position;
+        public int mau;
+        public string tenQuaiPrefabs;
 
-        public EnemyDataList(List<EnemyData> enemies)
+        public EnemyData(Vector3 position, int mau, string tenQuaiPrefabs)
         {
-            this.enemies = enemies;
+            this.position = position;
+            this.mau = mau;
+            this.tenQuaiPrefabs = tenQuaiPrefabs;
         }
     }
     [System.Serializable]
-    private class ItemDataList
+    public class ItemData
     {
-        public List<ItemData> items;
+        public Vector3 position;
+        public string tenItem;
 
-        public ItemDataList(List<ItemData> items)
+        public ItemData(Vector3 position, string tenItem)
         {
-            this.items = items;
+            this.position = position;
+            this.tenItem = tenItem;
         }
     }
+    [Serializable]
+    public class BossData
+    {
+        public Vector3 position;
+        public int mauBoss;
+        public string tenBossPrefabs;
+
+        public BossData(Vector3 position, int mauBoss, string tenBossPrefabs)
+        {
+            this.position = position;
+            this.mauBoss = mauBoss;
+            this.tenBossPrefabs = tenBossPrefabs;
+        }
+    }
+
+
+
 }

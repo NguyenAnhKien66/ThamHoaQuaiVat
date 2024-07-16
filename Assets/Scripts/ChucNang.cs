@@ -17,9 +17,6 @@ public class ChucNang : MonoBehaviour
     [SerializeField] GameObject QLKhoaMap5;
     public TextMeshProUGUI MapChonTxt;
 
-  
-
-
     void Start()
     {
         if (nut_batdau != null)

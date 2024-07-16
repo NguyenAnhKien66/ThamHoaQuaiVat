@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static QLLuuQuaTrinh;
 
 public class ChucNangTiepTucQT : MonoBehaviour
 {
@@ -23,7 +26,7 @@ public class ChucNangTiepTucQT : MonoBehaviour
         if (TiepTucQT != null)
         {
             // Kiểm tra xem game đã được lưu hay chưa
-            if (PlayerPrefs.GetInt("DaLuuGame", 0) == 1)
+            if (File.Exists(Application.persistentDataPath + "/savefile.json"))
             {
                 // Hiển thị nút Tiếp tục
                 TiepTucQT.SetActive(true);
@@ -34,11 +37,11 @@ public class ChucNangTiepTucQT : MonoBehaviour
             }
         }
         int TiepTuc = PlayerPrefs.GetInt("TiepTuc");
-        if (TiepTuc == 1&& NhanVatG != null)
+        if (TiepTuc == 1 && NhanVatG != null)
         {
             // Khôi phục trạng thái game sau khi scene được tải lại
             StartCoroutine(KhoiPhucTrangThaiGame());
-            
+
         }
 
     }
@@ -46,19 +49,19 @@ public class ChucNangTiepTucQT : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void TiepTucGame()
     {
-       
-        if(PlayerPrefs.GetInt("DaLuuGame",0)==1)
+
+        if (File.Exists(Application.persistentDataPath + "/savefile.json"))
         {
             PlayerPrefs.SetInt("TiepTuc", 1);
             // Khôi phục scene đã lưu
-            int ViTriManHinh = PlayerPrefs.GetInt("ViTriManHinh");
-            SceneManager.LoadScene(ViTriManHinh);
-            
-            
+            string json = File.ReadAllText(Application.persistentDataPath + "/savefile.json");
+            GameData gameData = JsonUtility.FromJson<GameData>(json);
+            SceneManager.LoadScene(gameData.ViTriManHinh);
+
         }
         else
         {
@@ -67,127 +70,101 @@ public class ChucNangTiepTucQT : MonoBehaviour
     }
     IEnumerator KhoiPhucTrangThaiGame()
     {
-        yield return null;     
+        yield return null;
         //Khôi phục vị trí nhân vật
-        float nhanVatX = PlayerPrefs.GetFloat("NhanVatX");
-        float nhanVatY = PlayerPrefs.GetFloat("NhanVatY");
-        float nhanVatZ = PlayerPrefs.GetFloat("NhanVatZ");
-        Vector3 ViTriNhanVat=new Vector3(nhanVatX, nhanVatY, nhanVatZ);
-        NhanVatG.transform.position = ViTriNhanVat;
+        string json = File.ReadAllText(Application.persistentDataPath + "/savefile.json");
+        GameData gameData = JsonUtility.FromJson<GameData>(json);
 
+        NhanVatG.transform.position = gameData.ViTriNhanVat;
         //Khôi phục lượng máu hiện tại
-        int mauNVHienTai = PlayerPrefs.GetInt("MauNVHienTai");
-        quanLyThongSoNhanVat.MauHientai = mauNVHienTai;
+        quanLyThongSoNhanVat.MauHientai = gameData.MauNVHienTai;
         thanhMau.CapnhatMau(quanLyThongSoNhanVat.MauHientai, quanLyThongSoNhanVat.MauToiDaNhanVat);
         //Khôi phục thanh hồi chiêu
-        float ThoiGianHoiChieuNV = PlayerPrefs.GetFloat("ThoiGianHoiChieuNV");
-        float HoiChieuCuonNV = PlayerPrefs.GetFloat("HoiChieuCuonNV");
-        NhanVatS.ThoiGianHoiChieu = ThoiGianHoiChieuNV;
-        NhanVatS.HoiChieuCuon = HoiChieuCuonNV;
-        ThanhKyNangNhanVat thanhKyNangNhanVat=FindObjectOfType<ThanhKyNangNhanVat>();
-        thanhKyNangNhanVat.CapNhatHoiChieu(1- NhanVatS.ThoiGianHoiChieu / NhanVatS.HoiChieuCuon);
+        NhanVatS.ThoiGianHoiChieu = gameData.ThoiGianHoiChieuNV;
+        NhanVatS.HoiChieuCuon = gameData.HoiChieuCuonNV;
+        ThanhKyNangNhanVat thanhKyNangNhanVat = FindObjectOfType<ThanhKyNangNhanVat>();
+        thanhKyNangNhanVat.CapNhatHoiChieu(1 - NhanVatS.ThoiGianHoiChieu / NhanVatS.HoiChieuCuon);
         //Khôi phục lượng giáp hiện tại
-        int giapNVHienTai = PlayerPrefs.GetInt("GiapNVHienTai");
-        quanLyThongSoNhanVat.GiapHienTai = giapNVHienTai;
+        quanLyThongSoNhanVat.GiapHienTai = gameData.GiapNVHienTai;
         thanhGiap.CapnhatGiap(quanLyThongSoNhanVat.GiapHienTai, quanLyThongSoNhanVat.GiapToiDa);
-        //Khôi phục sát thương của nhân vật
-        int satThuongNhoNhat= PlayerPrefs.GetInt("SatThuongNhoNhatNV");
-        int satThuongLonNhat = PlayerPrefs.GetInt("SatThuongLonNhatNV");
-        quanLyThongSoNhanVat.SatThuongNhoNhat= satThuongNhoNhat;
-        quanLyThongSoNhanVat.SatThuongLonNhat=satThuongLonNhat;
+        //Khôi phục sát thương của nhân vật      
+        quanLyThongSoNhanVat.SatThuongNhoNhat = gameData.SatThuongNhoNhatNV;
+        quanLyThongSoNhanVat.SatThuongLonNhat = gameData.SatThuongLonNhatNV;
         //Khôi phục số kill 
-        int soKillNV = PlayerPrefs.GetInt("SoKillNV");
-        DemQuaiChet.instance.DemSoLuongQuaiChet = soKillNV;
+        DemQuaiChet.instance.DemSoLuongQuaiChet = gameData.SoKillNV;
         DemQuaiChet.instance.CapNhatSoLuongQuaiChet();
 
-        //Khôi phục cấp độ và kinh nghiệm
-        int capDoNV = PlayerPrefs.GetInt("CapDoNV");        
-        quanLyThongSoNhanVat.CapDoNhanVat = capDoNV;
-        int kinhNghiemNV = PlayerPrefs.GetInt("KinhNghiemNV");
-        NhanVatS.kinhNghiemNhanVat = kinhNghiemNV;
+        //Khôi phục cấp độ và kinh nghiệm             
+        quanLyThongSoNhanVat.CapDoNhanVat = gameData.CapDoNV;
+        NhanVatS.kinhNghiemNhanVat = gameData.KinhNghiemNV;
         NhanVatS.CapNhatUI();
 
         //Khôi phục thời gian
         DongHo DongHo = FindObjectOfType<DongHo>();
         if (DongHo != null)
         {
-            float tGSinhTon = PlayerPrefs.GetFloat("TGSinhTon");
-            DongHo.ThoiGianTroiQua = tGSinhTon;
+
+            DongHo.ThoiGianTroiQua = gameData.TGSinhTon;
         }
         // Khôi phục trạng thái của các quái
-        if (PlayerPrefs.HasKey("CacQuai"))
+        foreach (var enemyData in gameData.CacQuai)
         {
-            string json = PlayerPrefs.GetString("CacQuai");
-            EnemyDataList enemyDataList = JsonUtility.FromJson<EnemyDataList>(json);
-
-            foreach (EnemyData data in enemyDataList.enemies)
+            //Tạo quái dựa vào tên quái prefabs đã lưu
+            string tenQuaiPrefabs = enemyData.tenQuaiPrefabs.Replace("(Clone)", "").Trim();
+            GameObject quaiPrefab = Resources.Load<GameObject>("AllQuai/" + tenQuaiPrefabs);
+            if (quaiPrefab != null)
             {
-                Vector3 position = new Vector3(data.posX, data.posY, data.posZ);
-                //Tạo quái dựa vào tên quái prefabs đã lưu
-                string tenQuaiPrefabs = data.tenQuaiPrefabs.Replace("(Clone)", "").Trim();
-                GameObject quaiPrefab = Resources.Load<GameObject>("AllQuai/"+tenQuaiPrefabs);
-                if (quaiPrefab != null)
+                GameObject enemy = Instantiate(quaiPrefab, enemyData.position, Quaternion.identity);
+                QuanLyQuai quanLyQuai = enemy.GetComponent<QuanLyQuai>();
+                if (quanLyQuai != null)
                 {
-                    GameObject enemy = Instantiate(quaiPrefab, position, Quaternion.identity);
-                    enemy.name = tenQuaiPrefabs + "(Clone)"; // Đặt lại tên với (Clone)
-                    enemy.GetComponent<QuanLyQuai>().LuongMau = data.mau;
+                    quanLyQuai.LuongMau = enemyData.mau;
                 }
-                
             }
         }
         //Khôi phục item rơi
-        if (PlayerPrefs.HasKey("CacItem"))
+        
+        foreach (var itemData in gameData.CacItem)
         {
-            string json2 = PlayerPrefs.GetString("CacItem");
-            ItemDataList itemDataList = JsonUtility.FromJson<ItemDataList>(json2);
-
-            foreach (ItemData data in itemDataList.items)
+            string tenItemPrefabs = itemData.tenItem.Replace("(Clone)", "").Trim();
+            GameObject itemPrefab = Resources.Load<GameObject>("Item/" + tenItemPrefabs);
+            if (itemPrefab != null)
             {
-                Vector3 positem = new Vector3(data.posX, data.posY, data.posZ);
-                //Tạo item dựa vào tên item prefabs đã lưu
-                string tenItemPrefabs = data.tenItem.Replace("(Clone)", "").Trim();
-                GameObject itemPrefab = Resources.Load<GameObject>("Item/" + tenItemPrefabs);
-                if (itemPrefab != null)
-                {
-                    GameObject item = Instantiate(itemPrefab, positem, Quaternion.identity);
-                    item.name = tenItemPrefabs + "(Clone)"; // Đặt lại tên với (Clone)
-
-                }
-                
+                Instantiate(itemPrefab, itemData.position, Quaternion.identity);
             }
         }
 
         //Khôi phục trạng thái boss
         if (PlayerPrefs.GetInt("CoDuLieuBoss") == 1) //Có dữ liệu boss thì mới khôi phục
         {
-            float bossX = PlayerPrefs.GetFloat("BossX");
-            float bossY = PlayerPrefs.GetFloat("BossY");
-            float bossZ = PlayerPrefs.GetFloat("BossZ");
-            Vector3 ViTriBoss = new Vector3(bossX, bossY, bossZ);
-
-            string tenBoss = PlayerPrefs.GetString("TenBoss");
-            string tenBossDaChinh = tenBoss.Replace("(Clone)", "").Trim();
-            GameObject bossPrefab = Resources.Load<GameObject>("AllQuai/" + tenBossDaChinh);
-            if (bossPrefab != null)
+            if (gameData.Boss != null)
             {
-                GameObject boss = Instantiate(bossPrefab, ViTriBoss, Quaternion.identity);
-                boss.name = tenBossDaChinh + "(Clone)";
-                boss.GetComponent<QuanLyBoss>().LuongMau = PlayerPrefs.GetInt("MauBoss");
+                string tenBossDaChinh = gameData.Boss.tenBossPrefabs.Replace("(Clone)", "").Trim();
+                GameObject bossPrefab = Resources.Load<GameObject>("AllQuai/" + tenBossDaChinh);
+                if (bossPrefab != null)
+                {
+                    GameObject boss = Instantiate(bossPrefab, gameData.Boss.position, Quaternion.identity);
+                    QuanLyBoss quanLyBoss = boss.GetComponent<QuanLyBoss>();
+                    if (quanLyBoss != null)
+                    {
+                        quanLyBoss.LuongMau = gameData.Boss.mauBoss;
+                    }
+                }
             }
         }
-
+        
         //Khôi phục trạng thái điểm buff
         GameObject DiemBuff = GameObject.Find("DiemBuff");
-        
-        if(DiemBuff!=null)
+
+        if (DiemBuff != null)
         {
             if (PlayerPrefs.GetInt("TonTaiDiemBuff") == 0)
             {
                 Destroy(DiemBuff.gameObject);
                 ConTro.SetActive(false);
             }
-        }    
-        
+        }
+
 
     }
     void ResetDuLieu()
@@ -197,58 +174,5 @@ public class ChucNangTiepTucQT : MonoBehaviour
         Debug.Log("Tất cả dữ liệu PlayerPrefs đã được reset.");
     }
 
-    [System.Serializable]
-    private class EnemyDataList
-    {
-        public List<EnemyData> enemies;
-
-        public EnemyDataList(List<EnemyData> enemies)
-        {
-            this.enemies = enemies;
-        }
-    }
-    [System.Serializable]
-    private class ItemDataList
-    {
-        public List<ItemData> items;
-
-        public ItemDataList(List<ItemData> items)
-        {
-            this.items = items;
-        }
-    }
-}
-[System.Serializable]
-public class EnemyData
-{
-    public float posX;
-    public float posY;
-    public float posZ;
-    public int mau;
-    public string tenQuaiPrefabs;
-
-    public EnemyData(Vector3 position, int mau,string tenQuaiPrefabs)
-    {
-        this.posX = position.x;
-        this.posY = position.y;
-        this.posZ = position.z;
-        this.mau = mau;
-        this.tenQuaiPrefabs = tenQuaiPrefabs;
-    }
-}
-[System.Serializable]
-public class ItemData
-{
-    public float posX;
-    public float posY;
-    public float posZ;
-    public string tenItem;
-
-    public ItemData(Vector3 position, string tenItem)
-    {
-        this.posX = position.x;
-        this.posY = position.y;
-        this.posZ = position.z;
-        this.tenItem = tenItem;
-    }
+    
 }

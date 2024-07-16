@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using static QLLuuQuaTrinh;
 
 public class QLSinhBoss : MonoBehaviour
 {
@@ -13,9 +15,11 @@ public class QLSinhBoss : MonoBehaviour
     void Start()
     {
         NguonAmThanh = GetComponent<AudioSource>();
+        string json = File.ReadAllText(Application.persistentDataPath + "/savefile.json");
+        GameData gameData = JsonUtility.FromJson<GameData>(json);
         if (PlayerPrefs.GetInt("TiepTuc") == 1)
         {
-            ThoiGianTroiQua = PlayerPrefs.GetFloat("TGSinhTon"); ;
+            ThoiGianTroiQua = gameData.TGSinhTon;
         }
         else
         {
