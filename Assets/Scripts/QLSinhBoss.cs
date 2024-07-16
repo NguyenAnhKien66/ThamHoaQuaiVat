@@ -11,19 +11,22 @@ public class QLSinhBoss : MonoBehaviour
     public float thoiGianXuatHien;
     public AudioClip AmThanh; // am thanh 
     private AudioSource NguonAmThanh;
-    float ThoiGianTroiQua;
+    float ThoiGianTroiQua=0f;
     void Start()
     {
         NguonAmThanh = GetComponent<AudioSource>();
-        string json = File.ReadAllText(Application.persistentDataPath + "/savefile.json");
-        GameData gameData = JsonUtility.FromJson<GameData>(json);
-        if (PlayerPrefs.GetInt("TiepTuc") == 1)
+        if (File.Exists(Application.persistentDataPath + "/savefile.json"))
         {
-            ThoiGianTroiQua = gameData.TGSinhTon;
-        }
-        else
-        {
-            ThoiGianTroiQua = 0f;
+            string json = File.ReadAllText(Application.persistentDataPath + "/savefile.json");
+            GameData gameData = JsonUtility.FromJson<GameData>(json);
+            if (PlayerPrefs.GetInt("TiepTuc") == 1)
+            {
+                ThoiGianTroiQua = gameData.TGSinhTon;
+            }
+            else
+            {
+                ThoiGianTroiQua = 0f;
+            }
         }
         if (PlayerPrefs.GetInt("TiepTuc")==0 || PlayerPrefs.GetInt("CoDuLieuBoss") == 0)
         {
