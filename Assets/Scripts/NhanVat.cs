@@ -28,6 +28,8 @@ public class NhanVat : MonoBehaviour
     // hien thi tren giao dien
     public Slider thanhKinhNghiem;
     public TextMeshProUGUI textCapDo;
+    //
+    public LevelUpEffect levelUpEffect;
     private void Start()
     {
         kinhNghiemNhanVat = 0;
@@ -81,7 +83,7 @@ public class NhanVat : MonoBehaviour
         }
     }
 
-   
+
 
     private void CapNhatCapDo()
     {
@@ -95,8 +97,12 @@ public class NhanVat : MonoBehaviour
         }
 
         Debug.Log("Level: " + quanLyThongSoNhanVat.CapDoNhanVat);
-        quanLyThongSoNhanVat.KinhNghiemToiDa= quanLyThongSoNhanVat.CapDoNhanVat * 100;
+        quanLyThongSoNhanVat.KinhNghiemToiDa = quanLyThongSoNhanVat.CapDoNhanVat * 100;
         // Them Cac thong so khac
+        if (levelUpEffect != null)
+        {
+            levelUpEffect.HienThi();
+        }
     }
     private void Update()
     {
