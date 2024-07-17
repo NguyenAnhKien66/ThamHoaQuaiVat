@@ -1,0 +1,3884 @@
+fileFormatVersion: 2
+guid: cec5641a94fe51046a8dc0d97359d965
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fence_medieval_361
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0adee4f5825eda04497beb8b2eea4d95
+      internalID: -1401217234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_362
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a3517ae0daaec40a22aeb251911f36
+      internalID: -1814725195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_363
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518789030a2dc8f48aa6ca462169b442
+      internalID: -1836316477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_364
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a696e97fb6009534e96f3f1176c9a302
+      internalID: -946305656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_365
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fdcdf01f70c11d4580c17f9b9ec3a57
+      internalID: -717808650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_366
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a84248b5bef3e94da3c0bc65745902b
+      internalID: -290654002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_367
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a798dcb71df51419c89e1539ec127a
+      internalID: 1869986452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_368
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d0fe46af589fe4c9a7ea7d717d7984
+      internalID: -831525603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_369
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398e10b6afa40864d86ce992dc44a93e
+      internalID: -421536359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_382
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b634ff04c822734ba57f9dc37aab594
+      internalID: 1367438725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_383
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf345b2824565a40bb5e3016ee7e827
+      internalID: 1906806317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_384
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6943b72835c9564c997298573d25b61
+      internalID: 1659330650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_385
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a3bfeca6724544a9eb7bb609df7105
+      internalID: 1327845472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_386
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc6490d1fcfe5849b869096ed1b76fa
+      internalID: -715251626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_387
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad0a6f8c1d159b47930fb27952f473e
+      internalID: 819635927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_388
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6568a329befac784fb33a79675a46985
+      internalID: 162450145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_389
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d44fab7cae1ac42a92c11a132fa6ad
+      internalID: 357903903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_390
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d5f57e228a2454f8ffa3064071a732
+      internalID: 918014174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_391
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 800
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1d0063ec98af34388ecd7ec040ee45
+      internalID: -466085801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_404
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ec57acd94481e4a864c506de0f3c39
+      internalID: -568299114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_405
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd664028c1e1a204c9207e39058fb723
+      internalID: 129316271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_406
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ba29b35fe33c64ba048c92a74d197e
+      internalID: 561838129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_407
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136aeb452f99be4499d7a403f359a4a7
+      internalID: 1042219309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_408
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e31bb02e061844c801ef0e54b95ede
+      internalID: 327595847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_409
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997126a738791c544af7c5ba83adb932
+      internalID: -985520486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_410
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1adee5beea2ca54cba8a22bd199e8d9
+      internalID: -922749514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_411
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb7336746cc63045bd0ca18886a406e
+      internalID: -309913491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_412
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca95ba648137c1847bbf74b263bb0384
+      internalID: -1066703311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_413
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4924db43f66cb154eb0c2b48e2d240e3
+      internalID: -812987341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_414
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b639e592475db2444add9fd205e51958
+      internalID: 1321288559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_415
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632c7561e541af54db40e92be87424f4
+      internalID: -1395126985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_428
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb9a07d4f346de4e880904ff278cd38
+      internalID: 756818640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_429
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2a838b22eac264e9a56213c48e06f3
+      internalID: -113608170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_430
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a36435f616a5148a478ec0ec87cb69
+      internalID: -44813150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_431
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1afe9f76a2ec6dd408de2a7945455c56
+      internalID: 223028683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_432
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01af3c55ef470ff43a7691e52247aa29
+      internalID: 1944979923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_434
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6af5fc3304d79b4ca2b1e4ecec09d92
+      internalID: -1871525471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_435
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cec4ace477c506419c31c8a5e874e17
+      internalID: 928801867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_436
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ed6f60d6023f04fa7ef4ff1e79e81b
+      internalID: 862282563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_437
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec2eb4429a783541804c939561f06bf
+      internalID: -86154856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_438
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a6d8a5483f109408d50ed57337f11c
+      internalID: 793996950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_439
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 768
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6936e8561d8ca5429987c6a24f99b3e
+      internalID: -196521028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_458
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc80668bf8fa2c6468c3ad4891ffc813
+      internalID: -292168681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_459
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42116113e3a09e47a06d67db1c2391b
+      internalID: 1708719300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_460
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e8dbd3caa225241a1db436858cb8da
+      internalID: 258931107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_461
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f138dd7066e6be04a9df22b24f5c3b37
+      internalID: -1080139109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_462
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: facbfc0ebdb988a45a664d9001e447d0
+      internalID: 1522796873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_463
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 752
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a776cd508266d43a98b3d46d121d32
+      internalID: -390137330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_482
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e271e903d2e0a54e8b97eff298eeb18
+      internalID: -532988585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_483
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3090e9e8e9c9caf458a40d46502a9154
+      internalID: -332378011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_484
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595c0385b03e2174ea37fcf117eff876
+      internalID: 2014741693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_485
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89bdce84755090844b77bafd1a67797b
+      internalID: 595462922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_486
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75370470cc4859f49916fb9c9b02ad38
+      internalID: 71229123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_487
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0f1da8fbf73d448b4f194dd6f79843
+      internalID: 221384508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_504
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 768
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.36553574, y: 0.5122223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893259f291678434eb02bf10f5efdd36
+      internalID: -1500940248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_506
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 720
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f7efc7dc1aa8941b76b0180fefde06
+      internalID: 320426257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_507
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 720
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e63fe3f307f84429f1ea84cb161d55
+      internalID: 1411888039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_508
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 720
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449e07f19695b574c816b529670294fc
+      internalID: 757080839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_509
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 720
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a5fb9226530bdb448eac2723e3e8329
+      internalID: -2003876785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_510
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 720
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514022eed10f55c4da47e6b3a7929e59
+      internalID: 2031631879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_511
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 720
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d119ce9419d137b4db494e368396129c
+      internalID: -1853156919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_530
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212859df66f93cf459472a6177224b99
+      internalID: -762923774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_531
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24691ec09bd37354bb001bc123641eac
+      internalID: -1143151938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_532
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aea37d36220cc240bce51c48a972863
+      internalID: 1096212051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_533
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b26ff75b40ec5943b626720fcb6c9c8
+      internalID: 807910675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_534
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb46bf6565f36a4eb393cc972bf9518
+      internalID: -1523454605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_535
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bada99738e9b34fbeb9e062fc0a496
+      internalID: 934688069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_554
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb01ca1c75b72914f8562eeca8a72e66
+      internalID: 131437013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_555
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e4c022c4b984045b63e41efd614619
+      internalID: -1849468206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_556
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cae77abfa63e644b5e33a662ccc490
+      internalID: -1952216769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_557
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b91c3cc5ab55084e876278038be1d51
+      internalID: 909497508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_558
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8669ba5daec827742b629565b35832e7
+      internalID: 828863443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_559
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3369e5e8bc15b214389ddb49c8cfb570
+      internalID: -669770769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_578
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0c9b30025671847a2e6b8f5ebc2da7
+      internalID: 251817264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_579
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e0cf71c5a24b24a93e2608bdac6436
+      internalID: 2061259365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_580
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986ad5c6d8bc0ea45a403b5056e2df7d
+      internalID: 1340880380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_581
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7231cc6e2506cc4c93ea0ae5f518263
+      internalID: -2031706658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_582
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46899d686f3f9b04293e9837b342f47e
+      internalID: -852245261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_583
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 672
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36cbd96822cf8684398403f92f4b7894
+      internalID: 1535162424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_602
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511f4f6cff0e8b7499763d435217d0b6
+      internalID: 1665636966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_603
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3cbf65f11d06a34f847ea88c3027616
+      internalID: 1984339705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_604
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c1a07e811771c4c82b3e010f8208ad
+      internalID: -8094296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_605
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7061123945f19e243a408ce4a17037e4
+      internalID: -1550592006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_624
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 640
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21a27811c7f1984d9db09273b94c15d
+      internalID: 996417421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_625
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 640
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5b35c92f7c6b746be86ff7c108b335
+      internalID: -1352900779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_626
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 640
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb6e64e73e761c4bba5e7166cfed3f4
+      internalID: 1335911635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_627
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 640
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408cf44201c470241b047cc4e43b7ce4
+      internalID: -1609340177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_978
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d19bf449d3e7e246b6d19deb5d53c73
+      internalID: 1298162689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_979
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1b59efc7777df246a8ef2c9484d39d6
+      internalID: -1986787039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_980
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f5cf79cc6747f54e9ac5ec58661bff6
+      internalID: -1447706920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_981
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2714d188938000a4889938b199861358
+      internalID: -149935158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_982
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ab014b428f00b429b0a04f975d7bad
+      internalID: 274137819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_983
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db26592b8db3e614f94d75c801b3cfc1
+      internalID: 1744752570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1002
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426037f2cc29f3c46a47c8a3d39e5507
+      internalID: 1323606075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1003
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db365138a6a43b49ad16a392aabfe51
+      internalID: -1047604407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1004
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a629576d748af7448ba0c843b4eba1e
+      internalID: 1380911855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1005
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11531d5e63ce4514a801103e039af2d1
+      internalID: 504833425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1006
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ce7851e05fe4f4aafd8674f69f6200
+      internalID: 1242201623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1007
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010f3bdf559a0154aa2bb1675ed478b2
+      internalID: 1963797642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1026
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5496352b258ab6e4188df7d113dc2750
+      internalID: 1698918031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1027
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20298c67cc63304c832df8eff599df9
+      internalID: -308032414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1028
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a0991c1fbb84945b65ea2f436c480d
+      internalID: 1742722557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1029
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4abc5f6ee209cd4abeb85274c16bd8e
+      internalID: -1869297142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1030
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b582029fca307a488b038d2d25e52fb
+      internalID: 784763414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1031
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13aa0b3f301da264e8b33b1e03e00e69
+      internalID: -847087240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1051
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2285075ec25114240b2c07cfc7b923ba
+      internalID: -150400726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1052
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460376c2a9371864585dfd9d93235108
+      internalID: -1838976850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1053
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695cc1e6baa10b848bfad3df7de83e70
+      internalID: 450407586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1054
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40518ac494f37544a693f4bd0e9718a
+      internalID: 769886911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1055
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 320
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8c5b1c9c4f2ea46a6bb72550e1ce91
+      internalID: -286877481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1076
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a6566e527060e44b103dac2d7496c3
+      internalID: -1455756221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1077
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fee1bc719527454ca9138bfe797515d
+      internalID: 1052695163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1078
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17594b9e49ddfc499dbf1f6a9570eb3
+      internalID: -1316022598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1079
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cfe221df2d2fd409b32d5b326ec309
+      internalID: -1661745139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1080
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a9d2b98525d3847a67dbd0b131ad6b
+      internalID: 1351478237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1081
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5513e2d43e91adb4aa632414fbdafdbd
+      internalID: -1245304801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1106
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b003aa68fe430408ed2dff44e85efe
+      internalID: -1221487237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1107
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf95e4f188f517142882c6b6dc59c04e
+      internalID: -1323798280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1108
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b021e264ee67a78408c2b641e8473739
+      internalID: 1605585543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1109
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b99552798c12f45900f8db486af7df
+      internalID: -176914195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1110
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239502a4f6d366b4d9e29b65a2701a72
+      internalID: -1714115418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_1111
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c977e9fcf6f2479419399f77decca2f2
+      internalID: 639286227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_medieval_0
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 816
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e702516cb6f877341aba870cadfa44b5
+      internalID: 519663185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      fence_medieval_0: 519663185
+      fence_medieval_1: -1775478911
+      fence_medieval_10: 1849639868
+      fence_medieval_100: -850866820
+      fence_medieval_1000: 532015826
+      fence_medieval_1001: 2060061223
+      fence_medieval_1002: 1323606075
+      fence_medieval_1003: -1047604407
+      fence_medieval_1004: 1380911855
+      fence_medieval_1005: 504833425
+      fence_medieval_1006: 1242201623
+      fence_medieval_1007: 1963797642
+      fence_medieval_1008: -182416390
+      fence_medieval_1009: 1937517524
+      fence_medieval_101: 455362108
+      fence_medieval_1010: -1173801910
+      fence_medieval_1011: 520069143
+      fence_medieval_1012: -1276835896
+      fence_medieval_1013: 1689240976
+      fence_medieval_1014: 673775653
+      fence_medieval_1015: 1725365610
+      fence_medieval_1016: 1373264304
+      fence_medieval_1017: -1261447937
+      fence_medieval_1018: -607843481
+      fence_medieval_1019: -859145895
+      fence_medieval_102: -720635475
+      fence_medieval_1020: -1562588328
+      fence_medieval_1021: -1678158066
+      fence_medieval_1022: -2033313801
+      fence_medieval_1023: -741713484
+      fence_medieval_1024: 232131426
+      fence_medieval_1025: -359126967
+      fence_medieval_1026: 1698918031
+      fence_medieval_1027: -308032414
+      fence_medieval_1028: 1742722557
+      fence_medieval_1029: -1869297142
+      fence_medieval_103: -574716773
+      fence_medieval_1030: 784763414
+      fence_medieval_1031: -847087240
+      fence_medieval_1032: 953596495
+      fence_medieval_1033: 1778029465
+      fence_medieval_1034: -1283574429
+      fence_medieval_1035: -637974053
+      fence_medieval_1036: -1242453671
+      fence_medieval_1037: -132809000
+      fence_medieval_1038: 1874127578
+      fence_medieval_1039: 918564751
+      fence_medieval_104: 931480515
+      fence_medieval_1040: -924147426
+      fence_medieval_1041: -223227171
+      fence_medieval_1042: -1525350152
+      fence_medieval_1043: 1435053248
+      fence_medieval_1044: 521318427
+      fence_medieval_1045: 208366532
+      fence_medieval_1046: 1332404250
+      fence_medieval_1047: -63629755
+      fence_medieval_1048: 1045122171
+      fence_medieval_1049: -1669278296
+      fence_medieval_105: -1932035955
+      fence_medieval_1050: 1235984148
+      fence_medieval_1051: -150400726
+      fence_medieval_1052: -1838976850
+      fence_medieval_1053: 450407586
+      fence_medieval_1054: 769886911
+      fence_medieval_1055: -286877481
+      fence_medieval_1056: -325057148
+      fence_medieval_1057: -495053748
+      fence_medieval_1058: -1186951502
+      fence_medieval_1059: -409597115
+      fence_medieval_106: 27337973
+      fence_medieval_1060: -1467154470
+      fence_medieval_1061: -540913048
+      fence_medieval_1062: -1421902936
+      fence_medieval_1063: -276885799
+      fence_medieval_1064: -1161478444
+      fence_medieval_1065: -1415553880
+      fence_medieval_1066: 1520634457
+      fence_medieval_1067: -1528540313
+      fence_medieval_1068: -1443143522
+      fence_medieval_1069: 1968641344
+      fence_medieval_107: 1754249793
+      fence_medieval_1070: -741581179
+      fence_medieval_1071: 719267388
+      fence_medieval_1072: 2138045634
+      fence_medieval_1073: -1597870707
+      fence_medieval_1074: 1339679667
+      fence_medieval_1075: -960013042
+      fence_medieval_1076: -1455756221
+      fence_medieval_1077: 1052695163
+      fence_medieval_1078: -1316022598
+      fence_medieval_1079: -1661745139
+      fence_medieval_108: -1740354254
+      fence_medieval_1080: 1351478237
+      fence_medieval_1081: -1245304801
+      fence_medieval_1082: 666273366
+      fence_medieval_1083: -960680740
+      fence_medieval_1084: 867914760
+      fence_medieval_1085: 1278296172
+      fence_medieval_1086: -548428545
+      fence_medieval_1087: -1599605820
+      fence_medieval_1088: -1347697715
+      fence_medieval_1089: 416319428
+      fence_medieval_109: 1506805485
+      fence_medieval_1090: -1808192305
+      fence_medieval_1091: 1197667083
+      fence_medieval_1092: 1058476601
+      fence_medieval_1093: -1289584084
+      fence_medieval_1094: 518000243
+      fence_medieval_1095: 427568635
+      fence_medieval_1096: 269652863
+      fence_medieval_1097: -944738914
+      fence_medieval_1098: -1732387748
+      fence_medieval_1099: 1919871900
+      fence_medieval_11: 1523793512
+      fence_medieval_110: 1343689449
+      fence_medieval_1100: -1118528439
+      fence_medieval_1101: -431399005
+      fence_medieval_1102: -118446873
+      fence_medieval_1103: 1681035955
+      fence_medieval_1104: 1198448987
+      fence_medieval_1105: -1812102902
+      fence_medieval_1106: -1221487237
+      fence_medieval_1107: -1323798280
+      fence_medieval_1108: 1605585543
+      fence_medieval_1109: -176914195
+      fence_medieval_111: -740483705
+      fence_medieval_1110: -1714115418
+      fence_medieval_1111: 639286227
+      fence_medieval_1112: 1480986509
+      fence_medieval_1113: 1020925078
+      fence_medieval_1114: -1796899658
+      fence_medieval_1115: 258152361
+      fence_medieval_1116: 3116850
+      fence_medieval_1117: -791644272
+      fence_medieval_1118: -1774153305
+      fence_medieval_1119: 1427889261
+      fence_medieval_112: -1052926689
+      fence_medieval_1120: -1221244483
+      fence_medieval_1121: 1932898311
+      fence_medieval_1122: -1906973680
+      fence_medieval_1123: -244133948
+      fence_medieval_1124: -20298701
+      fence_medieval_1125: 194021540
+      fence_medieval_1126: 1774678911
+      fence_medieval_1127: -513067423
+      fence_medieval_1128: 1771023723
+      fence_medieval_1129: 1385550161
+      fence_medieval_113: -904396511
+      fence_medieval_1130: 1647981808
+      fence_medieval_1131: 903250795
+      fence_medieval_1132: 240813449
+      fence_medieval_1133: -492428178
+      fence_medieval_1134: 1965968700
+      fence_medieval_1135: 1221370577
+      fence_medieval_1136: -1637588279
+      fence_medieval_1137: 127567384
+      fence_medieval_1138: -4603884
+      fence_medieval_1139: 102104600
+      fence_medieval_114: -1206391165
+      fence_medieval_1140: 1550334036
+      fence_medieval_1141: 281099945
+      fence_medieval_1142: 737553690
+      fence_medieval_1143: 1382537153
+      fence_medieval_1144: -1761587577
+      fence_medieval_1145: 947558585
+      fence_medieval_1146: -1942680376
+      fence_medieval_1147: 1233040724
+      fence_medieval_1148: -1657730251
+      fence_medieval_1149: -751763410
+      fence_medieval_115: 562576336
+      fence_medieval_1150: -1516094815
+      fence_medieval_1151: 1862029611
+      fence_medieval_1152: 1607666857
+      fence_medieval_1153: -1949708438
+      fence_medieval_1154: -668286312
+      fence_medieval_1155: 111900552
+      fence_medieval_1156: -1154854926
+      fence_medieval_1157: -975669051
+      fence_medieval_1158: 843057389
+      fence_medieval_1159: 1905765062
+      fence_medieval_116: 1520932304
+      fence_medieval_1160: -110742058
+      fence_medieval_1161: -796579160
+      fence_medieval_1162: 16980776
+      fence_medieval_1163: -867867798
+      fence_medieval_1164: 93714169
+      fence_medieval_1165: 944639264
+      fence_medieval_1166: 1804131942
+      fence_medieval_1167: -1069597364
+      fence_medieval_1168: 1009822648
+      fence_medieval_1169: -862050214
+      fence_medieval_117: 1373793708
+      fence_medieval_1170: 886873378
+      fence_medieval_1171: 1432390846
+      fence_medieval_1172: -1377246975
+      fence_medieval_1173: -1687655968
+      fence_medieval_118: -501691430
+      fence_medieval_119: 1749492255
+      fence_medieval_12: -348919229
+      fence_medieval_120: -2037637018
+      fence_medieval_121: -1490982523
+      fence_medieval_122: 1314773680
+      fence_medieval_123: 486891123
+      fence_medieval_124: -1710178977
+      fence_medieval_125: 1448404056
+      fence_medieval_126: 674668659
+      fence_medieval_127: -100547434
+      fence_medieval_128: -437883394
+      fence_medieval_129: -1754015375
+      fence_medieval_13: -1805979685
+      fence_medieval_130: 1052938291
+      fence_medieval_131: 1963491764
+      fence_medieval_132: -2063013948
+      fence_medieval_133: -621258875
+      fence_medieval_134: -1945587866
+      fence_medieval_135: 374032518
+      fence_medieval_136: 98282682
+      fence_medieval_137: 1643606778
+      fence_medieval_138: -1560785291
+      fence_medieval_139: -648294329
+      fence_medieval_14: -408552906
+      fence_medieval_140: -282645288
+      fence_medieval_141: -229606601
+      fence_medieval_142: -1649084718
+      fence_medieval_143: 282806536
+      fence_medieval_144: -1128284139
+      fence_medieval_145: -797403540
+      fence_medieval_146: 777759660
+      fence_medieval_147: -1547838761
+      fence_medieval_148: 256917924
+      fence_medieval_149: -1570907362
+      fence_medieval_15: 1426592541
+      fence_medieval_150: 847295263
+      fence_medieval_151: 1431302625
+      fence_medieval_152: -281334602
+      fence_medieval_153: 276160774
+      fence_medieval_154: 986087214
+      fence_medieval_155: -350362891
+      fence_medieval_156: 192393115
+      fence_medieval_157: 1400917932
+      fence_medieval_158: -1457095791
+      fence_medieval_159: 1655016316
+      fence_medieval_16: -1383119623
+      fence_medieval_160: 648286041
+      fence_medieval_161: -2096280411
+      fence_medieval_162: 540259031
+      fence_medieval_163: -2005036049
+      fence_medieval_164: 1879830219
+      fence_medieval_165: -1367877330
+      fence_medieval_166: 1216571080
+      fence_medieval_167: 1843892215
+      fence_medieval_168: 1173702644
+      fence_medieval_169: 131894088
+      fence_medieval_17: -16805001
+      fence_medieval_170: 2139414277
+      fence_medieval_171: 1083316924
+      fence_medieval_172: -648567350
+      fence_medieval_173: -1084200481
+      fence_medieval_174: -586191395
+      fence_medieval_175: 1642366503
+      fence_medieval_176: -386898773
+      fence_medieval_177: 2144259733
+      fence_medieval_178: -1502842367
+      fence_medieval_179: -1966322968
+      fence_medieval_18: 1039709222
+      fence_medieval_180: 236237618
+      fence_medieval_181: 1527443296
+      fence_medieval_182: 324751594
+      fence_medieval_183: 1684694854
+      fence_medieval_184: -2102805453
+      fence_medieval_185: -827931384
+      fence_medieval_186: 147779003
+      fence_medieval_187: 315902299
+      fence_medieval_188: -2104161006
+      fence_medieval_189: 264457009
+      fence_medieval_19: 1337826555
+      fence_medieval_190: -1259478441
+      fence_medieval_191: -176784121
+      fence_medieval_192: 1733926619
+      fence_medieval_193: 812047092
+      fence_medieval_194: 667155646
+      fence_medieval_195: 1187182163
+      fence_medieval_196: 1237911304
+      fence_medieval_197: 710994418
+      fence_medieval_198: 2057666540
+      fence_medieval_199: 788223518
+      fence_medieval_2: -58988796
+      fence_medieval_20: -1963242265
+      fence_medieval_200: -458838343
+      fence_medieval_201: 2015971324
+      fence_medieval_202: -1013619457
+      fence_medieval_203: -13739040
+      fence_medieval_204: 67941539
+      fence_medieval_205: -341712040
+      fence_medieval_206: 1298656568
+      fence_medieval_207: -1032759138
+      fence_medieval_208: -1059785356
+      fence_medieval_209: -4977185
+      fence_medieval_21: -1377733916
+      fence_medieval_210: -166002623
+      fence_medieval_211: 1135212723
+      fence_medieval_212: 261197667
+      fence_medieval_213: 1719896299
+      fence_medieval_214: -461916181
+      fence_medieval_215: 2126577296
+      fence_medieval_216: 1670184891
+      fence_medieval_217: 1304899205
+      fence_medieval_218: 2113230437
+      fence_medieval_219: 298921677
+      fence_medieval_22: 1930985896
+      fence_medieval_220: -197887467
+      fence_medieval_221: 1142910279
+      fence_medieval_222: -2119416413
+      fence_medieval_223: -1206438543
+      fence_medieval_224: 1394836071
+      fence_medieval_225: 1723838910
+      fence_medieval_226: 481476712
+      fence_medieval_227: -3103699
+      fence_medieval_228: -849422145
+      fence_medieval_229: 225645820
+      fence_medieval_23: 1054200785
+      fence_medieval_230: 1549938865
+      fence_medieval_231: 1064059369
+      fence_medieval_232: 1986731923
+      fence_medieval_233: 1254631438
+      fence_medieval_234: -307368118
+      fence_medieval_235: -1948493218
+      fence_medieval_236: 682693059
+      fence_medieval_237: -961051257
+      fence_medieval_238: -288208515
+      fence_medieval_239: -2125420530
+      fence_medieval_24: 2030106568
+      fence_medieval_240: 1443810534
+      fence_medieval_241: 1142019110
+      fence_medieval_242: 337149286
+      fence_medieval_243: -1896645185
+      fence_medieval_244: 652926963
+      fence_medieval_245: 1814075673
+      fence_medieval_246: -559536861
+      fence_medieval_247: -299478908
+      fence_medieval_248: -177564934
+      fence_medieval_249: 1567865133
+      fence_medieval_25: 136380111
+      fence_medieval_250: -735553888
+      fence_medieval_251: -2029531323
+      fence_medieval_252: 1349539864
+      fence_medieval_253: -745877826
+      fence_medieval_254: 1135905847
+      fence_medieval_255: 124084388
+      fence_medieval_256: 271754853
+      fence_medieval_257: -1731162177
+      fence_medieval_258: -129554247
+      fence_medieval_259: -483108848
+      fence_medieval_26: -1710123295
+      fence_medieval_260: 1368877258
+      fence_medieval_261: 1613155824
+      fence_medieval_262: 2140043554
+      fence_medieval_263: -1482677783
+      fence_medieval_264: 627151351
+      fence_medieval_265: -1776009871
+      fence_medieval_266: 1679640672
+      fence_medieval_267: 1563663111
+      fence_medieval_268: 1352155503
+      fence_medieval_269: 611680339
+      fence_medieval_27: 918117073
+      fence_medieval_270: -1549255215
+      fence_medieval_271: -4795177
+      fence_medieval_272: 1810593226
+      fence_medieval_273: 101082482
+      fence_medieval_274: 378592668
+      fence_medieval_275: -1259492022
+      fence_medieval_276: -935487935
+      fence_medieval_277: 10289612
+      fence_medieval_278: 200462271
+      fence_medieval_279: 1860428630
+      fence_medieval_28: -905383036
+      fence_medieval_280: 1844583748
+      fence_medieval_281: -151577388
+      fence_medieval_282: 365870109
+      fence_medieval_283: -290720479
+      fence_medieval_284: -419101422
+      fence_medieval_285: 1145404455
+      fence_medieval_286: 1952073493
+      fence_medieval_287: 220631632
+      fence_medieval_288: -324578348
+      fence_medieval_289: 341669303
+      fence_medieval_29: -1914584437
+      fence_medieval_290: -223143952
+      fence_medieval_291: -510144683
+      fence_medieval_292: 1243237917
+      fence_medieval_293: -2134222409
+      fence_medieval_294: -1890568913
+      fence_medieval_295: -1843915340
+      fence_medieval_296: 244123729
+      fence_medieval_297: 974928385
+      fence_medieval_298: -305696032
+      fence_medieval_299: -1264833310
+      fence_medieval_3: -2017221363
+      fence_medieval_30: 1774527142
+      fence_medieval_300: 1970039718
+      fence_medieval_301: -986402275
+      fence_medieval_302: 1483742311
+      fence_medieval_303: 1864354169
+      fence_medieval_304: -499572469
+      fence_medieval_305: -1855298506
+      fence_medieval_306: 1239970726
+      fence_medieval_307: -1033541692
+      fence_medieval_308: -214082675
+      fence_medieval_309: 1301827168
+      fence_medieval_31: 1593637280
+      fence_medieval_310: -475136256
+      fence_medieval_311: 1068758327
+      fence_medieval_312: 868456974
+      fence_medieval_313: -80971486
+      fence_medieval_314: -1700481387
+      fence_medieval_315: -448248205
+      fence_medieval_316: 982246737
+      fence_medieval_317: -2111827965
+      fence_medieval_318: 1876547995
+      fence_medieval_319: -47376243
+      fence_medieval_32: -335580902
+      fence_medieval_320: -1774559551
+      fence_medieval_321: 611535117
+      fence_medieval_322: -1137979256
+      fence_medieval_323: -45031675
+      fence_medieval_324: -1611744489
+      fence_medieval_325: 1062248577
+      fence_medieval_326: 108158847
+      fence_medieval_327: 450928933
+      fence_medieval_328: 1369226964
+      fence_medieval_329: 1883540664
+      fence_medieval_33: 145779236
+      fence_medieval_330: -130362518
+      fence_medieval_331: 1324845656
+      fence_medieval_332: -405278112
+      fence_medieval_333: -248112990
+      fence_medieval_334: -529937137
+      fence_medieval_335: 1821927147
+      fence_medieval_336: -2140708200
+      fence_medieval_337: -1502926510
+      fence_medieval_338: -1027976732
+      fence_medieval_339: 1363488222
+      fence_medieval_34: -1108488431
+      fence_medieval_340: 1318126398
+      fence_medieval_341: 1242068205
+      fence_medieval_342: 274044931
+      fence_medieval_343: 486686127
+      fence_medieval_344: 535158430
+      fence_medieval_345: -674205200
+      fence_medieval_346: -238440050
+      fence_medieval_347: 707729557
+      fence_medieval_348: -2045872994
+      fence_medieval_349: -1571368096
+      fence_medieval_35: 1236831180
+      fence_medieval_350: 1777735403
+      fence_medieval_351: -1996252968
+      fence_medieval_352: -1949499652
+      fence_medieval_353: 968797738
+      fence_medieval_354: -1465990277
+      fence_medieval_355: -618472274
+      fence_medieval_356: 1538040974
+      fence_medieval_357: -1075238907
+      fence_medieval_358: 233627582
+      fence_medieval_359: 491061090
+      fence_medieval_36: 2015115933
+      fence_medieval_360: -1002075855
+      fence_medieval_361: -1401217234
+      fence_medieval_362: -1814725195
+      fence_medieval_363: -1836316477
+      fence_medieval_364: -946305656
+      fence_medieval_365: -717808650
+      fence_medieval_366: -290654002
+      fence_medieval_367: 1869986452
+      fence_medieval_368: -831525603
+      fence_medieval_369: -421536359
+      fence_medieval_37: 1642235926
+      fence_medieval_370: 150555125
+      fence_medieval_371: 1391733845
+      fence_medieval_372: -2099914586
+      fence_medieval_373: -844932016
+      fence_medieval_374: -1620790455
+      fence_medieval_375: -1660755123
+      fence_medieval_376: 1410276076
+      fence_medieval_377: 1443184418
+      fence_medieval_378: 1458765607
+      fence_medieval_379: 1136793832
+      fence_medieval_38: -1769111635
+      fence_medieval_380: 1126045354
+      fence_medieval_381: 2094563242
+      fence_medieval_382: 1367438725
+      fence_medieval_383: 1906806317
+      fence_medieval_384: 1659330650
+      fence_medieval_385: 1327845472
+      fence_medieval_386: -715251626
+      fence_medieval_387: 819635927
+      fence_medieval_388: 162450145
+      fence_medieval_389: 357903903
+      fence_medieval_39: 2128378379
+      fence_medieval_390: 918014174
+      fence_medieval_391: -466085801
+      fence_medieval_392: -1220201514
+      fence_medieval_393: 840486844
+      fence_medieval_394: -507303059
+      fence_medieval_395: -1015183609
+      fence_medieval_396: -1833098779
+      fence_medieval_397: -1452083918
+      fence_medieval_398: -123258852
+      fence_medieval_399: -1327165437
+      fence_medieval_4: 1218886077
+      fence_medieval_40: -1058227253
+      fence_medieval_400: -1402565871
+      fence_medieval_401: -1900607672
+      fence_medieval_402: 447550370
+      fence_medieval_403: 1458701298
+      fence_medieval_404: -568299114
+      fence_medieval_405: 129316271
+      fence_medieval_406: 561838129
+      fence_medieval_407: 1042219309
+      fence_medieval_408: 327595847
+      fence_medieval_409: -985520486
+      fence_medieval_41: 536486837
+      fence_medieval_410: -922749514
+      fence_medieval_411: -309913491
+      fence_medieval_412: -1066703311
+      fence_medieval_413: -812987341
+      fence_medieval_414: 1321288559
+      fence_medieval_415: -1395126985
+      fence_medieval_416: 221658960
+      fence_medieval_417: -367944402
+      fence_medieval_418: -974260078
+      fence_medieval_419: 1664069112
+      fence_medieval_42: 402389746
+      fence_medieval_420: -587301848
+      fence_medieval_421: -1941785812
+      fence_medieval_422: -165867005
+      fence_medieval_423: 1756765328
+      fence_medieval_424: 1171086490
+      fence_medieval_425: -812813
+      fence_medieval_426: 1904857476
+      fence_medieval_427: 1505260494
+      fence_medieval_428: 756818640
+      fence_medieval_429: -113608170
+      fence_medieval_43: -688763100
+      fence_medieval_430: -44813150
+      fence_medieval_431: 223028683
+      fence_medieval_432: 1944979923
+      fence_medieval_433: 844501626
+      fence_medieval_434: -1871525471
+      fence_medieval_435: 928801867
+      fence_medieval_436: 862282563
+      fence_medieval_437: -86154856
+      fence_medieval_438: 793996950
+      fence_medieval_439: -196521028
+      fence_medieval_44: 207133088
+      fence_medieval_440: -1420752562
+      fence_medieval_441: -921053507
+      fence_medieval_442: 1166579602
+      fence_medieval_443: 74235843
+      fence_medieval_444: -40609911
+      fence_medieval_445: 332912337
+      fence_medieval_446: -787225483
+      fence_medieval_447: 1106907850
+      fence_medieval_448: 1694633189
+      fence_medieval_449: 999060678
+      fence_medieval_45: -939346863
+      fence_medieval_450: 1700770607
+      fence_medieval_451: 654419097
+      fence_medieval_452: -780733137
+      fence_medieval_453: 59438814
+      fence_medieval_454: -1933977155
+      fence_medieval_455: 110802435
+      fence_medieval_456: -1214949589
+      fence_medieval_457: -502173329
+      fence_medieval_458: -292168681
+      fence_medieval_459: 1708719300
+      fence_medieval_46: 407794873
+      fence_medieval_460: 258931107
+      fence_medieval_461: -1080139109
+      fence_medieval_462: 1522796873
+      fence_medieval_463: -390137330
+      fence_medieval_464: 137140202
+      fence_medieval_465: 838451946
+      fence_medieval_466: -726633483
+      fence_medieval_467: 1773193981
+      fence_medieval_468: -147678370
+      fence_medieval_469: 1781139276
+      fence_medieval_47: 1763534409
+      fence_medieval_470: -1971259221
+      fence_medieval_471: -1048072159
+      fence_medieval_472: 259629916
+      fence_medieval_473: -1447251107
+      fence_medieval_474: -1756418634
+      fence_medieval_475: 1288648775
+      fence_medieval_476: -875629117
+      fence_medieval_477: -647527849
+      fence_medieval_478: -511148207
+      fence_medieval_479: 255955246
+      fence_medieval_48: 2105325267
+      fence_medieval_480: -1154682836
+      fence_medieval_481: 400732306
+      fence_medieval_482: -532988585
+      fence_medieval_483: -332378011
+      fence_medieval_484: 2014741693
+      fence_medieval_485: 595462922
+      fence_medieval_486: 71229123
+      fence_medieval_487: 221384508
+      fence_medieval_488: -438867874
+      fence_medieval_489: 1404257924
+      fence_medieval_49: 443416427
+      fence_medieval_490: -203069239
+      fence_medieval_491: -1703449094
+      fence_medieval_492: -292707545
+      fence_medieval_493: 38909477
+      fence_medieval_494: -168853367
+      fence_medieval_495: 1623364059
+      fence_medieval_496: 1713837171
+      fence_medieval_497: 20725082
+      fence_medieval_498: -450094154
+      fence_medieval_499: 402598760
+      fence_medieval_5: 863007661
+      fence_medieval_50: 621364569
+      fence_medieval_500: 1564649438
+      fence_medieval_501: -897384000
+      fence_medieval_502: 623305404
+      fence_medieval_503: -31022133
+      fence_medieval_504: -1500940248
+      fence_medieval_505: -1574122824
+      fence_medieval_506: 320426257
+      fence_medieval_507: 1411888039
+      fence_medieval_508: 757080839
+      fence_medieval_509: -2003876785
+      fence_medieval_51: -348798942
+      fence_medieval_510: 2031631879
+      fence_medieval_511: -1853156919
+      fence_medieval_512: -41272690
+      fence_medieval_513: -121851680
+      fence_medieval_514: 1813189475
+      fence_medieval_515: 1099188850
+      fence_medieval_516: -2041312917
+      fence_medieval_517: -1336342418
+      fence_medieval_518: 639430165
+      fence_medieval_519: -595309407
+      fence_medieval_52: -2011644479
+      fence_medieval_520: -1183754308
+      fence_medieval_521: 1373490912
+      fence_medieval_522: -429928296
+      fence_medieval_523: -472086556
+      fence_medieval_524: -847600177
+      fence_medieval_525: -981182477
+      fence_medieval_526: -1662805368
+      fence_medieval_527: -41678933
+      fence_medieval_528: 147817022
+      fence_medieval_529: -158978255
+      fence_medieval_53: 1924949781
+      fence_medieval_530: -762923774
+      fence_medieval_531: -1143151938
+      fence_medieval_532: 1096212051
+      fence_medieval_533: 807910675
+      fence_medieval_534: -1523454605
+      fence_medieval_535: 934688069
+      fence_medieval_536: 282944636
+      fence_medieval_537: 504840665
+      fence_medieval_538: -843906929
+      fence_medieval_539: -738297728
+      fence_medieval_54: -1758559350
+      fence_medieval_540: -510317099
+      fence_medieval_541: -1562693324
+      fence_medieval_542: -1089390668
+      fence_medieval_543: -1305858498
+      fence_medieval_544: -2057725618
+      fence_medieval_545: 1304044158
+      fence_medieval_546: 212486515
+      fence_medieval_547: 20066128
+      fence_medieval_548: 1012256026
+      fence_medieval_549: -448264005
+      fence_medieval_55: 421320817
+      fence_medieval_550: 1780703666
+      fence_medieval_551: 1247108186
+      fence_medieval_552: -63889013
+      fence_medieval_553: 2048876675
+      fence_medieval_554: 131437013
+      fence_medieval_555: -1849468206
+      fence_medieval_556: -1952216769
+      fence_medieval_557: 909497508
+      fence_medieval_558: 828863443
+      fence_medieval_559: -669770769
+      fence_medieval_56: 202034118
+      fence_medieval_560: 2077275752
+      fence_medieval_561: -1416816068
+      fence_medieval_562: -902251954
+      fence_medieval_563: -162923014
+      fence_medieval_564: 48285443
+      fence_medieval_565: 1293158349
+      fence_medieval_566: 279169061
+      fence_medieval_567: 1454514717
+      fence_medieval_568: 384445807
+      fence_medieval_569: -829752504
+      fence_medieval_57: 729866522
+      fence_medieval_570: -148885942
+      fence_medieval_571: 1253045417
+      fence_medieval_572: -1340728291
+      fence_medieval_573: 13347626
+      fence_medieval_574: -791992874
+      fence_medieval_575: 103374235
+      fence_medieval_576: -802737344
+      fence_medieval_577: 993100059
+      fence_medieval_578: 251817264
+      fence_medieval_579: 2061259365
+      fence_medieval_58: 1330781179
+      fence_medieval_580: 1340880380
+      fence_medieval_581: -2031706658
+      fence_medieval_582: -852245261
+      fence_medieval_583: 1535162424
+      fence_medieval_584: -1654137243
+      fence_medieval_585: 465392966
+      fence_medieval_586: 1399669670
+      fence_medieval_587: 1576652157
+      fence_medieval_588: -1939169319
+      fence_medieval_589: 416184852
+      fence_medieval_59: -1670143842
+      fence_medieval_590: 639844192
+      fence_medieval_591: 1193777563
+      fence_medieval_592: -13014354
+      fence_medieval_593: -1620388435
+      fence_medieval_594: -1366566462
+      fence_medieval_595: -7888080
+      fence_medieval_596: 10796466
+      fence_medieval_597: -2026712552
+      fence_medieval_598: 333147732
+      fence_medieval_599: 1125007607
+      fence_medieval_6: -668696116
+      fence_medieval_60: 2091599237
+      fence_medieval_600: -819209840
+      fence_medieval_601: -1401240964
+      fence_medieval_602: 1665636966
+      fence_medieval_603: 1984339705
+      fence_medieval_604: -8094296
+      fence_medieval_605: -1550592006
+      fence_medieval_606: -2015705144
+      fence_medieval_607: -2064508933
+      fence_medieval_608: -1371725246
+      fence_medieval_609: -2043217401
+      fence_medieval_61: 1276618828
+      fence_medieval_610: -2082139525
+      fence_medieval_611: 2127253853
+      fence_medieval_612: -636491028
+      fence_medieval_613: 1127642244
+      fence_medieval_614: -668084978
+      fence_medieval_615: 1198264759
+      fence_medieval_616: -136175816
+      fence_medieval_617: 59467023
+      fence_medieval_618: 1713095669
+      fence_medieval_619: -627102275
+      fence_medieval_62: 2030740465
+      fence_medieval_620: -786021204
+      fence_medieval_621: -735725594
+      fence_medieval_622: 1007083442
+      fence_medieval_623: -2058326018
+      fence_medieval_624: 996417421
+      fence_medieval_625: -1352900779
+      fence_medieval_626: 1335911635
+      fence_medieval_627: -1609340177
+      fence_medieval_628: -955765103
+      fence_medieval_629: 134119095
+      fence_medieval_63: -312976523
+      fence_medieval_630: -2142759147
+      fence_medieval_631: -111151026
+      fence_medieval_632: -233691572
+      fence_medieval_633: 1677896098
+      fence_medieval_634: 973518028
+      fence_medieval_635: 438845873
+      fence_medieval_636: -1507638784
+      fence_medieval_637: -1775347014
+      fence_medieval_638: 1388101305
+      fence_medieval_639: -1109048964
+      fence_medieval_64: 722208556
+      fence_medieval_640: 1570915132
+      fence_medieval_641: -2072357747
+      fence_medieval_642: -1810720981
+      fence_medieval_643: 1194001408
+      fence_medieval_644: 84285192
+      fence_medieval_645: 1805168594
+      fence_medieval_646: 594732148
+      fence_medieval_647: 1576810003
+      fence_medieval_648: 2000794995
+      fence_medieval_649: -31940254
+      fence_medieval_65: -138023185
+      fence_medieval_650: 557663031
+      fence_medieval_651: 1324210020
+      fence_medieval_652: 81874836
+      fence_medieval_653: 473404498
+      fence_medieval_654: -1532600375
+      fence_medieval_655: -490726525
+      fence_medieval_656: -150944975
+      fence_medieval_657: 1484976900
+      fence_medieval_658: -1490862634
+      fence_medieval_659: 2055324887
+      fence_medieval_66: -853896048
+      fence_medieval_660: -2138272474
+      fence_medieval_661: -2070360962
+      fence_medieval_662: 1261719581
+      fence_medieval_663: -268491342
+      fence_medieval_664: -65029820
+      fence_medieval_665: -585191937
+      fence_medieval_666: 340431080
+      fence_medieval_667: -1226783246
+      fence_medieval_668: -1978889365
+      fence_medieval_669: -2068549740
+      fence_medieval_67: 1208536778
+      fence_medieval_670: -219365469
+      fence_medieval_671: 2014362591
+      fence_medieval_672: -1392004881
+      fence_medieval_673: 911896447
+      fence_medieval_674: -1146201116
+      fence_medieval_675: 199036636
+      fence_medieval_676: -714173349
+      fence_medieval_677: -690490467
+      fence_medieval_678: -2027540820
+      fence_medieval_679: 1975879805
+      fence_medieval_68: -1743910861
+      fence_medieval_680: -990273672
+      fence_medieval_681: -160487730
+      fence_medieval_682: 506555945
+      fence_medieval_683: -1798762373
+      fence_medieval_684: 137611423
+      fence_medieval_685: -2085021583
+      fence_medieval_686: -355412839
+      fence_medieval_687: 1410048468
+      fence_medieval_688: -1130331152
+      fence_medieval_689: 1822977250
+      fence_medieval_69: -745712600
+      fence_medieval_690: 1851568605
+      fence_medieval_691: -328796478
+      fence_medieval_692: 405157310
+      fence_medieval_693: -267611948
+      fence_medieval_694: 1413739294
+      fence_medieval_695: 1702167172
+      fence_medieval_696: 931846154
+      fence_medieval_697: -2130066464
+      fence_medieval_698: 801097392
+      fence_medieval_699: 227092599
+      fence_medieval_7: 2038547451
+      fence_medieval_70: 842307870
+      fence_medieval_700: 1865899068
+      fence_medieval_701: 1426351302
+      fence_medieval_702: -2059715954
+      fence_medieval_703: 1579259562
+      fence_medieval_704: -715425429
+      fence_medieval_705: 1517841605
+      fence_medieval_706: -1054264119
+      fence_medieval_707: -1744535646
+      fence_medieval_708: 1806560942
+      fence_medieval_709: 1400414709
+      fence_medieval_71: 316699591
+      fence_medieval_710: -2005603551
+      fence_medieval_711: -939881384
+      fence_medieval_712: 360048339
+      fence_medieval_713: -891693316
+      fence_medieval_714: -224627700
+      fence_medieval_715: -66544285
+      fence_medieval_716: 474004083
+      fence_medieval_717: -1060866278
+      fence_medieval_718: 616538654
+      fence_medieval_719: -1452805796
+      fence_medieval_72: 1331472410
+      fence_medieval_720: 1003341505
+      fence_medieval_721: 987003902
+      fence_medieval_722: -1170877707
+      fence_medieval_723: -2080172545
+      fence_medieval_724: 1542500580
+      fence_medieval_725: 120401509
+      fence_medieval_726: -876349931
+      fence_medieval_727: -810839968
+      fence_medieval_728: 1563186605
+      fence_medieval_729: -1517670093
+      fence_medieval_73: -286364491
+      fence_medieval_730: -1151584367
+      fence_medieval_731: 1754475340
+      fence_medieval_732: 226884788
+      fence_medieval_733: 1167709003
+      fence_medieval_734: 2116741264
+      fence_medieval_735: 1960601999
+      fence_medieval_736: 9544807
+      fence_medieval_737: -567848153
+      fence_medieval_738: 1564999629
+      fence_medieval_739: 72561938
+      fence_medieval_74: -969635831
+      fence_medieval_740: 1586045766
+      fence_medieval_741: 1490941107
+      fence_medieval_742: 1101616280
+      fence_medieval_743: -1895444001
+      fence_medieval_744: -699438262
+      fence_medieval_745: -4986059
+      fence_medieval_746: -1447840933
+      fence_medieval_747: 6326846
+      fence_medieval_748: 856649404
+      fence_medieval_749: 242407679
+      fence_medieval_75: 1717682922
+      fence_medieval_750: 7573898
+      fence_medieval_751: 1149395841
+      fence_medieval_752: -1765878556
+      fence_medieval_753: -1980009261
+      fence_medieval_754: 1370479087
+      fence_medieval_755: 1511016994
+      fence_medieval_756: 5078273
+      fence_medieval_757: 1364391416
+      fence_medieval_758: 94455921
+      fence_medieval_759: -1077368703
+      fence_medieval_76: 1756870822
+      fence_medieval_760: -1327859526
+      fence_medieval_761: -46681127
+      fence_medieval_762: 778470864
+      fence_medieval_763: -55696149
+      fence_medieval_764: -2040429214
+      fence_medieval_765: 908251925
+      fence_medieval_766: -383885215
+      fence_medieval_767: -2127951443
+      fence_medieval_768: -368377515
+      fence_medieval_769: -80908563
+      fence_medieval_77: 1671401649
+      fence_medieval_770: -414257399
+      fence_medieval_771: -774217796
+      fence_medieval_772: 437478066
+      fence_medieval_773: 246415633
+      fence_medieval_774: -246647166
+      fence_medieval_775: -1223015754
+      fence_medieval_776: -2093576491
+      fence_medieval_777: -549610554
+      fence_medieval_778: -1328181236
+      fence_medieval_779: 1234482513
+      fence_medieval_78: -1936382595
+      fence_medieval_780: -380484377
+      fence_medieval_781: 101594290
+      fence_medieval_782: 344835309
+      fence_medieval_783: -528755610
+      fence_medieval_784: -1246785290
+      fence_medieval_785: 262301720
+      fence_medieval_786: 20635261
+      fence_medieval_787: -1054273228
+      fence_medieval_788: 1322967964
+      fence_medieval_789: -1268574918
+      fence_medieval_79: -1903672224
+      fence_medieval_790: 77732845
+      fence_medieval_791: -475964881
+      fence_medieval_792: 1392364810
+      fence_medieval_793: -1529042438
+      fence_medieval_794: -309410146
+      fence_medieval_795: -91987601
+      fence_medieval_796: -60217465
+      fence_medieval_797: -1023758155
+      fence_medieval_798: -331328168
+      fence_medieval_799: 1119176059
+      fence_medieval_8: 580936153
+      fence_medieval_80: 987630218
+      fence_medieval_800: 638278834
+      fence_medieval_801: -1952679192
+      fence_medieval_802: 508011343
+      fence_medieval_803: 1792821853
+      fence_medieval_804: 131765956
+      fence_medieval_805: 1116043844
+      fence_medieval_806: 543595453
+      fence_medieval_807: 397703489
+      fence_medieval_808: -1507022215
+      fence_medieval_809: -429373016
+      fence_medieval_81: -1746563606
+      fence_medieval_810: -121663461
+      fence_medieval_811: 1780180921
+      fence_medieval_812: 1926664160
+      fence_medieval_813: -124742813
+      fence_medieval_814: 1866268464
+      fence_medieval_815: 1755999140
+      fence_medieval_816: -354900501
+      fence_medieval_817: -243807980
+      fence_medieval_818: 273548941
+      fence_medieval_819: -1959681561
+      fence_medieval_82: 526034790
+      fence_medieval_820: -1987425373
+      fence_medieval_821: 51330498
+      fence_medieval_822: -1692612879
+      fence_medieval_823: -2046256269
+      fence_medieval_824: -386981690
+      fence_medieval_825: 1692808811
+      fence_medieval_826: -2108769165
+      fence_medieval_827: -116039423
+      fence_medieval_828: 1938632802
+      fence_medieval_829: -1553612157
+      fence_medieval_83: -740684695
+      fence_medieval_830: 1395984921
+      fence_medieval_831: 397783955
+      fence_medieval_832: -1133102412
+      fence_medieval_833: 2038965354
+      fence_medieval_834: 391442100
+      fence_medieval_835: -503798377
+      fence_medieval_836: -793951787
+      fence_medieval_837: 990155967
+      fence_medieval_838: 1942014592
+      fence_medieval_839: 1468031263
+      fence_medieval_84: 761643570
+      fence_medieval_840: -367977442
+      fence_medieval_841: 53895019
+      fence_medieval_842: 155523141
+      fence_medieval_843: 1128796319
+      fence_medieval_844: -904348205
+      fence_medieval_845: 1639406515
+      fence_medieval_846: 1724396670
+      fence_medieval_847: 591458069
+      fence_medieval_848: -1461230570
+      fence_medieval_849: -1609885517
+      fence_medieval_85: 636736922
+      fence_medieval_850: -1940527231
+      fence_medieval_851: 1454067401
+      fence_medieval_852: -1493879949
+      fence_medieval_853: -1789868139
+      fence_medieval_854: 1195209456
+      fence_medieval_855: -384266272
+      fence_medieval_856: 298901854
+      fence_medieval_857: -807254501
+      fence_medieval_858: 1696218094
+      fence_medieval_859: -676160452
+      fence_medieval_86: -896033803
+      fence_medieval_860: 1437713454
+      fence_medieval_861: -2044213135
+      fence_medieval_862: -1496794857
+      fence_medieval_863: -633943990
+      fence_medieval_864: -907522988
+      fence_medieval_865: 1757041303
+      fence_medieval_866: 1444634974
+      fence_medieval_867: -1746552419
+      fence_medieval_868: 44975425
+      fence_medieval_869: 1072545874
+      fence_medieval_87: -1590954641
+      fence_medieval_870: -587142233
+      fence_medieval_871: -154549560
+      fence_medieval_872: -159389144
+      fence_medieval_873: -521910770
+      fence_medieval_874: 582526528
+      fence_medieval_875: -963744111
+      fence_medieval_876: 1501094662
+      fence_medieval_877: 240871605
+      fence_medieval_878: 247546458
+      fence_medieval_879: -66338296
+      fence_medieval_88: 1472735311
+      fence_medieval_880: 280110941
+      fence_medieval_881: -1272775771
+      fence_medieval_882: -25889444
+      fence_medieval_883: -390185528
+      fence_medieval_884: -636717552
+      fence_medieval_885: 1801457915
+      fence_medieval_886: 1336213166
+      fence_medieval_887: -1912770449
+      fence_medieval_888: -479919540
+      fence_medieval_889: 615674529
+      fence_medieval_89: -578331261
+      fence_medieval_890: 1465430399
+      fence_medieval_891: -1240893463
+      fence_medieval_892: 1275444127
+      fence_medieval_893: -1442411837
+      fence_medieval_894: -463206288
+      fence_medieval_895: 585023812
+      fence_medieval_896: -386140657
+      fence_medieval_897: -289156798
+      fence_medieval_898: -725937787
+      fence_medieval_899: 917995307
+      fence_medieval_9: -1168505366
+      fence_medieval_90: -310091128
+      fence_medieval_900: -1928105498
+      fence_medieval_901: 1166109485
+      fence_medieval_902: -1765172240
+      fence_medieval_903: 648016685
+      fence_medieval_904: 847316133
+      fence_medieval_905: -1545238362
+      fence_medieval_906: 1431573127
+      fence_medieval_907: 851038796
+      fence_medieval_908: 1917445053
+      fence_medieval_909: 1554098053
+      fence_medieval_91: -1534133751
+      fence_medieval_910: 621041682
+      fence_medieval_911: -1788234957
+      fence_medieval_912: -288505497
+      fence_medieval_913: 1592096690
+      fence_medieval_914: 1986191762
+      fence_medieval_915: -220367574
+      fence_medieval_916: -1452493347
+      fence_medieval_917: 1619318893
+      fence_medieval_918: 2078662814
+      fence_medieval_919: 638584321
+      fence_medieval_92: 794887964
+      fence_medieval_920: -446639364
+      fence_medieval_921: -45350880
+      fence_medieval_922: 1888379880
+      fence_medieval_923: -1577516831
+      fence_medieval_924: 302645235
+      fence_medieval_925: -930797805
+      fence_medieval_926: -120367788
+      fence_medieval_927: -455835292
+      fence_medieval_928: -926970238
+      fence_medieval_929: 179049228
+      fence_medieval_93: -446640839
+      fence_medieval_930: -2119871740
+      fence_medieval_931: 620516429
+      fence_medieval_932: 311856702
+      fence_medieval_933: -1256537561
+      fence_medieval_934: -1860233386
+      fence_medieval_935: -1807746180
+      fence_medieval_936: 1591420385
+      fence_medieval_937: -251898947
+      fence_medieval_938: 625637430
+      fence_medieval_939: 2136796545
+      fence_medieval_94: -1082569346
+      fence_medieval_940: 1380092301
+      fence_medieval_941: 2096559301
+      fence_medieval_942: -565762232
+      fence_medieval_943: -178646457
+      fence_medieval_944: 808835496
+      fence_medieval_945: 982376789
+      fence_medieval_946: 1676021530
+      fence_medieval_947: 105392667
+      fence_medieval_948: 1511964667
+      fence_medieval_949: 522789354
+      fence_medieval_95: 1362475532
+      fence_medieval_950: 1730704833
+      fence_medieval_951: 609748670
+      fence_medieval_952: 580346430
+      fence_medieval_953: -1036170179
+      fence_medieval_954: -1151407006
+      fence_medieval_955: 475464314
+      fence_medieval_956: -1143331297
+      fence_medieval_957: 1571735351
+      fence_medieval_958: 752167988
+      fence_medieval_959: -1455252219
+      fence_medieval_96: -406283512
+      fence_medieval_960: 551478002
+      fence_medieval_961: 621148843
+      fence_medieval_962: 2103518570
+      fence_medieval_963: -1873104487
+      fence_medieval_964: 74803687
+      fence_medieval_965: 933514037
+      fence_medieval_966: 2062187280
+      fence_medieval_967: -1527959449
+      fence_medieval_968: 547425174
+      fence_medieval_969: -1845820980
+      fence_medieval_97: -919728792
+      fence_medieval_970: -487409337
+      fence_medieval_971: -182959802
+      fence_medieval_972: -1057401529
+      fence_medieval_973: 1933161553
+      fence_medieval_974: -2123403703
+      fence_medieval_975: -1658795195
+      fence_medieval_976: 1302260315
+      fence_medieval_977: 482057941
+      fence_medieval_978: 1298162689
+      fence_medieval_979: -1986787039
+      fence_medieval_98: -1719318387
+      fence_medieval_980: -1447706920
+      fence_medieval_981: -149935158
+      fence_medieval_982: 274137819
+      fence_medieval_983: 1744752570
+      fence_medieval_984: -1473832918
+      fence_medieval_985: -1764877929
+      fence_medieval_986: -782693162
+      fence_medieval_987: 709934112
+      fence_medieval_988: -76219055
+      fence_medieval_989: -1539550012
+      fence_medieval_99: -520415425
+      fence_medieval_990: -527155357
+      fence_medieval_991: 1249027052
+      fence_medieval_992: 919861741
+      fence_medieval_993: -105147013
+      fence_medieval_994: -1508905019
+      fence_medieval_995: 766440608
+      fence_medieval_996: -888384920
+      fence_medieval_997: 691710664
+      fence_medieval_998: 728427317
+      fence_medieval_999: -1709079376
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -9,6 +9,9 @@ public class QuanLyThongSoNhanVat : ScriptableObject
     public float ThoiGianCuonNhanVat = 1f;
     public float HoiChieuCuonNhanVat = 10f;
     public int MauToiDaNhanVat = 100;
+    public int MauHientai = 100;
+    public int GiapHienTai = 0;
+    public int GiapToiDa = 100;
 
     // Sat Thuong Gay ra tu nhan Vat
     public int SatThuongNhoNhat;
@@ -16,9 +19,7 @@ public class QuanLyThongSoNhanVat : ScriptableObject
     // Sat Thuong Gay ra tu Quai
     public int SatThuongNhoNhatQuai;
     public int SatThuongLonNhatQuai;
-    // Thong so sung
-    public float TocDoban = 1f; // Toc do ban
-    public float LucBan = 10f; // Luc ban
+    
 
     // Thong so cap do
     public int KinhNghiemToiDa = 100;

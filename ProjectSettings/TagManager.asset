@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - QuaiVat
+  - Boss
+  - Tuong
+  - Pauseable
+  - VatPham
   layers:
   - Default
   - TransparentFX
@@ -13,9 +17,9 @@ TagManager:
   - Water
   - UI
   - Obstacles
-  - 
-  - 
-  - 
+  - Post
+  - NhanVat
+  - Quai
   - 
   - 
   - 

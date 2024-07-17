@@ -1,39 +1,117 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public class QLSoLuongQuaiChet
+{
+    public static int soluongquaichet = 0;
 
+}
 public class QuanLyQuai : MonoBehaviour
 {
-    NhanVat nhanVat;
-    public int SatThuongNhoNhat;
+    private NhanVat nhanVat; 
+    public int SatThuongNhoNhat; 
     public int SatThuongLonNhat;
-    public int LuongMau;
+    public int LuongMau = 100; 
+    public bool AnimationTanCong; 
+    public int KinhNghiemNhanDuoc;
+    public QuanLyVatPham quanLyVatPham;
+    public int MauToiDa = 100;
+    public int MauHienTai;
+    public float ThoiGianTangMau = 60f;
+    public float TocDanh = 0.1f;
+
+    private void Start()
+    {
+        MauHienTai = LuongMau; 
+        Debug.Log("Starting with health: " + MauHienTai);
+        StartCoroutine(TangMauTheoThoiGian()); 
+    }
+
+    IEnumerator TangMauTheoThoiGian()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(ThoiGianTangMau);
+            Debug.Log("Checking health regeneration, MauHienTai: " + MauHienTai + ", MauToiDa: " + MauToiDa);
+
+            if (MauHienTai < MauToiDa)
+            {
+                MauHienTai += 20;
+                if (MauHienTai > MauToiDa)
+                {
+                    MauHienTai = MauToiDa;
+                }
+                LuongMau = MauHienTai;
+                Debug.Log("Increased monster health to " + MauHienTai);
+            }
+        }
+    }
 
     void Awake()
     {
-        LuongMau = 100;
+        if (quanLyVatPham == null)
+        {
+            quanLyVatPham = FindObjectOfType<QuanLyVatPham>();
+        }
+
+        if (quanLyVatPham == null)
+        {
+            Debug.LogError("QuanLyVatPham not found");
+        }
     }
 
-    public void SatThuongQuaiGanhChieu(int SatThuong)
+    public void SatThuongQuaiGanhChieu(int SatThuong, NhanVat nhanVat)
     {
-        LuongMau -= SatThuong;
-        Debug.Log("Quái nhận sát thương " + SatThuong + ". Lượng máu còn lại: " + LuongMau);
+        this.nhanVat = nhanVat;
+
+        if (LuongMau > 0)
+        {
+            LuongMau -= SatThuong;
+            Debug.Log("Monster took damage " + SatThuong + ". Remaining health: " + LuongMau);
+        }
 
         if (LuongMau <= 0)
         {
-            DemQuaiChet.instance.ThemSoluong();
-            Destroy(gameObject);
+            if (this.nhanVat != null)
+            {
+                this.nhanVat.CapNhatKinhNghiem(KinhNghiemNhanDuoc);
+                DemQuaiChet.instance.ThemSoluong();
+
+                if (quanLyVatPham != null)
+                {
+                    quanLyVatPham.RoiVatPham(transform.position);
+                }
+                else
+                {
+                    Debug.LogError("quanLyVatPham is null");
+                }
+
+                /*FindObjectOfType<QuanLyPhatSinhQuai>().demquai();*/
+                QLSoLuongQuaiChet.soluongquaichet++;
+                /*ReturnToPool(); */
+                Destroy(gameObject);
+            }
         }
+    }
+
+    void ReturnToPool()
+    {
+        gameObject.SetActive(false); 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            if (GetComponent<Animator>() != null && AnimationTanCong)
+            {
+                GetComponent<Animator>().SetBool("VaCham", true);
+            }
+
             nhanVat = collision.GetComponent<NhanVat>();
             if (nhanVat != null)
             {
-                InvokeRepeating("SatThuongQuaigayRa", 0, 0.1f);
+                InvokeRepeating("SatThuongQuaigayRa", 0, TocDanh);
             }
         }
     }
@@ -42,8 +120,12 @@ public class QuanLyQuai : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            if (GetComponent<Animator>() != null && AnimationTanCong)
+            {
+                GetComponent<Animator>().SetBool("VaCham", false);
+            }
+
             CancelInvoke("SatThuongQuaigayRa");
-            nhanVat = null;
         }
     }
 
@@ -51,9 +133,10 @@ public class QuanLyQuai : MonoBehaviour
     {
         if (nhanVat != null)
         {
-            int SatThuong = UnityEngine.Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
-            Debug.Log("Player nhận sát thương " + SatThuong);
+            int SatThuong = Random.Range(SatThuongNhoNhat, SatThuongLonNhat);
+            Debug.Log("Player took damage " + SatThuong);
             nhanVat.SatThuongGanhChieu(SatThuong);
+            
         }
     }
 }
