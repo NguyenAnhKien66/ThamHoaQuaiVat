@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class ChucNangMenuPause : MonoBehaviour
 {
     public GameObject MenuTamDung;
+    public GameObject HopThoaiLuu;
 
     void Start()
     {
@@ -18,8 +19,11 @@ public class ChucNangMenuPause : MonoBehaviour
     }
     public void TamDung()
     {
-        MenuTamDung.SetActive(true);
-        Time.timeScale = 0.0001f;
+        if (HopThoaiLuu.activeSelf == false)
+        {
+            MenuTamDung.SetActive(true);
+            Time.timeScale = 0.0001f;
+        }
     }
     public void ThoatGamePlay()
     {
