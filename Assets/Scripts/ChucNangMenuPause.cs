@@ -1,5 +1,6 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -22,6 +23,7 @@ public class ChucNangMenuPause : MonoBehaviour
     }
     public void ThoatGamePlay()
     {
+        XoaFileLuu();
         SceneManager.LoadScene("GameMap");
         Time.timeScale = 1;
     }
@@ -43,5 +45,16 @@ public class ChucNangMenuPause : MonoBehaviour
     {
         AmThanh.bAmThanh = true;
         Debug.Log("Da tat");
+    }
+    public void XoaFileLuu()
+    {
+        string path = Application.persistentDataPath + "/savefile.json";
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+            Debug.Log("File lưu đã được xóa!");
+        }
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
     }
 }

@@ -109162,7 +109162,7 @@ MonoBehaviour:
   quaiBossPf: {fileID: 7210530881058903835, guid: c41e16ca7c5c0e74b8151934f9068c0c, type: 3}
   viTriSinhRa:
   - {fileID: 1172148210}
-  thoiGianXuatHien: 10
+  thoiGianXuatHien: 420
   AmThanh: {fileID: 8300000, guid: ffdca19bd1a51794fa7cc8e850048ad7, type: 3}
 --- !u!4 &1172148210
 Transform:

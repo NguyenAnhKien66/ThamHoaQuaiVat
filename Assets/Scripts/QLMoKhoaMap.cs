@@ -15,8 +15,8 @@ public class QLMoKhoaMap : MonoBehaviour
     }
     void MoKhoaMap()
     {
-        
-        if(DieuKhienGame.instance!=null)
+
+        if (DieuKhienGame.instance != null)
         {
             DuLieuGame gameData = DieuKhienGame.instance.duLieuGame;
 
@@ -25,17 +25,36 @@ public class QLMoKhoaMap : MonoBehaviour
             {
                 QLKhoaMap2.SetActive(false);
             }
+            else
+            {
+                QLKhoaMap2.SetActive(true);
+            }
+
             if (gameData.maps[1].DaHaDuocboss == true)
             {
                 QLKhoaMap3.SetActive(false);
             }
+            else
+            {
+                QLKhoaMap3.SetActive(true);
+            }
+
             if (gameData.maps[2].DaHaDuocboss == true)
             {
                 QLKhoaMap4.SetActive(false);
             }
+            else
+            {
+                QLKhoaMap4.SetActive(true);
+            }
+
             if (gameData.maps[3].DaHaDuocboss == true)
             {
                 QLKhoaMap5.SetActive(false);
+            }
+            else
+            {
+                QLKhoaMap5.SetActive(true);
             }
         }
            

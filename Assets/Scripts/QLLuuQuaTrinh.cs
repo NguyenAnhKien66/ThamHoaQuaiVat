@@ -42,8 +42,10 @@ public class QLLuuQuaTrinh : MonoBehaviour
         if (!ChoThoat)
         {
             HienHopThoaiLuu = true;
+            Time.timeScale = 0.0001f;
             Application.CancelQuit();
         }
+
     }
     void LuuVaThoatGame()
     {
@@ -54,7 +56,8 @@ public class QLLuuQuaTrinh : MonoBehaviour
         Application.Quit();
     }
     void KhongLuuVaThoatGame()
-    {
+    {      
+        XoaFileLuu();
         //Thoát mà không lưu
         ChoThoat = true;
         Application.Quit();
@@ -167,6 +170,17 @@ public class QLLuuQuaTrinh : MonoBehaviour
             return fullName.Substring(0, index);
         }
         return fullName;
+    }
+    public void XoaFileLuu()
+    {
+        string path = Application.persistentDataPath + "/savefile.json";
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+            Debug.Log("File lưu đã được xóa!");
+        }
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
     }
     [Serializable]
     public class GameData
