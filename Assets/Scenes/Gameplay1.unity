@@ -108638,6 +108638,7 @@ MonoBehaviour:
   soluong: 0
   soluongchet: 0
   gioiHanQuai: 60
+  tongcong: 3
 --- !u!4 &975196633
 Transform:
   m_ObjectHideFlags: 0
@@ -109597,6 +109598,7 @@ MonoBehaviour:
   soluong: 0
   soluongchet: 0
   gioiHanQuai: 60
+  tongcong: 3
 --- !u!4 &1289611078
 Transform:
   m_ObjectHideFlags: 0
@@ -109737,6 +109739,7 @@ MonoBehaviour:
   soluong: 0
   soluongchet: 0
   gioiHanQuai: 60
+  tongcong: 3
 --- !u!4 &1334614747
 Transform:
   m_ObjectHideFlags: 0

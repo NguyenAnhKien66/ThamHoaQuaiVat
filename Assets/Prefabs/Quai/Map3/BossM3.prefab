@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Seeker: {fileID: 871552391644098935}
-  TocDoDiChuyen: 3.2
+  TocDoDiChuyen: 2.3
   KhoangCachDiemKeTiep: 1
   BossHuongVeTrai: 1
 --- !u!114 &618940211957432251
@@ -229,8 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6774b4499b5c75a4c9b59bdb3037dbda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SatThuongNhoNhat: 7
-  SatThuongLonNhat: 8
+  SatThuongNhoNhat: 3
+  SatThuongLonNhat: 4
   LuongMau: 5000
   AnimationTanCong: 1
   quanLyThongSoNhanVat: {fileID: 11400000, guid: 4d3535415c9a09246b23bd4938db445c, type: 2}

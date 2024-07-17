@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SatThuongNhoNhat: 1
-  SatThuongLonNhat: 2
+  SatThuongLonNhat: 1
   LuongMau: 30
   AnimationTanCong: 1
   KinhNghiemNhanDuoc: 15
@@ -237,3 +237,4 @@ MonoBehaviour:
   MauToiDa: 110
   MauHienTai: 0
   ThoiGianTangMau: 75
+  TocDanh: 0.3

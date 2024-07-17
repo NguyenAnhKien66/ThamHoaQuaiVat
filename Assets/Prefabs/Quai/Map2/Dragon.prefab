@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DiChuyenNgaunhien: 0
   seeker: {fileID: 9158776742424721241}
-  TocDoDiChuyen: 3.5
+  TocDoDiChuyen: 2.3
   CapNhatDuongDi: 1
   KhoangCachTiepTheo: 1
   Dan: {fileID: 5678471727513526027, guid: 31f711b43907359418e513b92e67fc44, type: 3}

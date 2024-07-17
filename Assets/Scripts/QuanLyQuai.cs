@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public class QLSoLuongQuaiChet
+{
+    public static int soluongquaichet = 0;
 
+}
 public class QuanLyQuai : MonoBehaviour
 {
     private NhanVat nhanVat; 
@@ -14,6 +18,7 @@ public class QuanLyQuai : MonoBehaviour
     public int MauToiDa = 100;
     public int MauHienTai;
     public float ThoiGianTangMau = 60f;
+    public float TocDanh = 0.1f;
 
     private void Start()
     {
@@ -81,7 +86,8 @@ public class QuanLyQuai : MonoBehaviour
                     Debug.LogError("quanLyVatPham is null");
                 }
 
-                FindObjectOfType<QuanLyPhatSinhQuai>().demquai();
+                /*FindObjectOfType<QuanLyPhatSinhQuai>().demquai();*/
+                QLSoLuongQuaiChet.soluongquaichet++;
                 /*ReturnToPool(); */
                 Destroy(gameObject);
             }
@@ -105,7 +111,7 @@ public class QuanLyQuai : MonoBehaviour
             nhanVat = collision.GetComponent<NhanVat>();
             if (nhanVat != null)
             {
-                InvokeRepeating("SatThuongQuaigayRa", 0, 0.1f);
+                InvokeRepeating("SatThuongQuaigayRa", 0, TocDanh);
             }
         }
     }

@@ -19,11 +19,12 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
     public int soLuongQuaiDot5 = 1;
     public int soLuongQuaiDot6 = 1;
     public int soluong = 0;
-    public int soluongchet = 0;
+    public int soluongchet;
     private int[] soLuongQuaiChoMoiDot; 
     public Dictionary<Transform, int> soLuongQuaiDaPhatSinh; 
     private float thoiGianDaTroiQua = 0f;
     public int gioiHanQuai=0;
+    public int tongcong=0;
 
     private void Start()
     {
@@ -37,7 +38,11 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
 
         StartCoroutine(SinhQuaiDinhKy());
     }
+    private void Update()
+    {
 
+        soluongchet=QLSoLuongQuaiChet.soluongquaichet;
+    }
     IEnumerator SinhQuaiDinhKy()
     {
         yield return new WaitForSeconds(thoiGianBatDau);
@@ -80,7 +85,7 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
                                 }
 
                                 soLuongQuaiDaPhatSinh[viTriNgauNhien]++;
-                                soluong++;
+                                soluong= soLuongQuaiDaPhatSinh[viTriNgauNhien];
                                 Debug.Log("Spawned " + soLuongQuaiDaPhatSinh[viTriNgauNhien] + " monsters from this portal.");
                             }
                             else
@@ -91,10 +96,13 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
                                  {
                                      StartCoroutine(TaiSinh());
                                  }*/
-                                if(soLuongQuaiDaPhatSinh[viTriNgauNhien]==60)
+                                if(soLuongQuaiDaPhatSinh[viTriNgauNhien]==gioiHanQuai&&soluongchet>= tongcong)
                                 {
-                                    soLuongQuaiDaPhatSinh[viTriNgauNhien] -= soluongchet;
-                                    soluongchet = 0;
+                                    soLuongQuaiDaPhatSinh[viTriNgauNhien] -= soluongchet/ tongcong;
+                                    if (soLuongQuaiDaPhatSinh[viTriNgauNhien] < 0) soLuongQuaiDaPhatSinh[viTriNgauNhien] = 0;
+                                    soluong = soLuongQuaiDaPhatSinh[viTriNgauNhien];
+                                    QLSoLuongQuaiChet.soluongquaichet = 0;
+         
                                 }
 
                             }
@@ -117,27 +125,7 @@ public class QuanLyPhatSinhQuai : MonoBehaviour
         }
     }
 
-    IEnumerator TaiSinh()
-    {
-        yield return new WaitForSeconds(1f); 
-
-        foreach (Transform viTri in viTriSinhRa)
-        {
-            if (soLuongQuaiDaPhatSinh[viTri] < 20)
-            {
-                foreach (GameObject quai in GameObject.FindGameObjectsWithTag("QuaiVat"))
-                {
-                    if (!quai.activeInHierarchy)
-                    {
-                        quai.transform.position = viTri.position;
-                        quai.SetActive(true);
-                        soLuongQuaiDaPhatSinh[viTri]++;  
-                        break;
-                    }
-                }
-            }
-        }
-    }
+    
 
     public void demquai()
     {

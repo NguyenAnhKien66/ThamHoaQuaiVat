@@ -18175,7 +18175,8 @@ MonoBehaviour:
   soLuongQuaiDot6: 4
   soluong: 0
   soluongchet: 0
-  gioiHanQuai: 50
+  gioiHanQuai: 45
+  tongcong: 3
 --- !u!4 &975196633
 Transform:
   m_ObjectHideFlags: 0
@@ -18237,7 +18238,8 @@ MonoBehaviour:
   soLuongQuaiDot6: 2
   soluong: 0
   soluongchet: 0
-  gioiHanQuai: 40
+  gioiHanQuai: 45
+  tongcong: 0
 --- !u!4 &1025430351
 Transform:
   m_ObjectHideFlags: 0
@@ -18933,7 +18935,8 @@ MonoBehaviour:
   soLuongQuaiDot6: 4
   soluong: 0
   soluongchet: 0
-  gioiHanQuai: 50
+  gioiHanQuai: 45
+  tongcong: 3
 --- !u!4 &1289611078
 Transform:
   m_ObjectHideFlags: 0
@@ -23283,7 +23286,8 @@ MonoBehaviour:
   soLuongQuaiDot6: 2
   soluong: 0
   soluongchet: 0
-  gioiHanQuai: 40
+  gioiHanQuai: 45
+  tongcong: 3
 --- !u!4 &1334614747
 Transform:
   m_ObjectHideFlags: 0
